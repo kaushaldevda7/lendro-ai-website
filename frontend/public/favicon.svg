@@ -1,0 +1,16 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main blue square -->
+  <rect x="2" y="2" width="12" height="14" rx="2" fill="#1E51DB"/>
+  
+  <!-- Light blue overlapping rectangle -->
+  <rect x="10" y="12" width="18" height="16" rx="2" fill="#9BD7FB"/>
+  
+  <!-- Medium blue geometric accent -->
+  <path d="M8 8L20 8C22 8 24 10 24 12L24 20C24 22 22 24 20 24L12 24C10 24 8 22 8 20Z" fill="#65A8F3"/>
+  
+  <!-- Dark blue accent shape -->
+  <path d="M2 12L12 12C14 12 16 14 16 16L16 28C16 30 14 32 12 32L4 32C2 32 0 30 0 28L0 16C0 14 2 12 2 12Z" fill="#1E51DB"/>
+  
+  <!-- Small accent rectangle -->
+  <rect x="4" y="22" width="8" height="4" rx="1" fill="#65A8F3"/>
+</svg> 
