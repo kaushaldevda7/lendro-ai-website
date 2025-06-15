@@ -172,43 +172,6 @@ export default function ContactPage() {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-lendro-primary via-lendro-secondary to-lendro-tertiary text-white py-12 md:py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="absolute inset-0 bg-grid-white/10"></div>
-        
-        {/* Floating Color Orbs */}
-        <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-cyan-400/30 to-teal-500/30 rounded-full blur-2xl animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-40 h-40 bg-gradient-to-r from-emerald-400/30 to-green-500/30 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-r from-blue-400/30 to-indigo-500/30 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        
-        <div className="container mx-auto px-4 max-w-6xl relative z-10">
-          <div className="text-center">
-            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-12">
-              Ready to experience the power of agentic AI? Our team is here to help you get started with autonomous lending solutions.
-            </p>
-            
-            {/* Quick Contact Methods */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              {contactMethods.map((method, index) => (
-                <a
-                  key={index}
-                  href={method.action}
-                  className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-r ${method.color} rounded-2xl flex items-center justify-center text-white mb-4 mx-auto group-hover:scale-110 transition-transform shadow-lg`}>
-                    {method.icon}
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{method.title}</h3>
-                  <p className="text-white/80 text-sm mb-3">{method.description}</p>
-                  <p className="text-cyan-300 font-medium">{method.contact}</p>
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Form Section */}
       <section className="bg-gradient-to-br from-gray-50 via-white to-gray-100 py-12 md:py-20 relative overflow-hidden">
         {/* Background Elements */}
