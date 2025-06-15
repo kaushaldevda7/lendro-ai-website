@@ -244,8 +244,9 @@ export default function ContactPage() {
               <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
                 <h3 className="text-xl font-bold mb-4 text-gray-900">Headquarters</h3>
                 <div className="space-y-3 text-gray-600">
-                  <p>San Francisco, CA</p>
-                  <p>United States</p>
+                  <p>40 King St W, 41st Floor</p>
+                  <p>Toronto, ON M5H 3Y2</p>
+                  <p>Canada</p>
                   <div className="pt-4 border-t border-gray-200">
                     <p className="font-medium text-gray-900">General Inquiries</p>
                     <a href="mailto:hello@lendro.ai" className="text-lendro-primary hover:text-lendro-secondary transition-colors">hello@lendro.ai</a>
