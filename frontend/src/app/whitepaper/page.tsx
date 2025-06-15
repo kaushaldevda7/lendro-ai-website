@@ -1647,6 +1647,222 @@ export default function WhitepaperPage() {
             )}
 
             {/* Automation & Intelligence */}
+            {currentSection === 9 && (
+              <div className="py-12">
+                <div className="mb-12">
+                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-full border border-blue-200/50 shadow-sm mb-6">
+                    <span className="text-sm font-semibold text-blue-700">Chapter 7</span>
+                  </div>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                    Automation & Intelligence
+                  </h1>
+                  <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"></div>
+                </div>
+
+                <div className="space-y-8">
+                  {/* Intelligent Document Processing */}
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Intelligent Document Processing</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div>
+                        <p className="text-gray-700 leading-relaxed mb-6">
+                          Traditional document processing requires manual review, data entry, and verification—creating bottlenecks and errors. 
+                          Lendro.AI's intelligent document processing leverages advanced AI to automatically extract, validate, and process 
+                          documents with human-level accuracy and superhuman speed.
+                        </p>
+                        
+                        <div className="space-y-4">
+                          <div className="flex items-start gap-4">
+                            <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3 className="font-bold text-gray-900 mb-2">Advanced OCR & NLP</h3>
+                              <p className="text-gray-600 text-sm">Extract text, tables, and structured data from any document format with 99.5% accuracy.</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start gap-4">
+                            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3 className="font-bold text-gray-900 mb-2">Smart Classification</h3>
+                              <p className="text-gray-600 text-sm">Automatically categorize and route documents to appropriate workflows and processing queues.</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start gap-4">
+                            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3 className="font-bold text-gray-900 mb-2">Real-time Validation</h3>
+                              <p className="text-gray-600 text-sm">Cross-reference extracted data against multiple sources for accuracy and fraud detection.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-200/50">
+                        <h3 className="font-bold text-gray-900 mb-4">Processing Performance</h3>
+                        <div className="space-y-4">
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-700 text-sm">Document Types Supported</span>
+                            <span className="text-blue-600 font-bold">50+</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-700 text-sm">Processing Speed</span>
+                            <span className="text-blue-600 font-bold">< 5 sec</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-700 text-sm">Accuracy Rate</span>
+                            <span className="text-blue-600 font-bold">99.5%</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-700 text-sm">Manual Review Reduction</span>
+                            <span className="text-blue-600 font-bold">92%</span>
+                          </div>
+                        </div>
+                        
+                        <div className="mt-6 p-4 bg-white/80 rounded-xl">
+                          <h4 className="font-bold text-gray-900 mb-2">Supported Documents</h4>
+                          <div className="grid grid-cols-2 gap-2 text-xs text-gray-600">
+                            <div>• Tax Returns</div>
+                            <div>• Bank Statements</div>
+                            <div>• Pay Stubs</div>
+                            <div>• Financial Statements</div>
+                            <div>• Credit Reports</div>
+                            <div>• Legal Documents</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Conversational AI Agents */}
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Conversational AI Agents</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                      <div className="p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border border-green-200/50">
+                        <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-3 text-center">Customer Support Agent</h3>
+                        <p className="text-gray-600 text-sm text-center">24/7 intelligent customer service with natural language understanding and contextual responses</p>
+                      </div>
+                      
+                      <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-200/50">
+                        <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-3 text-center">Underwriting Assistant</h3>
+                        <p className="text-gray-600 text-sm text-center">AI-powered decision support for underwriters with risk analysis and recommendation generation</p>
+                      </div>
+                      
+                      <div className="p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl border border-purple-200/50">
+                        <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-3 text-center">Collections Agent</h3>
+                        <p className="text-gray-600 text-sm text-center">Empathetic collections assistance with payment plan recommendations and hardship assessment</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Predictive Analytics Engine */}
+                  <div className="bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 rounded-3xl p-8 text-white shadow-xl">
+                    <h2 className="text-2xl font-bold mb-6">Predictive Analytics Engine</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div>
+                        <h3 className="font-bold text-white mb-4">Advanced Forecasting</h3>
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Portfolio performance prediction with 95% accuracy</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Early default detection 6 months in advance</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Market trend analysis and risk scenario modeling</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Customer lifetime value optimization</span>
+                          </div>
+                        </div>
+                        
+                        <div className="mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-xl">
+                          <h4 className="font-bold text-white mb-2">Prediction Accuracy</h4>
+                          <div className="space-y-2">
+                            <div className="flex justify-between items-center">
+                              <span className="text-white/90 text-sm">Default Prediction</span>
+                              <span className="text-white font-bold">94.7%</span>
+                            </div>
+                            <div className="flex justify-between items-center">
+                              <span className="text-white/90 text-sm">Portfolio Performance</span>
+                              <span className="text-white font-bold">96.2%</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-bold text-white mb-4">Business Intelligence</h3>
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Real-time dashboard with KPI monitoring</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Automated alert system for anomaly detection</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Custom reporting with drill-down capabilities</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Competitive benchmarking and market insights</span>
+                          </div>
+                        </div>
+                        
+                        <div className="mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-xl">
+                          <h4 className="font-bold text-white mb-2">Operational Impact</h4>
+                          <div className="space-y-2">
+                            <div className="flex justify-between items-center">
+                              <span className="text-white/90 text-sm">Decision Speed</span>
+                              <span className="text-white font-bold">10x Faster</span>
+                            </div>
+                            <div className="flex justify-between items-center">
+                              <span className="text-white/90 text-sm">Manual Analysis Reduction</span>
+                              <span className="text-white font-bold">87%</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Future Roadmap */}
             {currentSection === 17 && (
               <div className="py-12">
