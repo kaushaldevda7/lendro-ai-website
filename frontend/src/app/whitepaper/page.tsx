@@ -3281,6 +3281,54 @@ export default function WhitepaperPage() {
               </div>
             )}
 
+            {/* System Architecture & Security */}
+            {currentSection === 12 && (
+              <div className="py-12">
+                <div className="mb-12">
+                  <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                    System Architecture & Security
+                  </h1>
+                  <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"></div>
+                </div>
+
+                <div className="space-y-8">
+                  {/* Introduction */}
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Enterprise-Grade Infrastructure</h2>
+                    <p className="text-gray-700 mb-6 leading-relaxed">
+                      Security and reliability are paramount in financial services. Lendro.AI's System Architecture & Security framework 
+                      provides bank-grade security, scalable cloud infrastructure, and comprehensive compliance measures. Our platform 
+                      is built on modern cloud-native architecture with multiple layers of security, ensuring your data and operations 
+                      remain protected while delivering exceptional performance.
+                    </p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                      <div className="p-6 bg-gradient-to-r from-green-50 to-teal-50 rounded-2xl border border-green-200/50 text-center">
+                        <div className="text-2xl font-bold text-green-600 mb-2">99.99%</div>
+                        <div className="text-sm font-medium text-gray-700">Uptime SLA</div>
+                        <div className="text-xs text-gray-500 mt-1">Enterprise reliability</div>
+                      </div>
+                      <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-200/50 text-center">
+                        <div className="text-2xl font-bold text-blue-600 mb-2">256-bit</div>
+                        <div className="text-sm font-medium text-gray-700">AES Encryption</div>
+                        <div className="text-xs text-gray-500 mt-1">Military-grade security</div>
+                      </div>
+                      <div className="p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl border border-purple-200/50 text-center">
+                        <div className="text-2xl font-bold text-purple-600 mb-2">SOC 2</div>
+                        <div className="text-sm font-medium text-gray-700">Type II Certified</div>
+                        <div className="text-xs text-gray-500 mt-1">Audited compliance</div>
+                      </div>
+                      <div className="p-6 bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl border border-orange-200/50 text-center">
+                        <div className="text-2xl font-bold text-orange-600 mb-2">50ms</div>
+                        <div className="text-sm font-medium text-gray-700">API Response</div>
+                        <div className="text-xs text-gray-500 mt-1">Lightning fast</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Analytics & Business Intelligence */}
             {currentSection === 11 && (
               <div className="py-12">
@@ -3314,7 +3362,7 @@ export default function WhitepaperPage() {
                         <div className="text-xs text-gray-500 mt-1">Automated validation</div>
                       </div>
                       <div className="p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl border border-purple-200/50 text-center">
-                        <div className="text-2xl font-bold text-purple-600 mb-2">< 5s</div>
+                        <div className="text-2xl font-bold text-purple-600 mb-2">5s</div>
                         <div className="text-sm font-medium text-gray-700">Query Response</div>
                         <div className="text-xs text-gray-500 mt-1">Lightning fast</div>
                       </div>
@@ -3323,219 +3371,6 @@ export default function WhitepaperPage() {
                         <div className="text-sm font-medium text-gray-700">Monitoring</div>
                         <div className="text-xs text-gray-500 mt-1">Always available</div>
                       </div>
-                    </div>
-                  </div>
-
-                  {/* Executive Dashboard */}
-                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-8">Executive Dashboard</h2>
-                    
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                      <div className="lg:col-span-2 space-y-6">
-                        <div className="p-6 bg-gradient-to-r from-slate-800 via-gray-900 to-slate-800 rounded-2xl text-white">
-                          <h3 className="text-xl font-bold mb-6 text-center">Portfolio Performance Overview</h3>
-                          <div className="grid grid-cols-2 gap-6">
-                            <div className="space-y-4">
-                              <div className="p-4 bg-white/10 backdrop-blur-sm rounded-xl">
-                                <div className="flex justify-between items-center mb-2">
-                                  <span className="text-sm opacity-90">Total Portfolio Value</span>
-                                  <span className="text-lg font-bold text-green-400">$2.4B</span>
-                                </div>
-                                <div className="text-xs opacity-70">+12.3% vs last quarter</div>
-                              </div>
-                              
-                              <div className="p-4 bg-white/10 backdrop-blur-sm rounded-xl">
-                                <div className="flex justify-between items-center mb-2">
-                                  <span className="text-sm opacity-90">Active Loans</span>
-                                  <span className="text-lg font-bold text-blue-400">18,542</span>
-                                </div>
-                                <div className="text-xs opacity-70">+8.7% month over month</div>
-                              </div>
-                              
-                              <div className="p-4 bg-white/10 backdrop-blur-sm rounded-xl">
-                                <div className="flex justify-between items-center mb-2">
-                                  <span className="text-sm opacity-90">Default Rate</span>
-                                  <span className="text-lg font-bold text-yellow-400">2.3%</span>
-                                </div>
-                                <div className="text-xs opacity-70">-0.8% improvement</div>
-                              </div>
-                            </div>
-                            
-                            <div className="space-y-4">
-                              <div className="p-4 bg-white/10 backdrop-blur-sm rounded-xl">
-                                <div className="flex justify-between items-center mb-2">
-                                  <span className="text-sm opacity-90">Avg. Yield Rate</span>
-                                  <span className="text-lg font-bold text-purple-400">8.2%</span>
-                                </div>
-                                <div className="text-xs opacity-70">Industry leading</div>
-                              </div>
-                              
-                              <div className="p-4 bg-white/10 backdrop-blur-sm rounded-xl">
-                                <div className="flex justify-between items-center mb-2">
-                                  <span className="text-sm opacity-90">Collection Rate</span>
-                                  <span className="text-lg font-bold text-green-400">94.7%</span>
-                                </div>
-                                <div className="text-xs opacity-70">+2.1% vs target</div>
-                              </div>
-                              
-                              <div className="p-4 bg-white/10 backdrop-blur-sm rounded-xl">
-                                <div className="flex justify-between items-center mb-2">
-                                  <span className="text-sm opacity-90">Processing Time</span>
-                                  <span className="text-lg font-bold text-indigo-400">4.2 min</span>
-                                </div>
-                                <div className="text-xs opacity-70">85% faster than industry</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-200/50">
-                          <h3 className="text-lg font-bold text-gray-900 mb-4">Key Performance Indicators</h3>
-                          <div className="grid grid-cols-2 gap-4">
-                            <div className="space-y-3">
-                              <div className="flex justify-between items-center">
-                                <span className="text-sm text-gray-700">Loan Approval Rate</span>
-                                <span className="text-sm font-bold text-green-600">73.2%</span>
-                              </div>
-                              <div className="w-full bg-gray-200 rounded-full h-2">
-                                <div className="bg-green-500 h-2 rounded-full" style={{width: '73.2%'}}></div>
-                              </div>
-                              
-                              <div className="flex justify-between items-center">
-                                <span className="text-sm text-gray-700">Customer Satisfaction</span>
-                                <span className="text-sm font-bold text-blue-600">92.1%</span>
-                              </div>
-                              <div className="w-full bg-gray-200 rounded-full h-2">
-                                <div className="bg-blue-500 h-2 rounded-full" style={{width: '92.1%'}}></div>
-                              </div>
-                            </div>
-                            
-                            <div className="space-y-3">
-                              <div className="flex justify-between items-center">
-                                <span className="text-sm text-gray-700">Operational Efficiency</span>
-                                <span className="text-sm font-bold text-purple-600">87.5%</span>
-                              </div>
-                              <div className="w-full bg-gray-200 rounded-full h-2">
-                                <div className="bg-purple-500 h-2 rounded-full" style={{width: '87.5%'}}></div>
-                              </div>
-                              
-                              <div className="flex justify-between items-center">
-                                <span className="text-sm text-gray-700">Risk Score Accuracy</span>
-                                <span className="text-sm font-bold text-indigo-600">96.3%</span>
-                              </div>
-                              <div className="w-full bg-gray-200 rounded-full h-2">
-                                <div className="bg-indigo-500 h-2 rounded-full" style={{width: '96.3%'}}></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="space-y-6">
-                        <div className="p-6 bg-gradient-to-r from-green-50 to-teal-50 rounded-2xl border border-green-200/50">
-                          <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">Revenue Trends</h3>
-                          <div className="space-y-4">
-                            <div className="text-center">
-                              <div className="text-2xl font-bold text-green-600 mb-1">$47.2M</div>
-                              <div className="text-sm text-gray-600">Monthly Revenue</div>
-                              <div className="text-xs text-green-600 font-medium">+18.5% YoY</div>
-                            </div>
-                            
-                            <div className="space-y-2">
-                              <div className="flex justify-between text-sm">
-                                <span className="text-gray-600">Interest Income</span>
-                                <span className="font-medium">$32.1M</span>
-                              </div>
-                              <div className="flex justify-between text-sm">
-                                <span className="text-gray-600">Fee Income</span>
-                                <span className="font-medium">$8.7M</span>
-                              </div>
-                              <div className="flex justify-between text-sm">
-                                <span className="text-gray-600">Other Revenue</span>
-                                <span className="font-medium">$6.4M</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="p-6 bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl border border-orange-200/50">
-                          <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">Risk Metrics</h3>
-                          <div className="space-y-4">
-                            <div className="text-center">
-                              <div className="text-2xl font-bold text-orange-600 mb-1">2.3%</div>
-                              <div className="text-sm text-gray-600">Portfolio Risk</div>
-                              <div className="text-xs text-green-600 font-medium">-0.8% vs target</div>
-                            </div>
-                            
-                            <div className="space-y-2">
-                              <div className="flex justify-between text-sm">
-                                <span className="text-gray-600">30+ Days Past Due</span>
-                                <span className="font-medium">1.8%</span>
-                              </div>
-                              <div className="flex justify-between text-sm">
-                                <span className="text-gray-600">90+ Days Past Due</span>
-                                <span className="font-medium">0.7%</span>
-                              </div>
-                              <div className="flex justify-between text-sm">
-                                <span className="text-gray-600">Charge-offs</span>
-                                <span className="font-medium">0.4%</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl border border-purple-200/50">
-                          <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">Operational Metrics</h3>
-                          <div className="space-y-3">
-                            <div className="flex justify-between items-center">
-                              <span className="text-sm text-gray-600">Applications Processed</span>
-                              <span className="text-sm font-bold">2,847</span>
-                            </div>
-                            <div className="flex justify-between items-center">
-                              <span className="text-sm text-gray-600">Avg. Decision Time</span>
-                              <span className="text-sm font-bold">4.2 min</span>
-                            </div>
-                            <div className="flex justify-between items-center">
-                              <span className="text-sm text-gray-600">Automation Rate</span>
-                              <span className="text-sm font-bold">87%</span>
-                            </div>
-                            <div className="flex justify-between items-center">
-                              <span className="text-sm text-gray-600">Customer Inquiries</span>
-                              <span className="text-sm font-bold">1,234</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {currentSection > 11 && (
-              <div className="py-12">
-                <div className="mb-12">
-                  <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                    {sections[currentSection]}
-                  </h1>
-                  <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"></div>
-                </div>
-                
-                <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
-                  <div className="text-center py-12">
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                      </svg>
-                    </div>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Content Being Restored</h2>
-                    <p className="text-gray-600 mb-6">
-                      I'm working on restoring the comprehensive content for "{sections[currentSection]}". 
-                      This section will include detailed analysis, case studies, and implementation guidance.
-                    </p>
-                    <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-full border border-blue-200/50">
-                      <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full mr-3 animate-pulse"></div>
-                      <span className="text-sm font-semibold text-blue-700">Restoring detailed content...</span>
                     </div>
                   </div>
                 </div>
