@@ -503,9 +503,9 @@ export default function AICreditPage() {
                 <h4 className="text-lg font-semibold text-white mb-2">Full Compliance</h4>
                 <p className="text-white/80 text-sm">Built-in regulatory compliance and audit trails</p>
               </div>
+              </div>
             </div>
-          </div>
-
+            
           {/* Bottom Accent */}
           <div className="text-center">
             <div className="inline-flex items-center gap-2 text-white/70 text-sm">

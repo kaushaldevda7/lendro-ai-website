@@ -201,7 +201,7 @@ export default function AIServicingPage() {
                       <div className="flex items-center gap-2 mt-1">
                         <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-sm"></div>
                         <p className="text-sm font-medium text-gray-600">Managing loan portfolios</p>
-                      </div>
+                  </div>
                     </div>
                   </div>
                   
@@ -211,41 +211,41 @@ export default function AIServicingPage() {
                         <div className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
                           <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-                          </svg>
+                      </svg>
                         </div>
                         <div className="flex-1">
                           <p className="text-sm font-bold text-indigo-700 mb-1">Automated payment processing complete</p>
                           <p className="text-xs text-gray-600 leading-relaxed">Processed 1,247 payments across multiple channels with intelligent reconciliation and real-time posting</p>
                         </div>
                       </div>
-                    </div>
-                    
+                  </div>
+                  
                     <div className="group bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-2xl border border-green-200/50 hover:border-green-300/50 transition-all duration-300 hover:shadow-sm">
                       <div className="flex items-start gap-3">
                         <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
                           <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                          </svg>
+                      </svg>
                         </div>
                         <div className="flex-1">
                           <p className="text-sm font-bold text-green-700 mb-1">Proactive borrower engagement active</p>
                           <p className="text-xs text-gray-600 leading-relaxed">Sent 342 personalized communications through preferred channels with 87% engagement rate improvement</p>
                         </div>
                       </div>
-                    </div>
-                    
+                  </div>
+                  
                     <div className="group bg-gradient-to-r from-purple-50 to-violet-50 p-4 rounded-2xl border border-purple-200/50 hover:border-purple-300/50 transition-all duration-300 hover:shadow-sm">
                       <div className="flex items-start gap-3">
                         <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
                           <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                          </svg>
-                        </div>
+                      </svg>
+                    </div>
                         <div className="flex-1">
                           <p className="text-sm font-bold text-purple-700 mb-1">Early intervention system deployed</p>
                           <p className="text-xs text-gray-600 leading-relaxed">Identified 23 at-risk accounts and initiated proactive support measures with 91% success rate</p>
                         </div>
-                      </div>
+                  </div>
                     </div>
                   </div>
                 </div>
@@ -320,7 +320,7 @@ export default function AIServicingPage() {
           </div>
         </div>
       </section>
-
+      
       {/* Agentic Conversation Demo */}
       <section className="bg-gradient-to-br from-slate-50 via-white to-gray-50 py-16 md:py-24 relative overflow-hidden">
         {/* Enhanced Background Elements */}
@@ -363,9 +363,9 @@ export default function AIServicingPage() {
                     </svg>
                   </div>
                 </button>
-              </div>
-            </div>
-            
+                  </div>
+                </div>
+                
             <div className="lg:col-span-7">
               <div className="relative">
                 {/* Main Demo Container */}
@@ -380,9 +380,9 @@ export default function AIServicingPage() {
                         <div className="w-14 h-14 bg-white/15 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 shadow-lg">
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                          </svg>
-                        </div>
-                        <div>
+                    </svg>
+                  </div>
+                  <div>
                           <h3 className="text-xl font-bold text-white">Servicing AI Agent</h3>
                           <div className="flex items-center gap-2 mt-1">
                             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-sm"></div>
@@ -396,8 +396,8 @@ export default function AIServicingPage() {
                         <div className="w-3 h-3 bg-white rounded-full shadow-sm"></div>
                       </div>
                     </div>
-                  </div>
-                  
+                </div>
+                
                   {/* Enhanced Demo Content */}
                   <div className="p-8 space-y-6">
                     <div className="space-y-5">
@@ -406,8 +406,8 @@ export default function AIServicingPage() {
                           <div className="w-10 h-10 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
                             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-                            </svg>
-                          </div>
+                    </svg>
+                  </div>
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
                               <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></div>
@@ -415,33 +415,33 @@ export default function AIServicingPage() {
                             </div>
                             <p className="text-sm text-gray-700 leading-relaxed">Processed 1,847 payments across multiple channels. Automated reconciliation and real-time posting with 99.9% accuracy and instant borrower notifications.</p>
                           </div>
-                        </div>
-                      </div>
-                      
+                  </div>
+                </div>
+                
                       <div className="group bg-gradient-to-r from-green-50 to-emerald-50 p-5 rounded-2xl border border-green-200/50 hover:border-green-300/50 transition-all duration-300 hover:shadow-md">
                         <div className="flex items-start gap-4">
                           <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
                             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                            </svg>
-                          </div>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                    </svg>
+                  </div>
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
                               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                               <span className="text-sm font-bold text-green-700">Proactive Borrower Engagement</span>
-                            </div>
+                  </div>
                             <p className="text-sm text-gray-700 leading-relaxed">Deployed personalized communication campaigns for 456 borrowers. Achieved 89% engagement rate through optimal timing and channel preferences.</p>
-                          </div>
-                        </div>
-                      </div>
-                      
+                </div>
+              </div>
+            </div>
+            
                       <div className="group bg-gradient-to-r from-purple-50 to-violet-50 p-5 rounded-2xl border border-purple-200/50 hover:border-purple-300/50 transition-all duration-300 hover:shadow-md">
                         <div className="flex items-start gap-4">
                           <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-violet-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
                             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                          </div>
+                      </svg>
+                    </div>
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
                               <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
@@ -450,8 +450,8 @@ export default function AIServicingPage() {
                             <p className="text-sm text-gray-700 leading-relaxed">Identified 34 at-risk accounts using predictive analytics. Initiated proactive support measures with 93% success rate in preventing delinquency.</p>
                           </div>
                         </div>
-                      </div>
-                      
+                  </div>
+                  
                       <div className="group bg-gradient-to-r from-cyan-50 to-teal-50 p-5 rounded-2xl border border-cyan-200/50 hover:border-cyan-300/50 transition-all duration-300 hover:shadow-md">
                         <div className="flex items-start gap-4">
                           <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
@@ -493,7 +493,7 @@ export default function AIServicingPage() {
                           <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-1">+38%</div>
                           <div className="text-xs font-medium text-gray-600">Satisfaction Score</div>
                         </div>
-                      </div>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -506,7 +506,7 @@ export default function AIServicingPage() {
           </div>
         </div>
       </section>
-
+      
       {/* Key Benefits */}
       <section className="bg-gradient-to-br from-gray-50 via-white to-gray-100 py-12 md:py-20 relative overflow-hidden">
         {/* Background Elements */}
@@ -568,8 +568,8 @@ export default function AIServicingPage() {
             <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full border border-white/30 shadow-lg mb-8">
               <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-indigo-500 rounded-full mr-3 animate-pulse"></div>
               <span className="text-sm font-medium text-white">Transform Loan Servicing</span>
-            </div>
-            
+          </div>
+          
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white leading-tight">
               <span className="block mb-2">Ready to Deploy Your</span>
               <span className="block bg-gradient-to-r from-cyan-300 via-indigo-300 to-purple-300 bg-clip-text text-transparent py-2">
