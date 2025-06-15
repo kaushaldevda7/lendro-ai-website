@@ -160,20 +160,20 @@ export default function AICreditPage() {
                     <div>
                       <h3 className="font-bold text-gray-900">Credit AI Agent</h3>
                       <p className="text-sm text-gray-500">Analyzing credit applications...</p>
-                    </div>
+              </div>
                   </div>
                   
                   <div className="space-y-4">
                     <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-4 rounded-xl border-l-4 border-purple-500">
                       <p className="text-sm text-gray-700 font-medium">🎯 Risk score calculated: 720 (Low Risk)</p>
                       <p className="text-xs text-gray-600 mt-1">Analyzed 47 data points with 98.3% confidence level</p>
-                    </div>
-                    
+                  </div>
+                  
                     <div className="bg-gradient-to-r from-indigo-50 to-blue-50 p-4 rounded-xl border-l-4 border-indigo-500">
                       <p className="text-sm text-gray-700 font-medium">🛡️ Fraud check completed</p>
                       <p className="text-xs text-gray-600 mt-1">No suspicious patterns detected across 12 fraud indicators</p>
-                    </div>
-                    
+                  </div>
+                  
                     <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-xl border-l-4 border-blue-500">
                       <p className="text-sm text-gray-700 font-medium">✅ Approved with optimal terms</p>
                       <p className="text-xs text-gray-600 mt-1">$25,000 limit at 8.9% APR based on risk profile</p>
@@ -251,7 +251,7 @@ export default function AICreditPage() {
           </div>
         </div>
       </section>
-
+      
       {/* Agentic Conversation Demo */}
       <section className="bg-gradient-to-br from-white via-gray-50 to-white py-12 md:py-20 relative overflow-hidden">
         {/* Background Elements */}
@@ -287,9 +287,9 @@ export default function AICreditPage() {
                 >
                   See Full Demo
                 </button>
-              </div>
-            </div>
-            
+                  </div>
+                </div>
+                
             <div className="lg:col-span-7 h-full flex flex-col">
               <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl border border-gray-200/50 overflow-hidden flex-grow">
                 {/* Demo Header */}
@@ -299,18 +299,18 @@ export default function AICreditPage() {
                       <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
-                      </div>
-                      <div>
+                    </svg>
+                  </div>
+                  <div>
                         <h3 className="text-xl font-bold text-white">Credit AI Agent</h3>
                         <p className="text-white/80">Autonomous Risk Assessment</p>
-                      </div>
-                    </div>
+                  </div>
+                </div>
                     <div className="flex gap-2">
                       <div className="w-3 h-3 bg-white/30 rounded-full"></div>
                       <div className="w-3 h-3 bg-white/50 rounded-full"></div>
                       <div className="w-3 h-3 bg-white rounded-full"></div>
-                    </div>
+                  </div>
                   </div>
                 </div>
                 
@@ -321,7 +321,7 @@ export default function AICreditPage() {
                       <div className="flex items-center gap-2 mb-2">
                         <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
                         <span className="text-sm font-semibold text-purple-700">Executed: Risk Analysis</span>
-                      </div>
+                  </div>
                       <p className="text-sm text-gray-700">Processed 47 data points including credit history, income verification, and alternative data sources. Generated comprehensive risk profile with 98.3% confidence.</p>
                     </div>
                     
@@ -329,7 +329,7 @@ export default function AICreditPage() {
                       <div className="flex items-center gap-2 mb-2">
                         <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></div>
                         <span className="text-sm font-semibold text-indigo-700">Detected: Fraud Indicators</span>
-                      </div>
+                  </div>
                       <p className="text-sm text-gray-700">Analyzed behavioral patterns and device fingerprints. No suspicious activity detected across 12 fraud detection models. Application cleared for processing.</p>
                     </div>
                     
@@ -369,7 +369,7 @@ export default function AICreditPage() {
           </div>
         </div>
       </section>
-
+      
       {/* Key Benefits */}
       <section className="bg-gradient-to-br from-gray-50 via-white to-gray-100 py-12 md:py-20 relative overflow-hidden">
         {/* Background Elements */}
@@ -470,8 +470,8 @@ export default function AICreditPage() {
                   </svg>
                 </div>
               </button>
-            </div>
-            
+                </div>
+                
             {/* Trust Indicators */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
@@ -482,8 +482,8 @@ export default function AICreditPage() {
                 </div>
                 <h4 className="text-lg font-semibold text-white mb-2">Instant Decisions</h4>
                 <p className="text-white/80 text-sm">Credit decisions in seconds with 98%+ accuracy</p>
-              </div>
-              
+                </div>
+                
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-teal-400 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -499,7 +499,7 @@ export default function AICreditPage() {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                   </svg>
-                </div>
+              </div>
                 <h4 className="text-lg font-semibold text-white mb-2">Full Compliance</h4>
                 <p className="text-white/80 text-sm">Built-in regulatory compliance and audit trails</p>
               </div>

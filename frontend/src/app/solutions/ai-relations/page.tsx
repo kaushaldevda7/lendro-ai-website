@@ -262,7 +262,7 @@ export default function AIRelationsPage() {
                 <div className="relative z-10">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
                     {feature.icon}
-                  </div>
+                </div>
                   <h3 className="text-xl font-bold mb-4 text-gray-900 group-hover:text-blue-600 transition-colors">
                     {feature.title}
                   </h3>
@@ -275,7 +275,7 @@ export default function AIRelationsPage() {
           </div>
         </div>
       </section>
-
+      
       {/* Agentic Conversation Demo */}
       <section className="bg-gradient-to-br from-slate-50 via-white to-gray-50 py-16 md:py-24 relative overflow-hidden">
         {/* Enhanced Background Elements */}
@@ -304,8 +304,8 @@ export default function AIRelationsPage() {
                 <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-xl">
                   Experience how our Relations AI Agent operates with complete autonomy, making intelligent decisions and executing strategic actions to optimize every customer relationship.
                 </p>
-              </div>
-              
+                </div>
+                
               <div className="pt-4">
                 <button 
                   onClick={() => setIsScheduleDemoModalOpen(true)}
@@ -335,22 +335,22 @@ export default function AIRelationsPage() {
                         <div className="w-14 h-14 bg-white/15 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 shadow-lg">
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                          </svg>
-                        </div>
-                        <div>
+                    </svg>
+                  </div>
+                  <div>
                           <h3 className="text-xl font-bold text-white">Relations AI Agent</h3>
                           <div className="flex items-center gap-2 mt-1">
                             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-sm"></div>
                             <p className="text-white/90 text-sm font-medium">Processing customer intelligence</p>
-                          </div>
-                        </div>
-                      </div>
+                  </div>
+                </div>
+                  </div>
                       <div className="flex gap-2">
                         <div className="w-3 h-3 bg-white/20 rounded-full"></div>
                         <div className="w-3 h-3 bg-white/40 rounded-full"></div>
                         <div className="w-3 h-3 bg-white rounded-full shadow-sm"></div>
-                      </div>
-                    </div>
+                  </div>
+                  </div>
                   </div>
                   
                   {/* Enhanced Demo Content */}
@@ -362,16 +362,16 @@ export default function AIRelationsPage() {
                             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                             </svg>
-                          </div>
+                </div>
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
                               <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
                               <span className="text-sm font-bold text-blue-700">Advanced Sentiment Analysis</span>
-                            </div>
+              </div>
                             <p className="text-sm text-gray-700 leading-relaxed">Processed 1,247 customer interactions across all channels. Identified 28% improvement in satisfaction scores with 96% accuracy in emotional intelligence detection.</p>
-                          </div>
-                        </div>
-                      </div>
+            </div>
+          </div>
+        </div>
                       
                       <div className="group bg-gradient-to-r from-emerald-50 to-green-50 p-5 rounded-2xl border border-emerald-200/50 hover:border-emerald-300/50 transition-all duration-300 hover:shadow-md">
                         <div className="flex items-start gap-4">
@@ -384,19 +384,19 @@ export default function AIRelationsPage() {
                             <div className="flex items-center gap-2 mb-2">
                               <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
                               <span className="text-sm font-bold text-emerald-700">Proactive Retention Strategy</span>
-                            </div>
+                    </div>
                             <p className="text-sm text-gray-700 leading-relaxed">Deployed personalized retention campaigns for 18 high-value at-risk customers. Autonomous outreach achieved 84% engagement rate with optimal timing algorithms.</p>
-                          </div>
-                        </div>
-                      </div>
-                      
+                    </div>
+              </div>
+            </div>
+            
                       <div className="group bg-gradient-to-r from-violet-50 to-purple-50 p-5 rounded-2xl border border-violet-200/50 hover:border-violet-300/50 transition-all duration-300 hover:shadow-md">
                         <div className="flex items-start gap-4">
                           <div className="w-10 h-10 bg-gradient-to-r from-violet-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
                             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                            </svg>
-                          </div>
+                      </svg>
+                    </div>
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
                               <div className="w-2 h-2 bg-violet-500 rounded-full animate-pulse"></div>
@@ -404,16 +404,16 @@ export default function AIRelationsPage() {
                             </div>
                             <p className="text-sm text-gray-700 leading-relaxed">Dynamically adjusted messaging strategies for 342 customers based on behavioral patterns. Predicted 41% increase in response rates through personalized timing.</p>
                           </div>
-                        </div>
-                      </div>
-                      
+                    </div>
+                  </div>
+                  
                       <div className="group bg-gradient-to-r from-amber-50 to-orange-50 p-5 rounded-2xl border border-amber-200/50 hover:border-amber-300/50 transition-all duration-300 hover:shadow-md">
                         <div className="flex items-start gap-4">
                           <div className="w-10 h-10 bg-gradient-to-r from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
                             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-                            </svg>
-                          </div>
+                      </svg>
+                    </div>
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
                               <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></div>
@@ -423,16 +423,16 @@ export default function AIRelationsPage() {
                           </div>
                         </div>
                       </div>
-                    </div>
-                    
+                  </div>
+                  
                     {/* Enhanced Metrics Dashboard */}
                     <div className="bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl p-6 border border-gray-200/50 shadow-sm">
                       <div className="flex items-center gap-3 mb-6">
                         <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center shadow-sm">
                           <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                          </svg>
-                        </div>
+                      </svg>
+                    </div>
                         <h4 className="font-bold text-gray-900">Real-time Performance Metrics</h4>
                       </div>
                       <div className="grid grid-cols-3 gap-6">
@@ -501,9 +501,9 @@ export default function AIRelationsPage() {
                   <p className="text-gray-600 leading-relaxed">
                     {benefit.description}
                   </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -562,8 +562,8 @@ export default function AIRelationsPage() {
                   </svg>
                 </div>
               </button>
-            </div>
-            
+                </div>
+                
             {/* Trust Indicators */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
@@ -574,8 +574,8 @@ export default function AIRelationsPage() {
                 </div>
                 <h4 className="text-lg font-semibold text-white mb-2">Rapid Deployment</h4>
                 <p className="text-white/80 text-sm">Deploy in weeks with seamless integration to existing systems</p>
-              </div>
-              
+                </div>
+                
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -287,7 +287,7 @@ export default function Home() {
                 </button>
               ))}
             </div>
-          </div>
+            </div>
             
           {/* Main Showcase */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">

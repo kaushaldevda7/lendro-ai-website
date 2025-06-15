@@ -306,15 +306,15 @@ export default function SolutionsPage() {
                           </div>
                         ))}
                       </div>
-                    </div>
-                    
+                  </div>
+                  
                     <div className="flex gap-2">
                       <Link
                         href={`/solutions/${solution.slug}`}
                         className={`flex-1 py-2 px-3 bg-gradient-to-r ${solution.color} text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] text-center text-xs`}
                       >
-                        Learn More
-                      </Link>
+                    Learn More
+                  </Link>
                       <button
                         onClick={() => setIsScheduleDemoModalOpen(true)}
                         className="px-3 py-2 bg-gray-100 text-gray-700 rounded-xl font-semibold hover:bg-gray-200 transition-all text-xs"
@@ -325,7 +325,7 @@ export default function SolutionsPage() {
                   </div>
                 </div>
               ))}
-            </div>
+              </div>
             
             {/* Second Row - 3 Agents Centered */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -343,7 +343,7 @@ export default function SolutionsPage() {
                         {solution.title}
                       </h3>
                       <p className="text-gray-500 text-xs">Autonomous Intelligence</p>
-                    </div>
+                </div>
                     
                     <p className="text-gray-600 mb-6 leading-relaxed text-sm text-center">
                       {solution.description}
@@ -359,8 +359,8 @@ export default function SolutionsPage() {
                           </div>
                         ))}
                       </div>
-                    </div>
-                    
+                  </div>
+                  
                     <div className="flex gap-2">
                       <Link
                         href={`/solutions/${solution.slug}`}
@@ -418,8 +418,8 @@ export default function SolutionsPage() {
                   <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                    </svg>
-                  </div>
+                  </svg>
+                </div>
                   <div>
                     <h3 className="text-3xl font-bold text-white">Complete Lending Infrastructure</h3>
                     <p className="text-white/80 text-lg">Everything you need to launch and scale lending operations</p>
