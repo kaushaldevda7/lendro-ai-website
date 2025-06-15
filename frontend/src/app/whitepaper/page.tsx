@@ -1,12 +1,22 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 
 export default function WhitepaperPage() {
   const [currentSection, setCurrentSection] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
+  // Handle scroll detection for scroll-to-top button
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   const sections = [
     "Cover Page",
     "Table of Contents", 
@@ -35,17 +45,16 @@ export default function WhitepaperPage() {
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50">
         {/* Mobile Menu Button */}
-        <div className="lg:hidden fixed top-20 left-4 z-50">
+        <div className={`lg:hidden fixed top-[5.25rem] right-4 z-50 transition-opacity duration-300 ${
+          isMobileMenuOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'
+        }`}>
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="bg-white/95 backdrop-blur-xl border border-gray-200/50 shadow-lg rounded-xl p-3 hover:bg-gray-50 transition-colors"
+            className="bg-white/95 backdrop-blur-xl border border-gray-200/50 shadow-lg rounded-xl px-4 py-3 hover:bg-gray-50 transition-colors flex items-center gap-2"
           >
-            <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isMobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
+            <span className="text-sm font-medium text-gray-700">Whitepaper Menu</span>
+            <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
         </div>
@@ -63,9 +72,20 @@ export default function WhitepaperPage() {
           isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
         }`}>
           <div className="p-6">
-            <div className="mb-8">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">White Paper Navigation</h3>
-              <p className="text-sm text-gray-600">47-Page Comprehensive Analysis</p>
+            <div className="mb-8 flex items-center justify-between">
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">White Paper Navigation</h3>
+                <p className="text-sm text-gray-600">47-Page Comprehensive Analysis</p>
+              </div>
+              {/* Close button - only visible on mobile when menu is open */}
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="lg:hidden bg-gray-100 hover:bg-gray-200 rounded-lg p-2 transition-colors"
+              >
+                <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
             
             <div className="space-y-2">
@@ -74,7 +94,7 @@ export default function WhitepaperPage() {
                   key={index}
                   onClick={() => {
                     setCurrentSection(index);
-                    setIsMobileMenuOpen(false); // Close mobile menu when section is selected
+                    setIsMobileMenuOpen(false);
                   }}
                   className={`w-full text-left px-4 py-3 rounded-xl transition-all duration-200 ${
                     currentSection === index
@@ -7473,6 +7493,19 @@ export default function WhitepaperPage() {
                       </div>
                         </div>
                       </div>
+
+                      {/* Scroll to Top Button */}
+                      {showScrollTop && (
+                        <button
+                          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                          className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 lg:bottom-8 lg:right-8"
+                        >
+                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                          </svg>
+                        </button>
+                      )}
+
     </Layout>
   );
 } 
