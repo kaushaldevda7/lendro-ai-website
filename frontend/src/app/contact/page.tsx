@@ -184,18 +184,6 @@ export default function ContactPage() {
         
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30 shadow-lg mb-8">
-              <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-teal-500 rounded-full mr-3 animate-pulse"></div>
-              <span className="text-sm font-medium text-white">Get in Touch</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-              <span className="block">Let's Transform</span>
-              <span className="block bg-gradient-to-r from-cyan-300 via-teal-300 to-emerald-300 bg-clip-text text-transparent">
-                Your Lending Operations
-              </span>
-            </h1>
-            
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-12">
               Ready to experience the power of agentic AI? Our team is here to help you get started with autonomous lending solutions.
             </p>
