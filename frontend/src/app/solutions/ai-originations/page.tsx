@@ -253,117 +253,185 @@ export default function AIOriginationsPage() {
       </section>
 
       {/* Agentic Conversation Demo */}
-      <section className="bg-gradient-to-br from-white via-gray-50 to-white py-12 md:py-20 relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-grid-gray-100/20"></div>
-        <div className="absolute top-1/4 left-0 w-72 h-72 bg-gradient-to-r from-green-500/3 to-emerald-600/3 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-gradient-to-r from-emerald-600/3 to-teal-700/3 rounded-full blur-3xl"></div>
+      <section className="bg-gradient-to-br from-slate-50 via-white to-gray-50 py-16 md:py-24 relative overflow-hidden">
+        {/* Enhanced Background Elements */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.05),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(20,184,166,0.05),transparent_50%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-200/50 to-transparent"></div>
         
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-stretch">
-            <div className="lg:col-span-5 h-full flex flex-col">
-              <div className="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-gray-200/50 shadow-sm mb-8 w-fit">
-                <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-red-600 rounded-full mr-3 animate-pulse"></div>
-                <span className="text-sm font-medium text-gray-700">Live Processing Activity</span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
+            <div className="lg:col-span-5 space-y-8">
+              <div className="inline-flex items-center px-5 py-2.5 bg-gradient-to-r from-emerald-50 to-teal-50 backdrop-blur-sm rounded-full border border-emerald-200/50 shadow-sm">
+                <div className="w-2.5 h-2.5 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full mr-3 animate-pulse shadow-sm"></div>
+                <span className="text-sm font-semibold text-emerald-700">Live Processing Engine</span>
               </div>
               
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-green-500 via-emerald-600 to-teal-700 bg-clip-text text-transparent">
-                  Autonomous Application
-                </span>
-                <span className="block text-gray-900 text-3xl md:text-4xl mt-2">
-                  Processing in Action
-                </span>
-              </h2>
+              <div className="space-y-6">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                  <span className="block bg-gradient-to-r from-emerald-600 via-teal-600 to-green-600 bg-clip-text text-transparent mb-2">
+                    Autonomous Application
+                  </span>
+                  <span className="block text-gray-900 text-3xl md:text-4xl lg:text-5xl">
+                    Processing in Action
+                  </span>
+                </h2>
+                
+                <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-xl">
+                  Experience how our Originations AI Agent processes loan applications with complete autonomy, making intelligent decisions and executing instant approvals to transform your lending workflow.
+                </p>
+              </div>
               
-              <p className="text-xl text-gray-600 leading-relaxed flex-grow">
-                Watch how our Originations AI Agent processes loan applications autonomously, making intelligent decisions and taking immediate actions to accelerate approvals and improve customer experience.
-              </p>
-              
-              <div className="mt-auto">
+              <div className="pt-4">
                 <button 
                   onClick={() => setIsScheduleDemoModalOpen(true)}
-                  className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="group px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-2xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
                 >
-                  See Full Demo
+                  <div className="flex items-center gap-3">
+                    <span className="text-lg">Experience Full Demo</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </div>
                 </button>
               </div>
             </div>
             
-            <div className="lg:col-span-7 h-full flex flex-col">
-              <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl border border-gray-200/50 overflow-hidden flex-grow">
-                {/* Demo Header */}
-                <div className="bg-gradient-to-r from-green-500 via-emerald-600 to-teal-700 p-6">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
+            <div className="lg:col-span-7">
+              <div className="relative">
+                {/* Main Demo Container */}
+                <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl border border-gray-200/50 overflow-hidden">
+                  {/* Enhanced Demo Header */}
+                  <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-green-600 p-6 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-black/5"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.1),transparent_70%)]"></div>
+                    
+                    <div className="flex items-center justify-between relative z-10">
+                      <div className="flex items-center gap-4">
+                        <div className="w-14 h-14 bg-white/15 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 shadow-lg">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold text-white">Originations AI Agent</h3>
+                          <div className="flex items-center gap-2 mt-1">
+                            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-sm"></div>
+                            <p className="text-white/90 text-sm font-medium">Processing loan applications</p>
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-white">Originations AI Agent</h3>
-                        <p className="text-white/80">Autonomous Application Processing</p>
+                      <div className="flex gap-2">
+                        <div className="w-3 h-3 bg-white/20 rounded-full"></div>
+                        <div className="w-3 h-3 bg-white/40 rounded-full"></div>
+                        <div className="w-3 h-3 bg-white rounded-full shadow-sm"></div>
                       </div>
                     </div>
-                    <div className="flex gap-2">
-                      <div className="w-3 h-3 bg-white/30 rounded-full"></div>
-                      <div className="w-3 h-3 bg-white/50 rounded-full"></div>
-                      <div className="w-3 h-3 bg-white rounded-full"></div>
+                  </div>
+                  
+                  {/* Enhanced Demo Content */}
+                  <div className="p-8 space-y-6">
+                    <div className="space-y-5">
+                      <div className="group bg-gradient-to-r from-emerald-50 to-teal-50 p-5 rounded-2xl border border-emerald-200/50 hover:border-emerald-300/50 transition-all duration-300 hover:shadow-md">
+                        <div className="flex items-start gap-4">
+                          <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                          </div>
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-2">
+                              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                              <span className="text-sm font-bold text-emerald-700">Intelligent Document Processing</span>
+                            </div>
+                            <p className="text-sm text-gray-700 leading-relaxed">Processed 247 applications across all document types. Advanced OCR extracted data from pay stubs, bank statements, and tax documents with 99.8% accuracy and instant verification.</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="group bg-gradient-to-r from-blue-50 to-indigo-50 p-5 rounded-2xl border border-blue-200/50 hover:border-blue-300/50 transition-all duration-300 hover:shadow-md">
+                        <div className="flex items-start gap-4">
+                          <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                          </div>
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-2">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                              <span className="text-sm font-bold text-blue-700">Advanced Fraud Detection</span>
+                            </div>
+                            <p className="text-sm text-gray-700 leading-relaxed">Identified 7 suspicious applications with identity inconsistencies and synthetic fraud patterns. Automatically flagged high-risk cases and prevented $340K in potential losses.</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="group bg-gradient-to-r from-violet-50 to-purple-50 p-5 rounded-2xl border border-violet-200/50 hover:border-violet-300/50 transition-all duration-300 hover:shadow-md">
+                        <div className="flex items-start gap-4">
+                          <div className="w-10 h-10 bg-gradient-to-r from-violet-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                          </div>
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-2">
+                              <div className="w-2 h-2 bg-violet-500 rounded-full animate-pulse"></div>
+                              <span className="text-sm font-bold text-violet-700">Dynamic Workflow Optimization</span>
+                            </div>
+                            <p className="text-sm text-gray-700 leading-relaxed">Routed 156 high-quality applications to fast-track approval pipeline. Intelligent prioritization reduced average processing time from 3 days to 8 minutes.</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="group bg-gradient-to-r from-amber-50 to-orange-50 p-5 rounded-2xl border border-amber-200/50 hover:border-amber-300/50 transition-all duration-300 hover:shadow-md">
+                        <div className="flex items-start gap-4">
+                          <div className="w-10 h-10 bg-gradient-to-r from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                          </div>
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-2">
+                              <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></div>
+                              <span className="text-sm font-bold text-amber-700">Comprehensive Risk Assessment</span>
+                            </div>
+                            <p className="text-sm text-gray-700 leading-relaxed">Generated detailed risk profiles for 198 applications using advanced ML algorithms. Optimized loan terms and pricing with 94% accuracy in default prediction models.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Enhanced Metrics Dashboard */}
+                    <div className="bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl p-6 border border-gray-200/50 shadow-sm">
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="w-8 h-8 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center shadow-sm">
+                          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                          </svg>
+                        </div>
+                        <h4 className="font-bold text-gray-900">Real-time Processing Metrics</h4>
+                      </div>
+                      <div className="grid grid-cols-3 gap-6">
+                        <div className="text-center">
+                          <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-1">92%</div>
+                          <div className="text-xs font-medium text-gray-600">Faster Processing</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-1">99.8%</div>
+                          <div className="text-xs font-medium text-gray-600">Data Accuracy</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-3xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent mb-1">+48%</div>
+                          <div className="text-xs font-medium text-gray-600">Approval Rate</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 
-                {/* Demo Content */}
-                <div className="p-8 space-y-6 flex-grow">
-                  <div className="space-y-4">
-                    <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-2xl border-l-4 border-green-500">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                        <span className="text-sm font-semibold text-green-700">Executed: Document Processing</span>
-                      </div>
-                      <p className="text-sm text-gray-700">Processed 127 applications in last hour. Extracted data from pay stubs, bank statements, and tax documents with 99.7% accuracy.</p>
-                    </div>
-                    
-                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-2xl border-l-4 border-blue-500">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                        <span className="text-sm font-semibold text-blue-700">Initiated: Fraud Screening</span>
-                      </div>
-                      <p className="text-sm text-gray-700">Detected 3 suspicious applications with identity inconsistencies. Automatically flagged for manual review and blocked processing.</p>
-                    </div>
-                    
-                    <div className="bg-gradient-to-r from-purple-50 to-violet-50 p-4 rounded-2xl border-l-4 border-purple-500">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-                        <span className="text-sm font-semibold text-purple-700">Optimized: Approval Workflow</span>
-                      </div>
-                      <p className="text-sm text-gray-700">Routed 89 high-quality applications to fast-track approval. Average processing time reduced to 12 minutes from 3 days.</p>
-                    </div>
-                    
-                    <div className="bg-gradient-to-r from-orange-50 to-red-50 p-4 rounded-2xl border-l-4 border-orange-500">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
-                        <span className="text-sm font-semibold text-orange-700">Generated: Risk Assessments</span>
-                      </div>
-                      <p className="text-sm text-gray-700">Completed comprehensive risk analysis for 156 applications. Identified optimal loan terms and pricing for each applicant profile.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gray-50 rounded-2xl p-6">
-                    <h4 className="font-semibold text-gray-900 mb-4">Real-time Processing Metrics</h4>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="text-center">
-                        <div className="text-2xl font-bold text-green-600">89%</div>
-                        <div className="text-sm text-gray-600">Faster Processing</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-2xl font-bold text-blue-600">99.7%</div>
-                        <div className="text-sm text-gray-600">Data Accuracy</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                {/* Floating Enhancement Elements */}
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full blur-sm opacity-60 animate-pulse"></div>
+                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-teal-400 to-green-500 rounded-full blur-sm opacity-60 animate-pulse" style={{ animationDelay: '1s' }}></div>
               </div>
             </div>
           </div>
