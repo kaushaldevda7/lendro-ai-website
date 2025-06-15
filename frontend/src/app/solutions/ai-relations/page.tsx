@@ -277,117 +277,185 @@ export default function AIRelationsPage() {
       </section>
 
       {/* Agentic Conversation Demo */}
-      <section className="bg-gradient-to-br from-white via-gray-50 to-white py-12 md:py-20 relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-grid-gray-100/20"></div>
-        <div className="absolute top-1/4 left-0 w-72 h-72 bg-gradient-to-r from-blue-500/3 to-indigo-600/3 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-gradient-to-r from-indigo-600/3 to-purple-700/3 rounded-full blur-3xl"></div>
+      <section className="bg-gradient-to-br from-slate-50 via-white to-gray-50 py-16 md:py-24 relative overflow-hidden">
+        {/* Enhanced Background Elements */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.05),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.05),transparent_50%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-200/50 to-transparent"></div>
         
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-stretch">
-            <div className="lg:col-span-5 h-full flex flex-col">
-              <div className="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-gray-200/50 shadow-sm mb-8 w-fit">
-                <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full mr-3 animate-pulse"></div>
-                <span className="text-sm font-medium text-gray-700">Live Agent Activity</span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
+            <div className="lg:col-span-5 space-y-8">
+              <div className="inline-flex items-center px-5 py-2.5 bg-gradient-to-r from-blue-50 to-indigo-50 backdrop-blur-sm rounded-full border border-blue-200/50 shadow-sm">
+                <div className="w-2.5 h-2.5 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full mr-3 animate-pulse shadow-sm"></div>
+                <span className="text-sm font-semibold text-blue-700">Live Intelligence Engine</span>
               </div>
               
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700 bg-clip-text text-transparent">
-                  Autonomous Relationship
-                </span>
-                <span className="block text-gray-900 text-3xl md:text-4xl mt-2">
-                  Management in Action
-                </span>
-              </h2>
+              <div className="space-y-6">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                  <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                    Autonomous Relationship
+                  </span>
+                  <span className="block text-gray-900 text-3xl md:text-4xl lg:text-5xl">
+                    Management in Action
+                  </span>
+                </h2>
+                
+                <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-xl">
+                  Experience how our Relations AI Agent operates with complete autonomy, making intelligent decisions and executing strategic actions to optimize every customer relationship.
+                </p>
+              </div>
               
-              <p className="text-xl text-gray-600 leading-relaxed flex-grow">
-                Watch how our Relations AI Agent operates independently, making intelligent decisions and taking proactive actions to strengthen customer relationships and drive business outcomes.
-              </p>
-              
-              <div className="mt-auto">
+              <div className="pt-4">
                 <button 
                   onClick={() => setIsScheduleDemoModalOpen(true)}
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
                 >
-                  See Full Demo
+                  <div className="flex items-center gap-3">
+                    <span className="text-lg">Experience Full Demo</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </div>
                 </button>
               </div>
             </div>
             
-            <div className="lg:col-span-7 h-full flex flex-col">
-              <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl border border-gray-200/50 overflow-hidden flex-grow">
-                {/* Demo Header */}
-                <div className="bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700 p-6">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-                        </svg>
+            <div className="lg:col-span-7">
+              <div className="relative">
+                {/* Main Demo Container */}
+                <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl border border-gray-200/50 overflow-hidden">
+                  {/* Enhanced Demo Header */}
+                  <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 p-6 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-black/5"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.1),transparent_70%)]"></div>
+                    
+                    <div className="flex items-center justify-between relative z-10">
+                      <div className="flex items-center gap-4">
+                        <div className="w-14 h-14 bg-white/15 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 shadow-lg">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold text-white">Relations AI Agent</h3>
+                          <div className="flex items-center gap-2 mt-1">
+                            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-sm"></div>
+                            <p className="text-white/90 text-sm font-medium">Processing customer intelligence</p>
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-white">Relations AI Agent</h3>
-                        <p className="text-white/80">Autonomous Customer Intelligence</p>
+                      <div className="flex gap-2">
+                        <div className="w-3 h-3 bg-white/20 rounded-full"></div>
+                        <div className="w-3 h-3 bg-white/40 rounded-full"></div>
+                        <div className="w-3 h-3 bg-white rounded-full shadow-sm"></div>
                       </div>
                     </div>
-                    <div className="flex gap-2">
-                      <div className="w-3 h-3 bg-white/30 rounded-full"></div>
-                      <div className="w-3 h-3 bg-white/50 rounded-full"></div>
-                      <div className="w-3 h-3 bg-white rounded-full"></div>
+                  </div>
+                  
+                  {/* Enhanced Demo Content */}
+                  <div className="p-8 space-y-6">
+                    <div className="space-y-5">
+                      <div className="group bg-gradient-to-r from-blue-50 to-indigo-50 p-5 rounded-2xl border border-blue-200/50 hover:border-blue-300/50 transition-all duration-300 hover:shadow-md">
+                        <div className="flex items-start gap-4">
+                          <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                          </div>
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-2">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                              <span className="text-sm font-bold text-blue-700">Advanced Sentiment Analysis</span>
+                            </div>
+                            <p className="text-sm text-gray-700 leading-relaxed">Processed 1,247 customer interactions across all channels. Identified 28% improvement in satisfaction scores with 96% accuracy in emotional intelligence detection.</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="group bg-gradient-to-r from-emerald-50 to-green-50 p-5 rounded-2xl border border-emerald-200/50 hover:border-emerald-300/50 transition-all duration-300 hover:shadow-md">
+                        <div className="flex items-start gap-4">
+                          <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                          </div>
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-2">
+                              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                              <span className="text-sm font-bold text-emerald-700">Proactive Retention Strategy</span>
+                            </div>
+                            <p className="text-sm text-gray-700 leading-relaxed">Deployed personalized retention campaigns for 18 high-value at-risk customers. Autonomous outreach achieved 84% engagement rate with optimal timing algorithms.</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="group bg-gradient-to-r from-violet-50 to-purple-50 p-5 rounded-2xl border border-violet-200/50 hover:border-violet-300/50 transition-all duration-300 hover:shadow-md">
+                        <div className="flex items-start gap-4">
+                          <div className="w-10 h-10 bg-gradient-to-r from-violet-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                          </div>
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-2">
+                              <div className="w-2 h-2 bg-violet-500 rounded-full animate-pulse"></div>
+                              <span className="text-sm font-bold text-violet-700">Intelligent Communication Optimization</span>
+                            </div>
+                            <p className="text-sm text-gray-700 leading-relaxed">Dynamically adjusted messaging strategies for 342 customers based on behavioral patterns. Predicted 41% increase in response rates through personalized timing.</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="group bg-gradient-to-r from-amber-50 to-orange-50 p-5 rounded-2xl border border-amber-200/50 hover:border-amber-300/50 transition-all duration-300 hover:shadow-md">
+                        <div className="flex items-start gap-4">
+                          <div className="w-10 h-10 bg-gradient-to-r from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                            </svg>
+                          </div>
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-2">
+                              <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></div>
+                              <span className="text-sm font-bold text-amber-700">Predictive Opportunity Intelligence</span>
+                            </div>
+                            <p className="text-sm text-gray-700 leading-relaxed">Machine learning algorithms identified 127 cross-sell opportunities with 91% confidence scores. Automated product recommendations prepared for optimal conversion timing.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Enhanced Metrics Dashboard */}
+                    <div className="bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl p-6 border border-gray-200/50 shadow-sm">
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center shadow-sm">
+                          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                          </svg>
+                        </div>
+                        <h4 className="font-bold text-gray-900">Real-time Performance Metrics</h4>
+                      </div>
+                      <div className="grid grid-cols-3 gap-6">
+                        <div className="text-center">
+                          <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-1">+52%</div>
+                          <div className="text-xs font-medium text-gray-600">Customer Engagement</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent mb-1">-38%</div>
+                          <div className="text-xs font-medium text-gray-600">Churn Risk</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-3xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent mb-1">+67%</div>
+                          <div className="text-xs font-medium text-gray-600">Conversion Rate</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 
-                {/* Demo Content */}
-                <div className="p-8 space-y-6 flex-grow">
-                  <div className="space-y-4">
-                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-2xl border-l-4 border-blue-500">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                        <span className="text-sm font-semibold text-blue-700">Executed: Sentiment Analysis</span>
-                      </div>
-                      <p className="text-sm text-gray-700">Analyzed 847 customer interactions from last 48 hours. Detected 23% increase in satisfaction scores for premium segment.</p>
-                    </div>
-                    
-                    <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-2xl border-l-4 border-green-500">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                        <span className="text-sm font-semibold text-green-700">Initiated: Retention Campaign</span>
-                      </div>
-                      <p className="text-sm text-gray-700">Identified 12 high-value customers at risk. Automatically deployed personalized retention offers with 73% predicted success rate.</p>
-                    </div>
-                    
-                    <div className="bg-gradient-to-r from-purple-50 to-violet-50 p-4 rounded-2xl border-l-4 border-purple-500">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-                        <span className="text-sm font-semibold text-purple-700">Optimized: Communication Timing</span>
-                      </div>
-                      <p className="text-sm text-gray-700">Adjusted outreach schedules for 156 customers based on engagement patterns. Expected 34% improvement in response rates.</p>
-                    </div>
-                    
-                    <div className="bg-gradient-to-r from-orange-50 to-red-50 p-4 rounded-2xl border-l-4 border-orange-500">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
-                        <span className="text-sm font-semibold text-orange-700">Predicted: Cross-sell Opportunities</span>
-                      </div>
-                      <p className="text-sm text-gray-700">Machine learning models identified 89 customers likely to need additional services. Prepared targeted product recommendations.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gray-50 rounded-2xl p-6">
-                    <h4 className="font-semibold text-gray-900 mb-4">Real-time Impact Metrics</h4>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="text-center">
-                        <div className="text-2xl font-bold text-blue-600">+47%</div>
-                        <div className="text-sm text-gray-600">Engagement Rate</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-2xl font-bold text-green-600">-34%</div>
-                        <div className="text-sm text-gray-600">Churn Risk</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                {/* Floating Enhancement Elements */}
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full blur-sm opacity-60 animate-pulse"></div>
+                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-purple-400 to-violet-500 rounded-full blur-sm opacity-60 animate-pulse" style={{ animationDelay: '1s' }}></div>
               </div>
             </div>
           </div>
