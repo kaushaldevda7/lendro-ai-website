@@ -356,7 +356,7 @@ export default function ContactPage() {
                         name="message" 
                         value={formData.message} 
                         onChange={handleChange} 
-                        rows={6} 
+                        rows={10} 
                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-lendro-primary/20 focus:border-lendro-primary transition-all bg-white/50 backdrop-blur-sm resize-none" 
                         placeholder="Tell us about your lending challenges and how we can help..."
                         required
