@@ -212,7 +212,7 @@ export default function AIServicingPage() {
                           <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
                       </svg>
-                        </div>
+                    </div>
                         <div className="flex-1">
                           <p className="text-sm font-bold text-indigo-700 mb-1">Automated payment processing complete</p>
                           <p className="text-xs text-gray-600 leading-relaxed">Processed 1,247 payments across multiple channels with intelligent reconciliation and real-time posting</p>
@@ -226,7 +226,7 @@ export default function AIServicingPage() {
                           <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                       </svg>
-                        </div>
+                    </div>
                         <div className="flex-1">
                           <p className="text-sm font-bold text-green-700 mb-1">Proactive borrower engagement active</p>
                           <p className="text-xs text-gray-600 leading-relaxed">Sent 342 personalized communications through preferred channels with 87% engagement rate improvement</p>
@@ -395,7 +395,7 @@ export default function AIServicingPage() {
                         <div className="w-3 h-3 bg-white/40 rounded-full"></div>
                         <div className="w-3 h-3 bg-white rounded-full shadow-sm"></div>
                       </div>
-                    </div>
+                  </div>
                 </div>
                 
                   {/* Enhanced Demo Content */}
@@ -580,8 +580,8 @@ export default function AIServicingPage() {
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-12">
               Join forward-thinking lenders who are already using autonomous AI to automate payments, enhance borrower engagement, and reduce servicing costs.
               <span className="block mt-2 text-cyan-200 font-medium">Start servicing smarter today.</span>
-            </p>
-            
+              </p>
+              
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
               <button 

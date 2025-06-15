@@ -135,8 +135,8 @@ export default function AITreasuryPage() {
                       <div className="flex items-center gap-2 mt-1">
                         <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-sm"></div>
                         <p className="text-sm font-medium text-gray-600">Optimizing cash management</p>
-                      </div>
-                    </div>
+                                </div>
+                            </div>
                   </div>
                   
                   <div className="space-y-4">
@@ -150,10 +150,10 @@ export default function AITreasuryPage() {
                         <div className="flex-1">
                           <p className="text-sm font-bold text-blue-700 mb-1">Cash flow forecasting complete</p>
                           <p className="text-xs text-gray-600 leading-relaxed">Analyzed 30-day cash position with 96% accuracy. Identified $4.2M excess funds for optimal deployment</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    
+                      
                     <div className="group bg-gradient-to-r from-teal-50 to-cyan-50 p-4 rounded-2xl border border-teal-200/50 hover:border-teal-300/50 transition-all duration-300 hover:shadow-sm">
                       <div className="flex items-start gap-3">
                         <div className="w-8 h-8 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
@@ -314,9 +314,9 @@ export default function AITreasuryPage() {
                         <div className="w-14 h-14 bg-white/15 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 shadow-lg">
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                          </svg>
-                        </div>
-                        <div>
+                    </svg>
+                  </div>
+                  <div>
                           <h3 className="text-xl font-bold text-white">Treasury AI Agent</h3>
                           <div className="flex items-center gap-2 mt-1">
                             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-sm"></div>
@@ -383,16 +383,16 @@ export default function AITreasuryPage() {
                             </div>
                             <p className="text-sm text-gray-700 leading-relaxed">Monitored 2,847 transactions for risk indicators and regulatory compliance. Maintained 100% adherence to treasury policies and regulatory requirements.</p>
                           </div>
-                        </div>
-                      </div>
-                      
+                  </div>
+                </div>
+                
                       <div className="group bg-gradient-to-r from-indigo-50 to-blue-50 p-5 rounded-2xl border border-indigo-200/50 hover:border-indigo-300/50 transition-all duration-300 hover:shadow-md">
                         <div className="flex items-start gap-4">
                           <div className="w-10 h-10 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
                             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                            </svg>
-                          </div>
+                    </svg>
+                  </div>
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
                               <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></div>
@@ -401,17 +401,17 @@ export default function AITreasuryPage() {
                             <p className="text-sm text-gray-700 leading-relaxed">Optimized investment portfolio allocation across Treasury bills, commercial paper, and money market funds. Achieved 5.2% weighted average yield.</p>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    
+                  </div>
+                </div>
+                
                     {/* Enhanced Metrics Dashboard */}
                     <div className="bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl p-6 border border-gray-200/50 shadow-sm">
                       <div className="flex items-center gap-3 mb-6">
                         <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-teal-600 rounded-lg flex items-center justify-center shadow-sm">
                           <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                          </svg>
-                        </div>
+                    </svg>
+                  </div>
                         <h4 className="font-bold text-gray-900">Real-time Treasury Metrics</h4>
                       </div>
                       <div className="grid grid-cols-3 gap-6">
@@ -440,7 +440,7 @@ export default function AITreasuryPage() {
           </div>
         </div>
       </section>
-      
+
       {/* Key Benefits */}
       <section className="bg-gradient-to-br from-gray-50 via-white to-gray-100 py-12 md:py-20 relative overflow-hidden">
         {/* Background Elements */}
@@ -569,7 +569,7 @@ export default function AITreasuryPage() {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
-                </div>
+          </div>
               </button>
               
               <button 
@@ -583,8 +583,8 @@ export default function AITreasuryPage() {
                   </svg>
                 </div>
               </button>
-            </div>
-            
+                </div>
+                
             {/* Trust Indicators */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
@@ -595,8 +595,8 @@ export default function AITreasuryPage() {
                 </div>
                 <h4 className="text-lg font-semibold text-white mb-2">Predictive Forecasting</h4>
                 <p className="text-white/80 text-sm">AI-powered cash flow predictions with 97% accuracy</p>
-              </div>
-              
+                </div>
+                
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -625,7 +625,7 @@ export default function AITreasuryPage() {
               <div className="w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></div>
               <span>Intelligent treasury automation for modern financial institutions</span>
               <div className="w-1 h-1 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-full"></div>
-            </div>
+        </div>
           </div>
         </div>
       </section>
