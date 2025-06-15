@@ -2244,6 +2244,223 @@ export default function WhitepaperPage() {
               </div>
             )}
 
+            {/* Analytics & Business Intelligence */}
+            {currentSection === 11 && (
+              <div className="py-12">
+                <div className="mb-12">
+                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-full border border-blue-200/50 shadow-sm mb-6">
+                    <span className="text-sm font-semibold text-blue-700">Chapter 9</span>
+                  </div>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                    Analytics & Business Intelligence
+                  </h1>
+                  <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"></div>
+                </div>
+
+                <div className="space-y-8">
+                  {/* Real-time Dashboard */}
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Real-time Business Intelligence Dashboard</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div>
+                        <p className="text-gray-700 leading-relaxed mb-6">
+                          Traditional lending analytics rely on static reports and delayed data, making it difficult to respond quickly to 
+                          market changes or operational issues. Lendro.AI's real-time business intelligence platform provides instant 
+                          insights into portfolio performance, operational metrics, and market trends.
+                        </p>
+                        
+                        <div className="space-y-4">
+                          <div className="flex items-start gap-4">
+                            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3 className="font-bold text-gray-900 mb-2">Interactive Dashboards</h3>
+                              <p className="text-gray-600 text-sm">Customizable dashboards with drag-and-drop widgets and real-time data visualization.</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start gap-4">
+                            <div className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3 className="font-bold text-gray-900 mb-2">Performance Metrics</h3>
+                              <p className="text-gray-600 text-sm">Track KPIs including approval rates, processing times, portfolio health, and profitability.</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start gap-4">
+                            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3 className="font-bold text-gray-900 mb-2">Automated Alerts</h3>
+                              <p className="text-gray-600 text-sm">Intelligent alerting system for anomalies, thresholds, and critical business events.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-200/50">
+                        <h3 className="font-bold text-gray-900 mb-4">Dashboard Performance</h3>
+                        <div className="space-y-4">
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-700 text-sm">Data Refresh Rate</span>
+                            <span className="text-blue-600 font-bold">Real-time</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-700 text-sm">Widget Types</span>
+                            <span className="text-blue-600 font-bold">25+</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-700 text-sm">Custom Reports</span>
+                            <span className="text-blue-600 font-bold">Unlimited</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-700 text-sm">Export Formats</span>
+                            <span className="text-blue-600 font-bold">10+</span>
+                          </div>
+                        </div>
+                        
+                        <div className="mt-6 p-4 bg-white/80 rounded-xl">
+                          <h4 className="font-bold text-gray-900 mb-2">Key Metrics Tracked</h4>
+                          <div className="grid grid-cols-2 gap-2 text-xs text-gray-600">
+                            <div>• Loan Volume</div>
+                            <div>• Approval Rates</div>
+                            <div>• Processing Times</div>
+                            <div>• Default Rates</div>
+                            <div>• Revenue/Profit</div>
+                            <div>• Customer Satisfaction</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Advanced Reporting Engine */}
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Advanced Reporting Engine</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                      <div className="p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border border-green-200/50">
+                        <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-3 text-center">Regulatory Reports</h3>
+                        <p className="text-gray-600 text-sm text-center">Automated generation of HMDA, CRA, and other regulatory compliance reports</p>
+                      </div>
+                      
+                      <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-200/50">
+                        <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-3 text-center">Portfolio Analytics</h3>
+                        <p className="text-gray-600 text-sm text-center">Deep dive analysis of portfolio performance, risk distribution, and profitability trends</p>
+                      </div>
+                      
+                      <div className="p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl border border-purple-200/50">
+                        <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 0V6a2 2 0 012-2h4a2 2 0 012 2v1m-6 0h8m-8 0v5a2 2 0 002 2v0a2 2 0 002 2h4a2 2 0 002-2v0a2 2 0 002-2V7m-8 0V3a2 2 0 012-2h4a2 2 0 012 2v4" />
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-3 text-center">Custom Reports</h3>
+                        <p className="text-gray-600 text-sm text-center">Flexible report builder with custom fields, filters, and scheduling capabilities</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Data Analytics & Insights */}
+                  <div className="bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 rounded-3xl p-8 text-white shadow-xl">
+                    <h2 className="text-2xl font-bold mb-6">Advanced Data Analytics & Insights</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div>
+                        <h3 className="font-bold text-white mb-4">Predictive Analytics</h3>
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Portfolio performance forecasting with 96% accuracy</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Customer behavior prediction and segmentation</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Market trend analysis and competitive intelligence</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Risk scenario modeling and stress testing</span>
+                          </div>
+                        </div>
+                        
+                        <div className="mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-xl">
+                          <h4 className="font-bold text-white mb-2">Analytics Performance</h4>
+                          <div className="space-y-2">
+                            <div className="flex justify-between items-center">
+                              <span className="text-white/90 text-sm">Data Processing Speed</span>
+                              <span className="text-white font-bold">< 1 sec</span>
+                            </div>
+                            <div className="flex justify-between items-center">
+                              <span className="text-white/90 text-sm">Prediction Accuracy</span>
+                              <span className="text-white font-bold">96.2%</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-bold text-white mb-4">Business Intelligence Features</h3>
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Drill-down capabilities for detailed analysis</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Comparative analysis across time periods</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Cohort analysis and customer lifetime value</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Automated insights and recommendations</span>
+                          </div>
+                        </div>
+                        
+                        <div className="mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-xl">
+                          <h4 className="font-bold text-white mb-2">Business Impact</h4>
+                          <div className="space-y-2">
+                            <div className="flex justify-between items-center">
+                              <span className="text-white/90 text-sm">Decision Speed</span>
+                              <span className="text-white font-bold">8x Faster</span>
+                            </div>
+                            <div className="flex justify-between items-center">
+                              <span className="text-white/90 text-sm">Data-Driven Decisions</span>
+                              <span className="text-white font-bold">94%</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Navigation */}
             <div className="flex justify-between items-center mt-12 pt-8 border-t border-gray-200">
               <button
