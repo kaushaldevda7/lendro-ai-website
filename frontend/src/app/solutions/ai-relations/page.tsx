@@ -258,7 +258,7 @@ export default function AIRelationsPage() {
             {features.slice(3, 5).map((feature, index) => (
               <div key={index} className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300 group relative overflow-hidden">
                 <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${feature.color} opacity-10 rounded-full blur-2xl`}></div>
-                
+            
                 <div className="relative z-10">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
                     {feature.icon}
@@ -422,7 +422,7 @@ export default function AIRelationsPage() {
                             <p className="text-sm text-gray-700 leading-relaxed">Machine learning algorithms identified 127 cross-sell opportunities with 91% confidence scores. Automated product recommendations prepared for optimal conversion timing.</p>
                           </div>
                         </div>
-                      </div>
+                    </div>
                   </div>
                   
                     {/* Enhanced Metrics Dashboard */}

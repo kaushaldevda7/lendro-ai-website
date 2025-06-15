@@ -468,7 +468,7 @@ export default function AICreditPage() {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:rotate-45 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                   </svg>
-                </div>
+                  </div>
               </button>
                 </div>
                 
@@ -479,7 +479,7 @@ export default function AICreditPage() {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
-                </div>
+                  </div>
                 <h4 className="text-lg font-semibold text-white mb-2">Instant Decisions</h4>
                 <p className="text-white/80 text-sm">Credit decisions in seconds with 98%+ accuracy</p>
                 </div>
@@ -505,7 +505,7 @@ export default function AICreditPage() {
               </div>
             </div>
           </div>
-          
+
           {/* Bottom Accent */}
           <div className="text-center">
             <div className="inline-flex items-center gap-2 text-white/70 text-sm">

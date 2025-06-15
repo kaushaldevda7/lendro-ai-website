@@ -281,7 +281,7 @@ export default function AIOriginationsPage() {
           </div>
         </div>
       </section>
-
+      
       {/* Agentic Conversation Demo */}
       <section className="bg-gradient-to-br from-slate-50 via-white to-gray-50 py-16 md:py-24 relative overflow-hidden">
         {/* Enhanced Background Elements */}
@@ -310,8 +310,8 @@ export default function AIOriginationsPage() {
                 <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-xl">
                   Experience how our Originations AI Agent processes loan applications with complete autonomy, making intelligent decisions and executing instant approvals to transform your lending workflow.
                 </p>
-              </div>
-              
+                </div>
+                
               <div className="pt-4">
                 <button 
                   onClick={() => setIsScheduleDemoModalOpen(true)}
@@ -328,7 +328,7 @@ export default function AIOriginationsPage() {
             </div>
             
             <div className="lg:col-span-7">
-              <div className="relative">
+            <div className="relative">
                 {/* Main Demo Container */}
                 <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl border border-gray-200/50 overflow-hidden">
                   {/* Enhanced Demo Header */}
@@ -341,21 +341,21 @@ export default function AIOriginationsPage() {
                         <div className="w-14 h-14 bg-white/15 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 shadow-lg">
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                          </svg>
-                        </div>
+                      </svg>
+                    </div>
                         <div>
                           <h3 className="text-xl font-bold text-white">Originations AI Agent</h3>
                           <div className="flex items-center gap-2 mt-1">
                             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-sm"></div>
                             <p className="text-white/90 text-sm font-medium">Processing loan applications</p>
                           </div>
-                        </div>
-                      </div>
+                  </div>
+                    </div>
                       <div className="flex gap-2">
                         <div className="w-3 h-3 bg-white/20 rounded-full"></div>
                         <div className="w-3 h-3 bg-white/40 rounded-full"></div>
                         <div className="w-3 h-3 bg-white rounded-full shadow-sm"></div>
-                      </div>
+                    </div>
                     </div>
                   </div>
                   
@@ -367,25 +367,25 @@ export default function AIOriginationsPage() {
                           <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
                             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                          </div>
+                      </svg>
+                  </div>
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
                               <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
                               <span className="text-sm font-bold text-emerald-700">Intelligent Document Processing</span>
-                            </div>
+                </div>
                             <p className="text-sm text-gray-700 leading-relaxed">Processed 247 applications across all document types. Advanced OCR extracted data from pay stubs, bank statements, and tax documents with 99.8% accuracy and instant verification.</p>
-                          </div>
-                        </div>
-                      </div>
+            </div>
+          </div>
+        </div>
                       
                       <div className="group bg-gradient-to-r from-blue-50 to-indigo-50 p-5 rounded-2xl border border-blue-200/50 hover:border-blue-300/50 transition-all duration-300 hover:shadow-md">
                         <div className="flex items-start gap-4">
                           <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
                             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                            </svg>
-                          </div>
+                    </svg>
+                  </div>
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
                               <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
@@ -393,16 +393,16 @@ export default function AIOriginationsPage() {
                             </div>
                             <p className="text-sm text-gray-700 leading-relaxed">Identified 7 suspicious applications with identity inconsistencies and synthetic fraud patterns. Automatically flagged high-risk cases and prevented $340K in potential losses.</p>
                           </div>
-                        </div>
-                      </div>
-                      
+                  </div>
+                </div>
+                
                       <div className="group bg-gradient-to-r from-violet-50 to-purple-50 p-5 rounded-2xl border border-violet-200/50 hover:border-violet-300/50 transition-all duration-300 hover:shadow-md">
                         <div className="flex items-start gap-4">
                           <div className="w-10 h-10 bg-gradient-to-r from-violet-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
                             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                            </svg>
-                          </div>
+                    </svg>
+                  </div>
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
                               <div className="w-2 h-2 bg-violet-500 rounded-full animate-pulse"></div>
@@ -410,51 +410,51 @@ export default function AIOriginationsPage() {
                             </div>
                             <p className="text-sm text-gray-700 leading-relaxed">Routed 156 high-quality applications to fast-track approval pipeline. Intelligent prioritization reduced average processing time from 3 days to 8 minutes.</p>
                           </div>
-                        </div>
-                      </div>
-                      
+                  </div>
+                </div>
+                
                       <div className="group bg-gradient-to-r from-amber-50 to-orange-50 p-5 rounded-2xl border border-amber-200/50 hover:border-amber-300/50 transition-all duration-300 hover:shadow-md">
                         <div className="flex items-start gap-4">
                           <div className="w-10 h-10 bg-gradient-to-r from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
                             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                            </svg>
-                          </div>
+                    </svg>
+                  </div>
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
                               <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></div>
                               <span className="text-sm font-bold text-amber-700">Comprehensive Risk Assessment</span>
-                            </div>
+                  </div>
                             <p className="text-sm text-gray-700 leading-relaxed">Generated detailed risk profiles for 198 applications using advanced ML algorithms. Optimized loan terms and pricing with 94% accuracy in default prediction models.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            
                     {/* Enhanced Metrics Dashboard */}
                     <div className="bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl p-6 border border-gray-200/50 shadow-sm">
                       <div className="flex items-center gap-3 mb-6">
                         <div className="w-8 h-8 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center shadow-sm">
                           <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                          </svg>
-                        </div>
+                      </svg>
+                    </div>
                         <h4 className="font-bold text-gray-900">Real-time Processing Metrics</h4>
-                      </div>
+                    </div>
                       <div className="grid grid-cols-3 gap-6">
                         <div className="text-center">
                           <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-1">92%</div>
                           <div className="text-xs font-medium text-gray-600">Faster Processing</div>
-                        </div>
+                  </div>
                         <div className="text-center">
                           <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-1">99.8%</div>
                           <div className="text-xs font-medium text-gray-600">Data Accuracy</div>
-                        </div>
+                    </div>
                         <div className="text-center">
                           <div className="text-3xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent mb-1">+48%</div>
                           <div className="text-xs font-medium text-gray-600">Approval Rate</div>
-                        </div>
-                      </div>
+                    </div>
+                  </div>
                     </div>
                   </div>
                 </div>
@@ -507,8 +507,8 @@ export default function AIOriginationsPage() {
                   <p className="text-gray-600 leading-relaxed">
                     {benefit.description}
                   </p>
-                </div>
-              </div>
+            </div>
+            </div>
             ))}
           </div>
         </div>
@@ -566,7 +566,7 @@ export default function AIOriginationsPage() {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:rotate-45 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                   </svg>
-                </div>
+              </div>
               </button>
             </div>
             
