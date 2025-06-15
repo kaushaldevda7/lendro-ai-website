@@ -2461,6 +2461,223 @@ export default function WhitepaperPage() {
               </div>
             )}
 
+            {/* System Architecture & Security */}
+            {currentSection === 12 && (
+              <div className="py-12">
+                <div className="mb-12">
+                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-full border border-blue-200/50 shadow-sm mb-6">
+                    <span className="text-sm font-semibold text-blue-700">Chapter 10</span>
+                  </div>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                    System Architecture & Security
+                  </h1>
+                  <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"></div>
+                </div>
+
+                <div className="space-y-8">
+                  {/* Cloud-Native Architecture */}
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Cloud-Native Architecture</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div>
+                        <p className="text-gray-700 leading-relaxed mb-6">
+                          Lendro.AI is built on a modern, cloud-native architecture designed for scalability, reliability, and performance. 
+                          Our microservices-based approach ensures that each component can scale independently, providing optimal resource 
+                          utilization and system resilience.
+                        </p>
+                        
+                        <div className="space-y-4">
+                          <div className="flex items-start gap-4">
+                            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3 className="font-bold text-gray-900 mb-2">Microservices Architecture</h3>
+                              <p className="text-gray-600 text-sm">Modular, independently deployable services that can scale based on demand.</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start gap-4">
+                            <div className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3 className="font-bold text-gray-900 mb-2">Multi-Cloud Deployment</h3>
+                              <p className="text-gray-600 text-sm">Deployed across AWS, Azure, and GCP for maximum availability and disaster recovery.</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start gap-4">
+                            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3 className="font-bold text-gray-900 mb-2">Auto-Scaling Infrastructure</h3>
+                              <p className="text-gray-600 text-sm">Automatic resource scaling based on load patterns and performance metrics.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-200/50">
+                        <h3 className="font-bold text-gray-900 mb-4">Architecture Metrics</h3>
+                        <div className="space-y-4">
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-700 text-sm">System Uptime</span>
+                            <span className="text-blue-600 font-bold">99.99%</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-700 text-sm">Response Time</span>
+                            <span className="text-blue-600 font-bold">< 200ms</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-700 text-sm">Concurrent Users</span>
+                            <span className="text-blue-600 font-bold">100K+</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-700 text-sm">Data Processing</span>
+                            <span className="text-blue-600 font-bold">1M+ TPS</span>
+                          </div>
+                        </div>
+                        
+                        <div className="mt-6 p-4 bg-white/80 rounded-xl">
+                          <h4 className="font-bold text-gray-900 mb-2">Technology Stack</h4>
+                          <div className="grid grid-cols-2 gap-2 text-xs text-gray-600">
+                            <div>• Kubernetes</div>
+                            <div>• Docker</div>
+                            <div>• Node.js/Python</div>
+                            <div>• PostgreSQL</div>
+                            <div>• Redis</div>
+                            <div>• Elasticsearch</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Security Framework */}
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Enterprise Security Framework</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                      <div className="p-6 bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl border border-red-200/50">
+                        <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-3 text-center">Data Protection</h3>
+                        <p className="text-gray-600 text-sm text-center">End-to-end encryption, data masking, and secure key management with AES-256 encryption</p>
+                      </div>
+                      
+                      <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-200/50">
+                        <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-3 text-center">Access Control</h3>
+                        <p className="text-gray-600 text-sm text-center">Multi-factor authentication, role-based permissions, and zero-trust security model</p>
+                      </div>
+                      
+                      <div className="p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border border-green-200/50">
+                        <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-3 text-center">Compliance</h3>
+                        <p className="text-gray-600 text-sm text-center">SOC 2 Type II, PCI DSS, GDPR, and banking-grade security standards compliance</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Scalability & Performance */}
+                  <div className="bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 rounded-3xl p-8 text-white shadow-xl">
+                    <h2 className="text-2xl font-bold mb-6">Scalability & Performance Engineering</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div>
+                        <h3 className="font-bold text-white mb-4">Horizontal Scaling</h3>
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Auto-scaling based on CPU, memory, and custom metrics</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Load balancing across multiple availability zones</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Database sharding and read replicas</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">CDN integration for global content delivery</span>
+                          </div>
+                        </div>
+                        
+                        <div className="mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-xl">
+                          <h4 className="font-bold text-white mb-2">Performance Metrics</h4>
+                          <div className="space-y-2">
+                            <div className="flex justify-between items-center">
+                              <span className="text-white/90 text-sm">API Response Time</span>
+                              <span className="text-white font-bold">< 100ms</span>
+                            </div>
+                            <div className="flex justify-between items-center">
+                              <span className="text-white/90 text-sm">Database Query Time</span>
+                              <span className="text-white font-bold">< 50ms</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-bold text-white mb-4">Monitoring & Observability</h3>
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Real-time application performance monitoring</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Distributed tracing and error tracking</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Automated alerting and incident response</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Comprehensive logging and audit trails</span>
+                          </div>
+                        </div>
+                        
+                        <div className="mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-xl">
+                          <h4 className="font-bold text-white mb-2">Reliability Metrics</h4>
+                          <div className="space-y-2">
+                            <div className="flex justify-between items-center">
+                              <span className="text-white/90 text-sm">System Availability</span>
+                              <span className="text-white font-bold">99.99%</span>
+                            </div>
+                            <div className="flex justify-between items-center">
+                              <span className="text-white/90 text-sm">Mean Time to Recovery</span>
+                              <span className="text-white font-bold">< 5 min</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Navigation */}
             <div className="flex justify-between items-center mt-12 pt-8 border-t border-gray-200">
               <button
