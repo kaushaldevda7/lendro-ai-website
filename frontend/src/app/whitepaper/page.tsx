@@ -1027,6 +1027,794 @@ export default function WhitepaperPage() {
               </div>
             )}
 
+            {/* Loan Origination Revolution */}
+            {currentSection === 6 && (
+              <div className="py-12">
+                <div className="mb-12">
+                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-full border border-blue-200/50 shadow-sm mb-6">
+                    <span className="text-sm font-semibold text-blue-700">Chapter 4</span>
+                  </div>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                    Loan Origination Revolution
+                  </h1>
+                  <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"></div>
+                </div>
+
+                <div className="space-y-8">
+                  {/* Application Processing */}
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Multi-Channel Application Processing</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div>
+                        <p className="text-gray-700 leading-relaxed mb-6">
+                          Traditional loan origination processes are plagued by manual data entry, disconnected systems, and lengthy approval cycles. 
+                          Lendro.AI's origination module transforms this experience through intelligent automation and seamless integration.
+                        </p>
+                        
+                        <div className="space-y-4">
+                          <div className="flex items-start gap-4">
+                            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3 className="font-bold text-gray-900 mb-2">Web Forms & API Integration</h3>
+                              <p className="text-gray-600 text-sm">Seamless application intake through multiple channels with real-time validation and error checking.</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start gap-4">
+                            <div className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3 className="font-bold text-gray-900 mb-2">Smart Application Routing</h3>
+                              <p className="text-gray-600 text-sm">AI-powered workflow assignment based on loan type, complexity, and underwriter expertise.</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start gap-4">
+                            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3 className="font-bold text-gray-900 mb-2">Real-time Application Tracking</h3>
+                              <p className="text-gray-600 text-sm">Complete visibility into application status with automated notifications and milestone updates.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-200/50">
+                        <h3 className="font-bold text-gray-900 mb-4">Processing Time Improvements</h3>
+                        <div className="space-y-4">
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-700 text-sm">Traditional Process</span>
+                            <span className="text-red-600 font-bold">30-45 days</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-700 text-sm">With Lendro.AI</span>
+                            <span className="text-green-600 font-bold">3-7 days</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-700 text-sm">Improvement</span>
+                            <span className="text-blue-600 font-bold">85% faster</span>
+                          </div>
+                        </div>
+                        
+                        <div className="mt-6 p-4 bg-white/80 rounded-xl">
+                          <h4 className="font-bold text-gray-900 mb-2">Key Metrics</h4>
+                          <div className="grid grid-cols-2 gap-4 text-center">
+                            <div>
+                              <div className="text-lg font-bold text-blue-600">94%</div>
+                              <div className="text-xs text-gray-600">Automation Rate</div>
+                            </div>
+                            <div>
+                              <div className="text-lg font-bold text-indigo-600">99.2%</div>
+                              <div className="text-xs text-gray-600">Data Accuracy</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Document Management */}
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Intelligent Document Collection & Processing</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                      <div className="p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border border-green-200/50">
+                        <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-3 text-center">OCR Processing</h3>
+                        <p className="text-gray-600 text-sm text-center">Advanced optical character recognition extracts data from documents with 99.5% accuracy</p>
+                      </div>
+                      
+                      <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-200/50">
+                        <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-3 text-center">Auto Classification</h3>
+                        <p className="text-gray-600 text-sm text-center">AI automatically categorizes and routes documents to appropriate processing workflows</p>
+                      </div>
+                      
+                      <div className="p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl border border-purple-200/50">
+                        <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-3 text-center">Data Validation</h3>
+                        <p className="text-gray-600 text-sm text-center">Real-time verification against multiple data sources ensures accuracy and completeness</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Product Configuration */}
+                  <div className="bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 rounded-3xl p-8 text-white shadow-xl">
+                    <h2 className="text-2xl font-bold mb-6">Flexible Product Configuration</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div>
+                        <h3 className="font-bold text-white mb-4">Supported Loan Products</h3>
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Personal loans with flexible terms</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Business loans and working capital</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Auto loans and vehicle financing</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Lines of credit and revolving facilities</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">SBA loans and government programs</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Equipment financing and leasing</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                        <h3 className="font-bold text-white mb-4">Configuration Capabilities</h3>
+                        <div className="space-y-4">
+                          <div className="flex justify-between items-center">
+                            <span className="text-white/90 text-sm">Interest Rate Models</span>
+                            <span className="text-white font-bold">15+</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-white/90 text-sm">Term Options</span>
+                            <span className="text-white font-bold">Unlimited</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-white/90 text-sm">Fee Structures</span>
+                            <span className="text-white font-bold">Custom</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-white/90 text-sm">Workflow Rules</span>
+                            <span className="text-white font-bold">Dynamic</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* AI-Powered Risk Assessment */}
+            {currentSection === 7 && (
+              <div className="py-12">
+                <div className="mb-12">
+                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-full border border-blue-200/50 shadow-sm mb-6">
+                    <span className="text-sm font-semibold text-blue-700">Chapter 5</span>
+                  </div>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                    AI-Powered Risk Assessment
+                  </h1>
+                  <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"></div>
+                </div>
+
+                <div className="space-y-8">
+                  {/* Multi-factor Risk Engine */}
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Advanced Multi-Factor Risk Engine</h2>
+                    <div className="prose prose-gray max-w-none mb-8">
+                      <p className="text-gray-700 leading-relaxed">
+                        Traditional credit scoring relies on limited data points and static models that fail to capture the full risk profile 
+                        of modern borrowers. Lendro.AI's risk assessment engine leverages advanced machine learning algorithms to analyze 
+                        hundreds of data points in real-time, providing more accurate and nuanced risk evaluations.
+                      </p>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                      <div className="text-center p-6 bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl border border-red-200/50">
+                        <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-2">Credit Scores</h3>
+                        <p className="text-gray-600 text-sm">Traditional and alternative credit scoring models with real-time updates</p>
+                      </div>
+                      
+                      <div className="text-center p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-200/50">
+                        <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-2">Financial Data</h3>
+                        <p className="text-gray-600 text-sm">Bank statements, cash flow analysis, and financial statement processing</p>
+                      </div>
+                      
+                      <div className="text-center p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border border-green-200/50">
+                        <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-2">Alternative Data</h3>
+                        <p className="text-gray-600 text-sm">Social signals, behavioral patterns, and non-traditional risk indicators</p>
+                      </div>
+                      
+                      <div className="text-center p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl border border-purple-200/50">
+                        <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-2">Real-time Monitoring</h3>
+                        <p className="text-gray-600 text-sm">Continuous risk assessment and early warning system alerts</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Custom Scorecard Builder */}
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Custom Scorecard Builder</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div>
+                        <p className="text-gray-700 leading-relaxed mb-6">
+                          Build sophisticated risk models tailored to your specific lending portfolio and risk appetite. 
+                          Our visual scorecard builder allows you to create, test, and deploy custom scoring models without requiring data science expertise.
+                        </p>
+                        
+                        <div className="space-y-4">
+                          <div className="p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200/50">
+                            <h4 className="font-bold text-gray-900 mb-2">Rule-Based Scoring</h4>
+                            <p className="text-gray-600 text-sm">Create complex decision trees with weighted categories and conditional logic</p>
+                          </div>
+                          
+                          <div className="p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl border border-indigo-200/50">
+                            <h4 className="font-bold text-gray-900 mb-2">Machine Learning Models</h4>
+                            <p className="text-gray-600 text-sm">Deploy advanced ML algorithms that learn and adapt from your portfolio performance</p>
+                          </div>
+                          
+                          <div className="p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl border border-purple-200/50">
+                            <h4 className="font-bold text-gray-900 mb-2">A/B Testing Framework</h4>
+                            <p className="text-gray-600 text-sm">Test multiple scoring models simultaneously to optimize performance</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl p-6 border border-gray-200/50">
+                        <h3 className="font-bold text-gray-900 mb-4">Risk Model Performance</h3>
+                        <div className="space-y-6">
+                          <div>
+                            <div className="flex justify-between items-center mb-2">
+                              <span className="text-gray-700 text-sm">Prediction Accuracy</span>
+                              <span className="text-blue-600 font-bold">94.7%</span>
+                            </div>
+                            <div className="w-full bg-gray-200 rounded-full h-2">
+                              <div className="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full" style={{ width: '94.7%' }}></div>
+                            </div>
+                          </div>
+                          
+                          <div>
+                            <div className="flex justify-between items-center mb-2">
+                              <span className="text-gray-700 text-sm">Default Prediction</span>
+                              <span className="text-indigo-600 font-bold">89.3%</span>
+                            </div>
+                            <div className="w-full bg-gray-200 rounded-full h-2">
+                              <div className="bg-gradient-to-r from-indigo-500 to-purple-600 h-2 rounded-full" style={{ width: '89.3%' }}></div>
+                            </div>
+                          </div>
+                          
+                          <div>
+                            <div className="flex justify-between items-center mb-2">
+                              <span className="text-gray-700 text-sm">Processing Speed</span>
+                              <span className="text-purple-600 font-bold">< 2 sec</span>
+                            </div>
+                            <div className="w-full bg-gray-200 rounded-full h-2">
+                              <div className="bg-gradient-to-r from-purple-500 to-pink-600 h-2 rounded-full" style={{ width: '98%' }}></div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div className="mt-6 p-4 bg-white/80 rounded-xl">
+                          <h4 className="font-bold text-gray-900 mb-2">Risk Reduction Impact</h4>
+                          <div className="text-center">
+                            <div className="text-2xl font-bold text-green-600 mb-1">67%</div>
+                            <div className="text-xs text-gray-600">Lower default rates vs traditional models</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Compliance & Regulatory */}
+                  <div className="bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 rounded-3xl p-8 text-white shadow-xl">
+                    <h2 className="text-2xl font-bold mb-6">Compliance & Regulatory Framework</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                      <div>
+                        <h3 className="font-bold text-white mb-4">Automated Compliance</h3>
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">FCRA compliance checks</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">ECOA fair lending monitoring</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">State lending regulations</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">GDPR data protection</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-bold text-white mb-4">Audit Trail Management</h3>
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Complete decision documentation</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Model explainability reports</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Regulatory examination support</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Adverse action notices</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                        <h3 className="font-bold text-white mb-4">Regulatory Reporting</h3>
+                        <div className="space-y-4">
+                          <div className="flex justify-between items-center">
+                            <span className="text-white/90 text-sm">HMDA Reports</span>
+                            <span className="text-white font-bold">Auto</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-white/90 text-sm">CRA Compliance</span>
+                            <span className="text-white font-bold">Built-in</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-white/90 text-sm">Fair Lending</span>
+                            <span className="text-white font-bold">Monitored</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-white/90 text-sm">Model Validation</span>
+                            <span className="text-white font-bold">Continuous</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Intelligent Loan Servicing */}
+            {currentSection === 8 && (
+              <div className="py-12">
+                <div className="mb-12">
+                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-full border border-blue-200/50 shadow-sm mb-6">
+                    <span className="text-sm font-semibold text-blue-700">Chapter 6</span>
+                  </div>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                    Intelligent Loan Servicing
+                  </h1>
+                  <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"></div>
+                </div>
+
+                <div className="space-y-8">
+                  {/* Payment Processing & Management */}
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Automated Payment Processing & Management</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div>
+                        <p className="text-gray-700 leading-relaxed mb-6">
+                          Traditional loan servicing involves manual payment processing, fragmented communication, and reactive portfolio management. 
+                          Lendro.AI's intelligent servicing platform transforms this experience through automation, real-time monitoring, and proactive customer engagement.
+                        </p>
+                        
+                        <div className="space-y-4">
+                          <div className="flex items-start gap-4">
+                            <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3 className="font-bold text-gray-900 mb-2">Multi-Channel Payment Processing</h3>
+                              <p className="text-gray-600 text-sm">ACH, wire transfers, credit cards, and digital wallets with real-time reconciliation and posting.</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start gap-4">
+                            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3 className="font-bold text-gray-900 mb-2">Automated Recurring Payments</h3>
+                              <p className="text-gray-600 text-sm">Smart autopay management with failure handling, retry logic, and customer notifications.</p>
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-start gap-4">
+                            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                              </svg>
+                            </div>
+                            <div>
+                              <h3 className="font-bold text-gray-900 mb-2">Real-time Account Management</h3>
+                              <p className="text-gray-600 text-sm">Instant balance updates, payment allocation, and transaction history with audit trails.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-200/50">
+                        <h3 className="font-bold text-gray-900 mb-4">Payment Processing Metrics</h3>
+                        <div className="space-y-4">
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-700 text-sm">Processing Speed</span>
+                            <span className="text-green-600 font-bold">< 30 sec</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-700 text-sm">Success Rate</span>
+                            <span className="text-green-600 font-bold">99.7%</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-700 text-sm">Reconciliation</span>
+                            <span className="text-green-600 font-bold">Real-time</span>
+                          </div>
+                        </div>
+                        
+                        <div className="mt-6 p-4 bg-white/80 rounded-xl">
+                          <h4 className="font-bold text-gray-900 mb-2">Cost Reduction</h4>
+                          <div className="text-center">
+                            <div className="text-2xl font-bold text-green-600 mb-1">78%</div>
+                            <div className="text-xs text-gray-600">Lower servicing costs vs manual processing</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Portfolio Monitoring */}
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">AI-Powered Portfolio Monitoring</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                      <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-200/50">
+                        <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-3 text-center">Performance Analytics</h3>
+                        <p className="text-gray-600 text-sm text-center">Real-time portfolio performance tracking with predictive insights and trend analysis</p>
+                      </div>
+                      
+                      <div className="p-6 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl border border-indigo-200/50">
+                        <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-3 text-center">Early Warning System</h3>
+                        <p className="text-gray-600 text-sm text-center">Proactive identification of at-risk accounts with automated alerts and intervention triggers</p>
+                      </div>
+                      
+                      <div className="p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl border border-purple-200/50">
+                        <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                          </svg>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-3 text-center">Compliance Monitoring</h3>
+                        <p className="text-gray-600 text-sm text-center">Automated regulatory compliance tracking with exception reporting and audit trails</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Delinquency Management */}
+                  <div className="bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 rounded-3xl p-8 text-white shadow-xl">
+                    <h2 className="text-2xl font-bold mb-6">Intelligent Delinquency Management</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div>
+                        <h3 className="font-bold text-white mb-4">Automated Collections Workflow</h3>
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Early intervention strategies (5-15 days past due)</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Escalation workflows with personalized outreach</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Payment plan automation and modification</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Legal action preparation and documentation</span>
+                          </div>
+                        </div>
+                        
+                        <div className="mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-xl">
+                          <h4 className="font-bold text-white mb-2">Recovery Performance</h4>
+                          <div className="space-y-2">
+                            <div className="flex justify-between items-center">
+                              <span className="text-white/90 text-sm">Recovery Rate</span>
+                              <span className="text-white font-bold">84%</span>
+                            </div>
+                            <div className="flex justify-between items-center">
+                              <span className="text-white/90 text-sm">Time to Resolution</span>
+                              <span className="text-white font-bold">-45%</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-bold text-white mb-4">Communication & Engagement</h3>
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Multi-channel communication (SMS, email, voice)</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Personalized messaging based on borrower profile</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Self-service payment portals and options</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Hardship program automation and qualification</span>
+                          </div>
+                        </div>
+                        
+                        <div className="mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-xl">
+                          <h4 className="font-bold text-white mb-2">Customer Satisfaction</h4>
+                          <div className="space-y-2">
+                            <div className="flex justify-between items-center">
+                              <span className="text-white/90 text-sm">Response Rate</span>
+                              <span className="text-white font-bold">73%</span>
+                            </div>
+                            <div className="flex justify-between items-center">
+                              <span className="text-white/90 text-sm">Resolution Satisfaction</span>
+                              <span className="text-white font-bold">89%</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Automation & Intelligence */}
+            {/* Future Roadmap */}
+            {currentSection === 17 && (
+              <div className="py-12">
+                <div className="mb-12">
+                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-full border border-blue-200/50 shadow-sm mb-6">
+                    <span className="text-sm font-semibold text-blue-700">Chapter 15</span>
+                  </div>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                    Future Roadmap
+                  </h1>
+                  <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"></div>
+                </div>
+
+                <div className="space-y-8">
+                  {/* Future Roadmap Overview */}
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Future Roadmap</h2>
+                    <div className="prose prose-gray max-w-none">
+                      <p className="text-gray-700 leading-relaxed mb-4">
+                        Lendro.AI's future roadmap includes continued innovation and expansion of its AI-powered platform.
+                      </p>
+                      
+                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-200/50 my-6">
+                        <h3 className="font-bold text-gray-900 mb-3">Key Features</h3>
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Continued innovation</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Expansion of AI-powered platform</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Regulatory Compliance */}
+            {currentSection === 18 && (
+              <div className="py-12">
+                <div className="mb-12">
+                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-full border border-blue-200/50 shadow-sm mb-6">
+                    <span className="text-sm font-semibold text-blue-700">Chapter 16</span>
+                  </div>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                    Regulatory Compliance
+                  </h1>
+                  <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"></div>
+                </div>
+
+                <div className="space-y-8">
+                  {/* Regulatory Compliance Overview */}
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Regulatory Compliance</h2>
+                    <div className="prose prose-gray max-w-none">
+                      <p className="text-gray-700 leading-relaxed mb-4">
+                        Lendro.AI's AI-powered platform is built with regulatory compliance in mind.
+                      </p>
+                      
+                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-200/50 my-6">
+                        <h3 className="font-bold text-gray-900 mb-3">Key Features</h3>
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Built-in compliance</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Comprehensive compliance</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Best Practices */}
+            {currentSection === 19 && (
+              <div className="py-12">
+                <div className="mb-12">
+                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-full border border-blue-200/50 shadow-sm mb-6">
+                    <span className="text-sm font-semibold text-blue-700">Chapter 18</span>
+                  </div>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                    Best Practices
+                  </h1>
+                  <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"></div>
+                </div>
+
+                <div className="space-y-8">
+                  {/* Best Practices Overview */}
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Best Practices</h2>
+                    <div className="prose prose-gray max-w-none">
+                      <p className="text-gray-700 leading-relaxed mb-4">
+                        Lendro.AI's AI-powered platform uses advanced algorithms to analyze various factors and predict the likelihood of default. This approach helps financial institutions make more accurate and informed decisions about loan approvals.
+                      </p>
+                      
+                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-200/50 my-6">
+                        <h3 className="font-bold text-gray-900 mb-3">Key Features</h3>
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Intelligent document processing</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Conversational AI agents</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Predictive analytics</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Conclusion & Recommendations */}
+            {currentSection === 20 && (
+              <div className="py-12">
+                <div className="mb-12">
+                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-full border border-blue-200/50 shadow-sm mb-6">
+                    <span className="text-sm font-semibold text-blue-700">Chapter 19</span>
+                  </div>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                    Conclusion & Recommendations
+                  </h1>
+                  <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"></div>
+                </div>
+
+                <div className="space-y-8">
+                  {/* Conclusion & Recommendations Overview */}
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Conclusion & Recommendations</h2>
+                    <div className="prose prose-gray max-w-none">
+                      <p className="text-gray-700 leading-relaxed mb-4">
+                        Lendro.AI's AI-powered platform has resulted in significant ROI and business impact for financial institutions.
+                      </p>
+                      
+                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-200/50 my-6">
+                        <h3 className="font-bold text-gray-900 mb-3">Key Benefits</h3>
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Improved ROI</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span className="text-white/90 text-sm">Reduced business impact</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Navigation */}
             <div className="flex justify-between items-center mt-12 pt-8 border-t border-gray-200">
               <button
