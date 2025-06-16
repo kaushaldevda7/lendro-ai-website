@@ -22,60 +22,128 @@ const Footer: React.FC = () => {
               </div>
             </div>
             <p className="text-white/80 text-sm leading-relaxed">
-              Enterprise-grade AI platform for loan management with configurable modules for every stage of the loan lifecycle.
+              Autonomous AI agents that think, learn, and act—transforming lending operations with unprecedented intelligence and efficiency.
             </p>
+            <div className="flex items-center gap-2 text-white/60 text-xs">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span>Next-Generation AI Technology</span>
+            </div>
           </div>
           
           <div className="space-y-4">
-            <h3 className="text-sm font-medium uppercase tracking-wider">Solutions</h3>
+            <h3 className="text-sm font-medium uppercase tracking-wider">AI Agents</h3>
             <ul className="space-y-3">
-              {["AI Relations", "AI Originations", "AI Credit", "AI Servicing", "AI Collections", "AI Treasury", "Lending as a Service"].map((item) => (
-                <li key={item}>
-                  <Link href={`/solutions/${item.toLowerCase().replace(/\s+/g, '-')}`} className="text-white/70 hover:text-white text-sm transition-colors">
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="/solutions/ai-relations" className="text-white/70 hover:text-white text-sm transition-colors">
+                  Relations AI Agent
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions/ai-originations" className="text-white/70 hover:text-white text-sm transition-colors">
+                  Originations AI Agent
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions/ai-spreading" className="text-white/70 hover:text-white text-sm transition-colors">
+                  Spreading AI Agent
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions/ai-credit" className="text-white/70 hover:text-white text-sm transition-colors">
+                  Credit AI Agent
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions/ai-servicing" className="text-white/70 hover:text-white text-sm transition-colors">
+                  Servicing AI Agent
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions/ai-collections" className="text-white/70 hover:text-white text-sm transition-colors">
+                  Collections AI Agent
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions/ai-treasury" className="text-white/70 hover:text-white text-sm transition-colors">
+                  Treasury AI Agent
+                </Link>
+              </li>
             </ul>
           </div>
           
           <div className="space-y-4">
             <h3 className="text-sm font-medium uppercase tracking-wider">Company</h3>
             <ul className="space-y-3">
-              {["About", "Leadership", "Careers", "Press", "Contact"].map((item) => (
-                <li key={item}>
-                  <Link href={`/${item.toLowerCase()}`} className="text-white/70 hover:text-white text-sm transition-colors">
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="/about" className="text-white/70 hover:text-white text-sm transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-white/70 hover:text-white text-sm transition-colors">
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
           
           <div className="space-y-4">
             <h3 className="text-sm font-medium uppercase tracking-wider">Resources</h3>
             <ul className="space-y-3">
-              {["Documentation", "API Reference", "Support", "Community", "Blog"].map((item) => (
-                <li key={item}>
-                  <Link href={`/${item.toLowerCase().replace(/\s+/g, '-')}`} className="text-white/70 hover:text-white text-sm transition-colors">
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="/whitepaper" className="text-white/70 hover:text-white text-sm transition-colors">
+                  White Paper
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/ai-risk-models" className="text-white/70 hover:text-white text-sm transition-colors">
+                  AI Risk Models
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/lending-ai-disruption" className="text-white/70 hover:text-white text-sm transition-colors">
+                  AI Disruption
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/ai-financial-opportunity" className="text-white/70 hover:text-white text-sm transition-colors">
+                  Market Opportunity
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions/integrations" className="text-white/70 hover:text-white text-sm transition-colors">
+                  Integrations
+                </Link>
+              </li>
+              <li>
+                <Link href="/security" className="text-white/70 hover:text-white text-sm transition-colors">
+                  Security & Compliance
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-white/60 text-sm">
-            &copy; 2024 Lendro.AI. All rights reserved.
-          </p>
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <p className="text-white/60 text-sm">
+              &copy; 2025 Lendro.AI. All rights reserved.
+            </p>
+            <div className="flex items-center gap-2 text-white/50 text-xs">
+              <span>Built for the future of lending</span>
+              <div className="w-1 h-1 bg-white/30 rounded-full"></div>
+              <span>Enterprise-grade AI</span>
+            </div>
+          </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-white/60 hover:text-white text-sm transition-colors">
+            <Link href="/privacy-policy" className="text-white/60 hover:text-white text-sm transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-white/60 hover:text-white text-sm transition-colors">
+            <Link href="/terms-of-service" className="text-white/60 hover:text-white text-sm transition-colors">
               Terms of Service
+            </Link>
+            <Link href="/compliance" className="text-white/60 hover:text-white text-sm transition-colors">
+              Compliance
             </Link>
           </div>
         </div>

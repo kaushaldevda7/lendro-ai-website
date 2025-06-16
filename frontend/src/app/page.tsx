@@ -17,6 +17,17 @@ export default function Home() {
   const [isScheduleDemoModalOpen, setIsScheduleDemoModalOpen] = useState(false);
   const [isGetStartedModalOpen, setIsGetStartedModalOpen] = useState(false);
   const [isStartTrialModalOpen, setIsStartTrialModalOpen] = useState(false);
+  const [isROIModalOpen, setIsROIModalOpen] = useState(false);
+  const [isWhitepaperModalOpen, setIsWhitepaperModalOpen] = useState(false);
+  const [whitepaperEmail, setWhitepaperEmail] = useState('');
+  const [roiInputs, setROIInputs] = useState({
+    monthlyApplicationVolume: 250,
+    avgLoanAmount: 25000,
+    currentProcessingTime: 12,
+    currentStaffCost: 240000,
+    currentDefaultRate: 3.8,
+    currentCustomerAcquisitionCost: 950
+  });
   
   // AI Assistant showcase states
   const [activeAssistant, setActiveAssistant] = useState(0);
@@ -191,6 +202,74 @@ export default function Home() {
     }
   }, [isAuthenticated, router]);
 
+  const calculateROI = () => {
+    const { monthlyApplicationVolume, avgLoanAmount, currentProcessingTime, currentStaffCost, currentDefaultRate, currentCustomerAcquisitionCost } = roiInputs;
+    
+    // Current state calculations
+    const annualLoanVolume = monthlyApplicationVolume * 12;
+    const totalLoanValue = annualLoanVolume * avgLoanAmount;
+    const currentProcessingCost = (currentProcessingTime * 30) * annualLoanVolume; // $30/hour processing cost
+    const currentDefaultLoss = (totalLoanValue * currentDefaultRate) / 100;
+    const currentAcquisitionCost = annualLoanVolume * currentCustomerAcquisitionCost;
+    const currentTotalCosts = currentStaffCost + currentProcessingCost + currentDefaultLoss + currentAcquisitionCost;
+    
+    // With Lendro.AI improvements (based on whitepaper data)
+    const improvedProcessingTime = Math.max(0.5, currentProcessingTime * 0.15); // 85% reduction
+    const improvedDefaultRate = currentDefaultRate * 0.65; // 35% reduction
+    const improvedAcquisitionCost = currentCustomerAcquisitionCost * 0.55; // 45% reduction
+    const improvedStaffCost = currentStaffCost * 0.65; // 35% reduction due to automation
+    
+    const newProcessingCost = (improvedProcessingTime * 30) * annualLoanVolume;
+    const newDefaultLoss = (totalLoanValue * improvedDefaultRate) / 100;
+    const newAcquisitionCost = annualLoanVolume * improvedAcquisitionCost;
+    const lendroLicenseCost = 450000; // Annual license cost from whitepaper
+    const newTotalCosts = improvedStaffCost + newProcessingCost + newDefaultLoss + newAcquisitionCost + lendroLicenseCost;
+    
+    const annualSavings = currentTotalCosts - newTotalCosts;
+    const roi = ((annualSavings - lendroLicenseCost) / lendroLicenseCost) * 100;
+    const paybackMonths = Math.max(1, (lendroLicenseCost / (annualSavings / 12)));
+    
+    // Additional benefits (based on whitepaper 300% capacity increase)
+    const capacityIncrease = Math.floor(annualLoanVolume * 3); // 200% capacity increase (3x total)
+    const revenueIncrease = (capacityIncrease - annualLoanVolume) * avgLoanAmount * 0.035; // 3.5% margin on additional loans
+    
+    return {
+      currentTotalCosts,
+      newTotalCosts,
+      annualSavings,
+      roi,
+      paybackMonths,
+      capacityIncrease,
+      revenueIncrease,
+      processingTimeReduction: ((currentProcessingTime - improvedProcessingTime) / currentProcessingTime) * 100,
+      defaultRateReduction: ((currentDefaultRate - improvedDefaultRate) / currentDefaultRate) * 100,
+      acquisitionCostReduction: ((currentCustomerAcquisitionCost - improvedAcquisitionCost) / currentCustomerAcquisitionCost) * 100
+    };
+  };
+
+  const results = calculateROI();
+
+  // Helper function to format large numbers
+  const formatLargeNumber = (num: number) => {
+    if (num >= 1000000) {
+      return `${(num / 1000000).toFixed(1)}M`;
+    } else if (num >= 1000) {
+      return `${Math.round(num / 1000)}K`;
+    }
+    return Math.round(num).toString();
+  };
+
+  // Handle whitepaper email submission
+  const handleWhitepaperSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (whitepaperEmail.trim()) {
+      // Close modal and redirect to whitepaper
+      setIsWhitepaperModalOpen(false);
+      setWhitepaperEmail('');
+      router.push('/whitepaper');
+    }
+  };
+
   return (
     <Layout>
       {/* Calendly Modal */}
@@ -259,30 +338,32 @@ export default function Home() {
             
           {/* Agent Selection */}
           <div className="mb-16">
-            <div className="flex flex-wrap justify-center gap-3 mb-12">
+            <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-12">
               {assistantOptions.map((assistant, index) => (
                 <button
                   key={assistant.id}
                   onClick={() => setActiveAssistant(index)}
-                  className={`group relative px-4 md:px-6 py-3 rounded-2xl transition-all duration-300 ${
+                  className={`group relative px-3 md:px-4 py-2 md:py-3 rounded-xl md:rounded-2xl transition-all duration-300 ${
                     activeAssistant === index 
                       ? 'bg-white shadow-xl scale-105 border border-gray-200' 
                       : 'bg-white/60 backdrop-blur-sm hover:bg-white/80 border border-gray-100'
                   }`}
                 >
-                  <div className="flex items-center gap-2 md:gap-3">
-                    <div className={`w-8 h-8 md:w-10 md:h-10 rounded-xl bg-gradient-to-r ${assistant.color} flex items-center justify-center text-white transition-transform group-hover:scale-110`}>
-                      {assistant.icon}
+                  <div className="flex items-center gap-2">
+                    <div className={`w-6 h-6 md:w-8 md:h-8 rounded-lg md:rounded-xl bg-gradient-to-r ${assistant.color} flex items-center justify-center text-white transition-transform group-hover:scale-110`}>
+                      <div className="scale-75 md:scale-100">
+                        {assistant.icon}
+                      </div>
                     </div>
                     <div className="text-left">
-                      <div className="font-semibold text-gray-900 text-xs md:text-sm">
+                      <div className="font-semibold text-gray-900 text-xs md:text-sm leading-tight">
                         {assistant.name.replace(' AI Agent', '')}
                       </div>
-                      <div className="text-xs text-gray-500 hidden md:block">AI Agent</div>
+                      <div className="text-xs text-gray-500 hidden lg:block">AI Agent</div>
                     </div>
                   </div>
                   {activeAssistant === index && (
-                    <div className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-6 md:w-8 h-1 bg-gradient-to-r ${assistant.color} rounded-full`}></div>
+                    <div className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-4 md:w-6 lg:w-8 h-1 bg-gradient-to-r ${assistant.color} rounded-full`}></div>
                   )}
                 </button>
               ))}
@@ -752,9 +833,9 @@ export default function Home() {
                         <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
                         <span className="text-sm font-bold text-green-700">All Systems Operational</span>
               </div>
-            </div>
-          </div>
-        </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -978,7 +1059,7 @@ export default function Home() {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:rotate-45 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                   </svg>
-                  </div>
+            </div>
               </button>
             </div>
             
@@ -1023,7 +1104,7 @@ export default function Home() {
               <span>Trusted by forward-thinking lenders</span>
               <div className="w-1 h-1 bg-gradient-to-r from-teal-400 to-emerald-500 rounded-full"></div>
         </div>
-      </div>
+          </div>
         </div>
       </section>
 
@@ -1051,7 +1132,7 @@ export default function Home() {
               Deep insights from industry leaders, cutting-edge research, and practical guides to transform your lending operations
             </p>
           </div>
-
+          
           {/* Featured Content Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
             {/* Featured White Paper */}
@@ -1076,39 +1157,38 @@ export default function Home() {
                   A comprehensive 47-page analysis of how autonomous AI agents are revolutionizing lending operations, featuring case studies from leading institutions and implementation frameworks.
                 </p>
                 
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4 text-sm text-gray-500">
-                    <div className="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                      <span>December 2024</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                      </svg>
-                      <span>47 pages</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                      </svg>
-                      <span>2.3K views</span>
-                    </div>
-                  </div>
-                  
-                  <button 
-                    onClick={() => setIsGetStartedModalOpen(true)}
-                    className="px-6 py-3 bg-gradient-to-r from-lendro-primary to-lendro-secondary text-white font-semibold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-                  >
-                    <span>Download Free</span>
+                <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
+                  <div className="flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
-                  </button>
-                  </div>
+                    <span>June 2025</span>
+            </div>
+                  <div className="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                    <span>21 pages</span>
+          </div>
+                  <div className="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                    <span>2.3K views</span>
+        </div>
+                </div>
+                
+                <button 
+                  onClick={() => setIsWhitepaperModalOpen(true)}
+                  className="px-6 py-3 bg-gradient-to-r from-lendro-primary to-lendro-secondary text-white font-semibold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                >
+                  <span>View Whitepaper</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                </button>
               </div>
             </div>
 
@@ -1127,7 +1207,10 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-600 text-sm mb-4">Calculate your potential savings and ROI with AI-powered lending automation.</p>
-                <button className="text-green-600 font-medium text-sm hover:text-green-700 transition-colors flex items-center gap-1">
+                <button 
+                  onClick={() => setIsROIModalOpen(true)}
+                  className="text-green-600 font-medium text-sm hover:text-green-700 transition-colors flex items-center gap-1"
+                >
                   <span>Try Calculator</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -1183,64 +1266,64 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300 group">
               <div className="flex items-center justify-between mb-4">
-                <div className="inline-flex items-center px-3 py-1 bg-orange-100 rounded-full border border-orange-200">
-                  <span className="text-xs font-medium text-orange-700">Research Paper</span>
+                <div className="inline-flex items-center px-3 py-1 bg-blue-100 rounded-full border border-blue-200">
+                  <span className="text-xs font-medium text-blue-700">Technical Deep Dive</span>
                 </div>
-                <div className="text-gray-400 text-sm">Nov 2024</div>
+                <div className="text-gray-400 text-sm">Jun 2025</div>
               </div>
               <h4 className="font-bold text-gray-900 text-lg mb-3 group-hover:text-lendro-primary transition-colors">
-                Machine Learning Risk Models: A Comparative Analysis
+                Building the Next Generation of AI Risk Models
               </h4>
               <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                Comprehensive study of ML algorithms in credit risk assessment, comparing traditional and modern approaches.
+                An in-depth exploration of modern machine learning approaches to credit risk assessment, comparing traditional statistical methods with cutting-edge AI techniques.
               </p>
               <div className="flex items-center justify-between">
-                <div className="text-gray-400 text-xs">24 pages • 1.8K downloads</div>
-                <button className="text-orange-600 font-medium text-sm hover:text-orange-700 transition-colors">
-                  Read More →
-                </button>
+                <div className="text-gray-400 text-xs">8 min read • Technical</div>
+                <Link href="/blog/ai-risk-models" className="text-blue-600 font-medium text-sm hover:text-blue-700 transition-colors">
+                  Read Article →
+            </Link>
               </div>
             </div>
 
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300 group">
               <div className="flex items-center justify-between mb-4">
-                <div className="inline-flex items-center px-3 py-1 bg-teal-100 rounded-full border border-teal-200">
-                  <span className="text-xs font-medium text-teal-700">Case Study</span>
+                <div className="inline-flex items-center px-3 py-1 bg-green-100 rounded-full border border-green-200">
+                  <span className="text-xs font-medium text-green-700">Industry Insights</span>
                 </div>
-                <div className="text-gray-400 text-sm">Oct 2024</div>
+                <div className="text-gray-400 text-sm">May 2025</div>
               </div>
               <h4 className="font-bold text-gray-900 text-lg mb-3 group-hover:text-lendro-primary transition-colors">
-                Regional Bank Transformation: 300% Efficiency Gain
+                Why Traditional Lending is Ripe for AI Disruption
               </h4>
               <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                How a mid-size regional bank achieved unprecedented efficiency through AI agent deployment.
+                Analyzing the inefficiencies in current lending processes and how autonomous AI agents can transform operations from application to servicing.
               </p>
               <div className="flex items-center justify-between">
-                <div className="text-gray-400 text-xs">16 pages • 2.1K downloads</div>
-                <button className="text-teal-600 font-medium text-sm hover:text-teal-700 transition-colors">
-                  Read More →
-                </button>
+                <div className="text-gray-400 text-xs">6 min read • Strategy</div>
+                <Link href="/blog/lending-ai-disruption" className="text-green-600 font-medium text-sm hover:text-green-700 transition-colors">
+                  Read Article →
+            </Link>
               </div>
             </div>
 
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300 group">
               <div className="flex items-center justify-between mb-4">
-                <div className="inline-flex items-center px-3 py-1 bg-pink-100 rounded-full border border-pink-200">
-                  <span className="text-xs font-medium text-pink-700">Industry Report</span>
+                <div className="inline-flex items-center px-3 py-1 bg-purple-100 rounded-full border border-purple-200">
+                  <span className="text-xs font-medium text-purple-700">Market Analysis</span>
                 </div>
-                <div className="text-gray-400 text-sm">Sep 2024</div>
+                <div className="text-gray-400 text-sm">Apr 2025</div>
               </div>
               <h4 className="font-bold text-gray-900 text-lg mb-3 group-hover:text-lendro-primary transition-colors">
-                The State of AI in Lending: 2024 Industry Survey
+                The $2.8 Trillion Opportunity: AI in Financial Services
               </h4>
               <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                Insights from 500+ lending executives on AI adoption, challenges, and future outlook.
+                Breaking down the massive market opportunity for AI-powered lending solutions and what it means for financial institutions of all sizes.
               </p>
               <div className="flex items-center justify-between">
-                <div className="text-gray-400 text-xs">32 pages • 3.2K downloads</div>
-                <button className="text-pink-600 font-medium text-sm hover:text-pink-700 transition-colors">
-                  Read More →
-                </button>
+                <div className="text-gray-400 text-xs">5 min read • Market</div>
+                <Link href="/blog/ai-financial-opportunity" className="text-purple-600 font-medium text-sm hover:text-purple-700 transition-colors">
+                  Read Article →
+            </Link>
               </div>
             </div>
           </div>
@@ -1276,9 +1359,345 @@ export default function Home() {
                 Join 5,000+ lending professionals. Unsubscribe anytime.
               </p>
       </div>
-    </div>
+          </div>
         </div>
       </section>
+
+      {/* ROI Calculator Modal */}
+      {isROIModalOpen && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-3xl shadow-2xl max-w-5xl w-full max-h-[95vh] flex flex-col">
+            {/* Modal Header */}
+            <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 p-6 text-white rounded-t-3xl flex-shrink-0">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-bold">ROI Calculator</h2>
+                    <p className="text-blue-100 text-sm">Calculate your potential savings with Lendro.AI</p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setIsROIModalOpen(false)}
+                  className="w-8 h-8 bg-white/20 hover:bg-white/30 rounded-lg flex items-center justify-center transition-colors"
+                >
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              
+              {/* Quick Stats */}
+              <div className="grid grid-cols-4 gap-3">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div className="text-xl font-bold">{Math.round(results.roi)}%</div>
+                  <div className="text-blue-200 text-xs">Annual ROI</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div className="text-xl font-bold">${formatLargeNumber(results.annualSavings)}</div>
+                  <div className="text-blue-200 text-xs">Annual Savings</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div className="text-xl font-bold">{Math.round(results.paybackMonths)}</div>
+                  <div className="text-blue-200 text-xs">Payback (Months)</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div className="text-xl font-bold">{Math.round(results.processingTimeReduction)}%</div>
+                  <div className="text-blue-200 text-xs">Time Reduction</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6 flex-1 min-h-0">
+              <div className="grid lg:grid-cols-2 gap-6 h-full">
+                {/* Input Section */}
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Your Current Operations</h3>
+                  
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-xs font-medium text-gray-700 mb-1">Monthly Application Volume</label>
+                      <input
+                        type="number"
+                        value={roiInputs.monthlyApplicationVolume}
+                        onChange={(e) => setROIInputs({...roiInputs, monthlyApplicationVolume: parseInt(e.target.value) || 0})}
+                        className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="250"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-medium text-gray-700 mb-1">Avg Loan Amount</label>
+                      <input
+                        type="number"
+                        value={roiInputs.avgLoanAmount}
+                        onChange={(e) => setROIInputs({...roiInputs, avgLoanAmount: parseInt(e.target.value) || 0})}
+                        className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="$25,000"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-medium text-gray-700 mb-1">Processing Time (hrs)</label>
+                      <input
+                        type="number"
+                        step="0.5"
+                        value={roiInputs.currentProcessingTime}
+                        onChange={(e) => setROIInputs({...roiInputs, currentProcessingTime: parseFloat(e.target.value) || 0})}
+                        className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="12"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-medium text-gray-700 mb-1">Annual Staff Costs</label>
+                      <input
+                        type="number"
+                        value={roiInputs.currentStaffCost}
+                        onChange={(e) => setROIInputs({...roiInputs, currentStaffCost: parseInt(e.target.value) || 0})}
+                        className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="$240,000"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-medium text-gray-700 mb-1">Default Rate (%)</label>
+                      <input
+                        type="number"
+                        step="0.1"
+                        value={roiInputs.currentDefaultRate}
+                        onChange={(e) => setROIInputs({...roiInputs, currentDefaultRate: parseFloat(e.target.value) || 0})}
+                        className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="3.8"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-medium text-gray-700 mb-1">Acquisition Cost</label>
+                      <input
+                        type="number"
+                        value={roiInputs.currentCustomerAcquisitionCost}
+                        onChange={(e) => setROIInputs({...roiInputs, currentCustomerAcquisitionCost: parseInt(e.target.value) || 0})}
+                        className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="$950"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Results Section */}
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Your ROI with Lendro.AI</h3>
+                  
+                  {/* ROI Summary */}
+                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-4 border border-green-200/50">
+                    <div className="text-center mb-3">
+                      <div className="text-3xl font-bold text-green-600 mb-1">{Math.round(results.roi)}%</div>
+                      <div className="text-green-700 font-medium text-sm">Annual Return on Investment</div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="text-center p-2 bg-white/60 rounded-lg">
+                        <div className="text-lg font-bold text-gray-900">${formatLargeNumber(results.annualSavings)}</div>
+                        <div className="text-xs text-gray-600">Annual Savings</div>
+                      </div>
+                      <div className="text-center p-2 bg-white/60 rounded-lg">
+                        <div className="text-lg font-bold text-gray-900">{Math.round(results.paybackMonths)} mo</div>
+                        <div className="text-xs text-gray-600">Payback Period</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Improvement Metrics */}
+                  <div className="space-y-2">
+                    <h4 className="text-sm font-semibold text-gray-900">Key Improvements</h4>
+                    
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="bg-blue-50 rounded-lg p-2 border border-blue-200/50">
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs text-gray-700">Processing Time</span>
+                          <span className="font-bold text-blue-600 text-sm">-{Math.round(results.processingTimeReduction)}%</span>
+                        </div>
+                      </div>
+
+                      <div className="bg-purple-50 rounded-lg p-2 border border-purple-200/50">
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs text-gray-700">Default Rate</span>
+                          <span className="font-bold text-purple-600 text-sm">-{Math.round(results.defaultRateReduction)}%</span>
+        </div>
+                      </div>
+
+                      <div className="bg-orange-50 rounded-lg p-2 border border-orange-200/50">
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs text-gray-700">Acquisition Cost</span>
+                          <span className="font-bold text-orange-600 text-sm">-{Math.round(results.acquisitionCostReduction)}%</span>
+        </div>
+      </div>
+      
+                      <div className="bg-green-50 rounded-lg p-2 border border-green-200/50">
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs text-gray-700">Capacity</span>
+                          <span className="font-bold text-green-600 text-sm">+{Math.round(((results.capacityIncrease - roiInputs.monthlyApplicationVolume * 12) / (roiInputs.monthlyApplicationVolume * 12)) * 100)}%</span>
+                  </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Cost Breakdown */}
+                  <div className="bg-gray-50 rounded-xl p-4">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-3">Annual Cost Comparison</h4>
+                    <div className="space-y-2">
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs text-gray-600">Current Total Costs</span>
+                        <span className="font-medium text-red-600 text-sm">${formatLargeNumber(results.currentTotalCosts)}</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs text-gray-600">With Lendro.AI</span>
+                        <span className="font-medium text-green-600 text-sm">${formatLargeNumber(results.newTotalCosts)}</span>
+                      </div>
+                      <div className="border-t pt-2 flex justify-between items-center font-bold">
+                        <span className="text-gray-900 text-sm">Net Annual Savings</span>
+                        <span className="text-green-600 text-sm">${formatLargeNumber(results.annualSavings)}</span>
+                      </div>
+                    </div>
+                </div>
+                
+                  {/* Additional Revenue */}
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-4 border border-blue-200/50">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Additional Revenue Opportunity</h4>
+                    <div className="text-center">
+                      <div className="text-xl font-bold text-blue-600 mb-1">${formatLargeNumber(results.revenueIncrease)}</div>
+                      <div className="text-blue-700 text-xs">Annual revenue from increased capacity</div>
+                      <div className="text-xs text-gray-600 mt-1">
+                        Process {Math.round((results.capacityIncrease - roiInputs.monthlyApplicationVolume * 12) / 12)} more loans per month
+                  </div>
+              </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="p-6 border-t border-gray-200 flex-shrink-0">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <button
+                  onClick={() => {
+                    setIsROIModalOpen(false);
+                    setIsGetStartedModalOpen(true);
+                  }}
+                  className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 font-medium shadow-lg hover:shadow-xl text-sm"
+                >
+                  Get Detailed Analysis
+                </button>
+                <button
+                  onClick={() => {
+                    setIsROIModalOpen(false);
+                    setIsScheduleDemoModalOpen(true);
+                  }}
+                  className="px-6 py-2.5 bg-white border-2 border-gray-300 text-gray-700 rounded-xl hover:border-blue-500 hover:text-blue-600 transition-all duration-200 font-medium text-sm"
+                >
+                  Schedule Demo
+                </button>
+              </div>
+
+              {/* Disclaimer */}
+              <div className="mt-4 p-3 bg-gray-50 rounded-lg">
+                <p className="text-xs text-gray-600 text-center">
+                  * Results are estimates based on industry averages and Lendro.AI performance data. 
+                  Actual results may vary. Contact our team for a personalized assessment.
+                </p>
+              </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+      {/* Whitepaper Email Modal */}
+      {isWhitepaperModalOpen && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-3xl shadow-2xl max-w-md w-full">
+            {/* Modal Header */}
+            <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 p-6 text-white rounded-t-3xl">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h2 className="text-xl font-bold">Access Whitepaper</h2>
+                    <p className="text-blue-100 text-sm">Get instant access to our comprehensive analysis</p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setIsWhitepaperModalOpen(false)}
+                  className="w-8 h-8 bg-white/20 hover:bg-white/30 rounded-lg flex items-center justify-center transition-colors"
+                >
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+        </div>
+      </div>
+      
+            {/* Modal Content */}
+            <div className="p-6">
+              <div className="text-center mb-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  The Future of Agentic AI in Financial Services
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  47-page comprehensive analysis featuring case studies, implementation frameworks, and ROI projections
+                </p>
+              </div>
+
+              <form onSubmit={handleWhitepaperSubmit} className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address
+                  </label>
+          <input 
+                    type="email"
+                    value={whitepaperEmail}
+                    onChange={(e) => setWhitepaperEmail(e.target.value)}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Enter your email address"
+                    required
+                  />
+                </div>
+
+                <div className="flex gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setIsWhitepaperModalOpen(false)}
+                    className="flex-1 px-4 py-3 bg-gray-100 text-gray-700 rounded-xl hover:bg-gray-200 transition-colors font-medium"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 font-medium shadow-lg hover:shadow-xl"
+                  >
+                    View Whitepaper
+          </button>
+        </div>
+              </form>
+
+              <div className="mt-4 p-3 bg-gray-50 rounded-lg">
+                <p className="text-xs text-gray-600 text-center">
+                  We respect your privacy. Your email will only be used to provide you with relevant industry insights and updates.
+                </p>
+      </div>
+    </div>
+          </div>
+        </div>
+      )}
+
     </Layout>
   );
 }

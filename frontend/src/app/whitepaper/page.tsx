@@ -75,7 +75,7 @@ export default function WhitepaperPage() {
             <div className="mb-8 flex items-center justify-between">
               <div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">White Paper Navigation</h3>
-                <p className="text-sm text-gray-600">47-Page Comprehensive Analysis</p>
+                <p className="text-sm text-gray-600">21-Page Comprehensive Analysis</p>
               </div>
               {/* Close button - only visible on mobile when menu is open */}
               <button
@@ -144,7 +144,7 @@ export default function WhitepaperPage() {
                   </h1>
                   
                   <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-                    A comprehensive 47-page analysis of how autonomous AI agents are revolutionizing lending operations, featuring case studies from leading institutions and implementation frameworks.
+                    A comprehensive 21-page analysis of how autonomous AI agents are revolutionizing lending operations, featuring case studies from leading institutions and implementation frameworks.
                   </p>
                   
                   <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50 mb-12">

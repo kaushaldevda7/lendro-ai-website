@@ -91,150 +91,202 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose, he
   if (!isOpen) return null;
 
   return (
-    <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4" 
-      style={{ 
-        backgroundColor: 'rgba(0,0,0,0.2)',
-        opacity: isOpen ? 1 : 0,
-        transition: 'opacity 0.3s ease-in-out'
-      }}
-    >
-      <div 
-        className="bg-white rounded-lg shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto"
-        style={{
-          transform: isOpen ? 'scale(1)' : 'scale(0.95)',
-          opacity: isOpen ? 1 : 0,
-          transition: 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out'
-        }}
-      >
-        <div className="p-6">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold text-black">{heading}</h2>
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-grid-white/5"></div>
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-[#1E51DB]/10 via-[#65A8F3]/10 to-[#9BD7FB]/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-[#9BD7FB]/10 via-[#65A8F3]/10 to-[#1E51DB]/10 rounded-full blur-3xl"></div>
+      
+      <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl max-w-lg w-full max-h-[95vh] overflow-hidden border border-gray-200/50 relative">
+        {/* Modal Header */}
+        <div className="bg-gradient-to-r from-[#1E51DB] via-[#65A8F3] to-[#9BD7FB] p-6 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-grid-white/10"></div>
+          <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-2xl"></div>
+          
+          <div className="relative z-10 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold">{heading}</h2>
+                <p className="text-blue-100 text-sm">Let's start your AI transformation journey</p>
+              </div>
+            </div>
             <button 
               onClick={onClose}
-              className="text-gray-500 hover:text-gray-700 transition-colors duration-200"
+              className="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-xl flex items-center justify-center transition-all duration-200 group"
               aria-label="Close"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-5 h-5 text-white group-hover:rotate-90 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
-          
+        </div>
+        
+        {/* Modal Content */}
+        <div className="p-6 overflow-y-auto max-h-[calc(95vh-120px)]">
           {formStatus.submitted ? (
             <div className="text-center py-8">
               {formStatus.error ? (
                 <>
-                  <svg className="w-16 h-16 text-red-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                  <h3 className="text-xl font-bold text-red-800 mb-2">Oops!</h3>
+                  <div className="w-20 h-20 bg-gradient-to-r from-red-500 to-rose-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Something went wrong</h3>
+                  <p className="text-gray-600 mb-8 leading-relaxed">{formStatus.message}</p>
                 </>
               ) : (
                 <>
-                  <svg className="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                  <h3 className="text-xl font-bold text-green-800 mb-2">Thank You!</h3>
+                  <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Thank you!</h3>
+                  <p className="text-gray-600 mb-8 leading-relaxed">{formStatus.message}</p>
                 </>
               )}
-              <p className={`${formStatus.error ? 'text-red-700' : 'text-green-700'} mb-6`}>{formStatus.message}</p>
               <button 
                 onClick={onClose}
-                className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition-colors"
+                className="px-8 py-3 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] text-white font-semibold rounded-xl hover:from-[#1a47c4] hover:to-[#5a96e0] transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 Close
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit}>
-              <div className="mb-4">
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Your Name *</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  name="name" 
-                  value={formData.name} 
-                  onChange={handleChange} 
-                  className="w-full px-3 py-2 text-black rounded border border-gray-300 focus:ring-black focus:border-black" 
-                  required 
-                />
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Form Introduction */}
+              <div className="text-center mb-8">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Ready to transform your lending operations?</h3>
+                <p className="text-gray-600 text-sm">Fill out the form below and our team will get back to you within 24 hours.</p>
+              </div>
+
+              {/* Form Fields */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">Your Name *</label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    value={formData.name} 
+                    onChange={handleChange} 
+                    className="w-full px-4 py-3 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E51DB]/50 focus:border-[#1E51DB] transition-all duration-200 shadow-sm hover:shadow-md" 
+                    placeholder="John Doe"
+                    required 
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    value={formData.email} 
+                    onChange={handleChange} 
+                    className="w-full px-4 py-3 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E51DB]/50 focus:border-[#1E51DB] transition-all duration-200 shadow-sm hover:shadow-md" 
+                    placeholder="john@company.com"
+                    required 
+                  />
+                </div>
               </div>
               
-              <div className="mb-4">
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  name="email" 
-                  value={formData.email} 
-                  onChange={handleChange} 
-                  className="w-full px-3 py-2 text-black rounded border border-gray-300 focus:ring-black focus:border-black" 
-                  required 
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-2">Company Name</label>
+                  <input 
+                    type="text" 
+                    id="company" 
+                    name="company" 
+                    value={formData.company} 
+                    onChange={handleChange} 
+                    className="w-full px-4 py-3 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E51DB]/50 focus:border-[#1E51DB] transition-all duration-200 shadow-sm hover:shadow-md" 
+                    placeholder="Your Company"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                  <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    value={formData.phone} 
+                    onChange={handleChange} 
+                    className="w-full px-4 py-3 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E51DB]/50 focus:border-[#1E51DB] transition-all duration-200 shadow-sm hover:shadow-md" 
+                    placeholder="+1 (555) 123-4567"
+                  />
+                </div>
               </div>
               
-              <div className="mb-4">
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">Company Name</label>
-                <input 
-                  type="text" 
-                  id="company" 
-                  name="company" 
-                  value={formData.company} 
-                  onChange={handleChange} 
-                  className="w-full px-3 py-2 text-black rounded border border-gray-300 focus:ring-black focus:border-black" 
-                />
-              </div>
-              
-              <div className="mb-4">
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                <input 
-                  type="tel" 
-                  id="phone" 
-                  name="phone" 
-                  value={formData.phone} 
-                  onChange={handleChange} 
-                  className="w-full px-3 py-2 text-black rounded border border-gray-300 focus:ring-black focus:border-black" 
-                />
-              </div>
-              
-              <div className="mb-6">
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Your Message *</label>
+              <div>
+                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">Your Message *</label>
                 <textarea 
                   id="message" 
                   name="message" 
                   value={formData.message} 
                   onChange={handleChange} 
                   rows={4} 
-                  className="w-full px-3 py-2 text-black rounded border border-gray-300 focus:ring-black focus:border-black" 
+                  className="w-full px-4 py-3 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E51DB]/50 focus:border-[#1E51DB] transition-all duration-200 shadow-sm hover:shadow-md resize-none" 
+                  placeholder="Tell us about your lending operations and how we can help transform them with AI..."
                   required
                 ></textarea>
               </div>
               
-              <div className="flex justify-end">
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3 pt-4">
                 <button 
                   type="button" 
                   onClick={onClose} 
-                  className="px-4 py-2 border border-gray-300 text-gray-700 rounded mr-2 hover:bg-gray-50"
+                  className="flex-1 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-xl transition-all duration-200 border border-gray-200 hover:border-gray-300"
                   disabled={formStatus.loading}
                 >
                   Cancel
                 </button>
                 <button 
                   type="submit" 
-                  className="px-4 py-2 bg-black text-white rounded hover:bg-gray-800 flex items-center"
+                  className="flex-1 px-6 py-3 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] hover:from-[#1a47c4] hover:to-[#5a96e0] text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-[1.02] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   disabled={formStatus.loading}
                 >
                   {formStatus.loading ? (
                     <>
-                      <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <svg className="animate-spin w-5 h-5 text-white" fill="none" viewBox="0 0 24 24">
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>
-                      Sending...
+                      <span>Sending...</span>
                     </>
-                  ) : 'Submit'}
+                  ) : (
+                    <>
+                      <span>Send Message</span>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </>
+                  )}
                 </button>
+              </div>
+
+              {/* Privacy Notice */}
+              <div className="bg-gradient-to-r from-[#9BD7FB]/20 to-[#65A8F3]/20 rounded-xl p-4 border border-[#65A8F3]/30">
+                <div className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-[#1E51DB] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-sm text-[#1E51DB] font-medium mb-1">Your privacy is protected</p>
+                    <p className="text-xs text-[#1E51DB]/80">We respect your privacy and will never share your information with third parties. This data is used solely to provide you with relevant information about our AI lending solutions.</p>
+                  </div>
+                </div>
               </div>
             </form>
           )}
