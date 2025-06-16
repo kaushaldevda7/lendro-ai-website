@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { AuthProvider } from '@/context/AuthContext';
 import { LoanProvider } from '@/context/LoanContext';
 import Sidebar from '@/components/platform/Sidebar';
@@ -19,11 +19,21 @@ const EmailBubble = dynamic(
 const PlatformContent: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { state } = useAuth();
   const router = useRouter();
+  const pathname = usePathname();
   const [authChecked, setAuthChecked] = useState(false);
   const [redirecting, setRedirecting] = useState(false);
   
-  // Redirect to login if not authenticated
+  // Check if current route requires authentication
+  const requiresAuth = pathname !== '/platform';
+  
+  // Redirect to login if not authenticated and route requires auth
   useEffect(() => {
+    // If route doesn't require auth, skip authentication check
+    if (!requiresAuth) {
+      setAuthChecked(true);
+      return;
+    }
+
     // Don't redirect during initial loading
     if (state.loading) {
       return;
@@ -69,10 +79,10 @@ const PlatformContent: React.FC<{ children: React.ReactNode }> = ({ children }) 
       setRedirecting(false);
       console.log('User authenticated:', state.user?.email);
     }
-  }, [state.isAuthenticated, state.loading, router, redirecting]);
+  }, [state.isAuthenticated, state.loading, router, redirecting, requiresAuth]);
 
-  // Show loading spinner during initial auth check
-  if (state.loading) {
+  // Show loading spinner during initial auth check (only for protected routes)
+  if (requiresAuth && state.loading) {
     return (
       <div className="flex h-screen w-full items-center justify-center bg-gray-50">
         <div className="flex flex-col items-center">
@@ -83,8 +93,8 @@ const PlatformContent: React.FC<{ children: React.ReactNode }> = ({ children }) 
     );
   }
 
-  // If authentication is being checked or user is being redirected, show loading
-  if ((!authChecked && !state.isAuthenticated) || redirecting) {
+  // If authentication is being checked or user is being redirected, show loading (only for protected routes)
+  if (requiresAuth && ((!authChecked && !state.isAuthenticated) || redirecting)) {
     return (
       <div className="flex h-screen w-full items-center justify-center bg-gray-50">
         <div className="flex flex-col items-center">
@@ -95,7 +105,12 @@ const PlatformContent: React.FC<{ children: React.ReactNode }> = ({ children }) 
     );
   }
 
-  // User is authenticated, render content
+  // For the main platform page, render without platform layout
+  if (!requiresAuth) {
+    return <>{children}</>;
+  }
+
+  // User is authenticated and on a protected route, render with platform layout
   return (
     <div className="flex flex-col h-screen bg-gray-50">
       <PlatformHeader />

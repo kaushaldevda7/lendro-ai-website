@@ -205,9 +205,9 @@ export default function IntegrationsPage() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
                       </Link>
-                    </div>
-                  </div>
-                </div>
+            </div>
+            </div>
+            </div>
               );
             })}
           </div>
@@ -233,15 +233,15 @@ export default function IntegrationsPage() {
 
           {/* Category Navigation */}
           <div className="flex flex-wrap justify-center gap-3 mb-16">
-            {categories.map((category) => (
-              <a
-                key={category.id}
-                href={`#${category.id}`}
+              {categories.map((category) => (
+                <a
+                  key={category.id}
+                  href={`#${category.id}`}
                 className="px-6 py-3 bg-gradient-to-r from-[#1E51DB]/10 to-[#65A8F3]/10 hover:from-[#1E51DB]/20 hover:to-[#65A8F3]/20 text-[#1E51DB] font-semibold rounded-xl transition-all duration-200 border border-[#65A8F3]/20 hover:border-[#65A8F3]/40"
-              >
-                {category.name}
-              </a>
-            ))}
+                >
+                  {category.name}
+                </a>
+              ))}
           </div>
 
           {/* Integration Listings */}
@@ -270,13 +270,13 @@ export default function IntegrationsPage() {
                         <div className="flex items-center gap-2 text-green-600 text-xs font-medium">
                           <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
                           <span>Available</span>
-                        </div>
-                        <Link 
-                          href={`/platform/admin/integrations-hub?category=${category.id}&integration=${integration.name}`}
+                    </div>
+                      <Link 
+                        href={`/platform/admin/integrations-hub?category=${category.id}&integration=${integration.name}`}
                           className="text-[#1E51DB] font-semibold text-sm hover:text-[#65A8F3] transition-colors"
-                        >
+                      >
                           Setup →
-                        </Link>
+                      </Link>
                       </div>
                     </div>
                   </div>
@@ -355,8 +355,8 @@ export default function IntegrationsPage() {
               <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#1E51DB]/10 to-[#65A8F3]/10 rounded-full border border-[#65A8F3]/20 mb-8">
                 <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full mr-3 animate-pulse"></div>
                 <span className="text-sm font-medium text-[#1E51DB]">Enterprise-Grade</span>
-              </div>
-              
+          </div>
+
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-[#1E51DB] via-[#65A8F3] to-[#9BD7FB] bg-clip-text text-transparent">
                   Built for Scale
@@ -377,8 +377,8 @@ export default function IntegrationsPage() {
                     <h4 className="text-lg font-bold text-gray-900 mb-2">Bank-Grade Security</h4>
                     <p className="text-gray-600">SOC 2 Type II compliance, end-to-end encryption, and zero-trust architecture.</p>
                   </div>
-                </div>
-                
+            </div>
+            
                 <div className="flex items-start gap-4">
                   <div className="w-8 h-8 bg-gradient-to-r from-[#65A8F3] to-[#9BD7FB] rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -389,8 +389,8 @@ export default function IntegrationsPage() {
                     <h4 className="text-lg font-bold text-gray-900 mb-2">Real-Time Processing</h4>
                     <p className="text-gray-600">Sub-second response times with intelligent caching and load balancing.</p>
                   </div>
-                </div>
-                
+            </div>
+            
                 <div className="flex items-start gap-4">
                   <div className="w-8 h-8 bg-gradient-to-r from-[#9BD7FB] to-[#1E51DB] rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -461,7 +461,7 @@ export default function IntegrationsPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </div>
-              </Link>
+                </Link>
               
               <Link 
                 href="/contact" 
@@ -473,7 +473,7 @@ export default function IntegrationsPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                   </svg>
                 </div>
-              </Link>
+                </Link>
             </div>
           </div>
           
@@ -493,7 +493,7 @@ export default function IntegrationsPage() {
               <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
+                  </svg>
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Enterprise Security</h4>
               <p className="text-white/80 text-sm">Bank-grade security with SOC 2 compliance</p>
@@ -503,7 +503,7 @@ export default function IntegrationsPage() {
               <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-violet-500 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-                </svg>
+                  </svg>
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Expert Support</h4>
               <p className="text-white/80 text-sm">24/7 support from integration specialists</p>
