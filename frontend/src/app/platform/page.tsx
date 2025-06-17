@@ -257,19 +257,19 @@ export default function PlatformPage() {
             
             {/* Platform Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16 border-t border-white/20">
-              <div className="text-center">
+            <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">8+</div>
                 <p className="text-white/80 text-sm">Core Modules</p>
-              </div>
-              <div className="text-center">
+            </div>
+            <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">40+</div>
                 <p className="text-white/80 text-sm">Integrations</p>
-              </div>
-              <div className="text-center">
+            </div>
+            <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">99.9%</div>
                 <p className="text-white/80 text-sm">Uptime SLA</p>
-              </div>
-              <div className="text-center">
+            </div>
+            <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">60%</div>
                 <p className="text-white/80 text-sm">Faster Processing</p>
               </div>
@@ -299,7 +299,7 @@ export default function PlatformPage() {
               A comprehensive, AI-powered lending platform that streamlines the entire loan lifecycle with advanced risk management, client portals, and automated workflows
             </p>
           </div>
-
+          
           <div className="max-w-5xl mx-auto">
             <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300 mb-8 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#1E51DB]/10 to-[#65A8F3]/10 rounded-full blur-2xl"></div>
@@ -341,7 +341,7 @@ export default function PlatformPage() {
                     <div className="w-8 h-8 bg-gradient-to-r from-[#9BD7FB] to-[#1E51DB] rounded-lg flex items-center justify-center flex-shrink-0">
                       <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
+                          </svg>
                     </div>
                     <span className="text-gray-700 font-medium text-sm">Real-time Analytics</span>
                   </div>
@@ -368,11 +368,11 @@ export default function PlatformPage() {
               Comprehensive modules covering every aspect of modern lending operations
             </p>
           </div>
-
+          
           {/* Section Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {Object.entries(platformSections).map(([key, section]) => (
-              <button
+                <button
                 key={key}
                 onClick={() => setActiveSection(key as SectionKey)}
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
@@ -384,10 +384,10 @@ export default function PlatformPage() {
                 <span className="mr-2">{section.icon}</span>
                 <span className="hidden sm:inline">{section.title.split(' ')[0]} {section.title.split(' ')[1]}</span>
                 <span className="sm:hidden">{section.icon}</span>
-              </button>
-            ))}
+                </button>
+              ))}
           </div>
-
+          
           {/* Active Section Content */}
           <div className="max-w-6xl mx-auto">
             <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
@@ -530,8 +530,8 @@ export default function PlatformPage() {
                 </div>
                 <h4 className="text-lg font-semibold text-white mb-2">Enterprise Security</h4>
                 <p className="text-white/80 text-sm">Bank-grade security and compliance</p>
-              </div>
-              
+            </div>
+            
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-violet-500 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
