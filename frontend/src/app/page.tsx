@@ -7,6 +7,7 @@ import { useAuth } from '@/context/AuthContext';
 import { useRouter } from 'next/navigation';
 import ContactFormModal from '@/components/ui/ContactFormModal';
 import CalendlyModal from '@/components/ui/CalendlyModal';
+import Head from 'next/head';
 
 export default function Home() {
   const { state } = useAuth();
@@ -272,6 +273,14 @@ export default function Home() {
 
   return (
     <Layout>
+      <Head>
+        <title>Lendro.AI - AI-Powered Lending Solutions</title>
+        <meta name="description" content="Transform your financial institution with AI-powered lending solutions that deliver unprecedented speed, accuracy, and insight. The future of lending is here." />
+        <meta name="keywords" content="Lendro.AI, AI lending, financial services, lending automation, risk assessment, fraud detection, credit analysis, market segmentation, pricing optimization, loan servicing, collections, treasury, AI technology" />
+        <meta name="author" content="Lendro.AI" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+      
       {/* Calendly Modal */}
       <CalendlyModal 
         isOpen={isScheduleDemoModalOpen} 

@@ -12,10 +12,11 @@ const cacheVersion = "v2024-12-17";
 export const metadata: Metadata = {
   title: "Lendro.AI - Agentic AI for Lending | Autonomous AI Agents Transform Lending Operations",
   description: "Transform your lending operations with Lendro.AI's autonomous AI agents. Experience unprecedented intelligence in loan origination, credit analysis, servicing, and collections.",
-  keywords: "AI lending, agentic AI, loan management, credit analysis, autonomous AI agents, lending automation, financial technology",
+  keywords: "AI lending, agentic AI, loan management, credit analysis, autonomous AI agents, lending automation, financial technology, lendro, lendro.ai",
   authors: [{ name: "Lendro.AI Team" }],
   creator: "Lendro.AI",
   publisher: "Lendro.AI",
+  robots: "index, follow",
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -65,6 +66,75 @@ export const metadata: Metadata = {
   }
 };
 
+// Structured Data for SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lendro.ai/#organization",
+      "name": "Lendro.AI",
+      "alternateName": "Lendro",
+      "url": "https://lendro.ai",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://lendro.ai/lendro-logo.svg",
+        "width": 1417,
+        "height": 267
+      },
+      "description": "Autonomous AI agents that transform lending operations with unprecedented intelligence in loan origination, credit analysis, servicing, and collections.",
+      "foundingDate": "2024",
+      "industry": "Financial Technology",
+      "keywords": "AI lending, agentic AI, loan management, credit analysis, autonomous AI agents, lending automation, financial technology",
+      "sameAs": [
+        "https://twitter.com/LendroAI",
+        "https://linkedin.com/company/lendro-ai"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "url": "https://lendro.ai/contact"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lendro.ai/#website",
+      "url": "https://lendro.ai",
+      "name": "Lendro.AI - Agentic AI for Intelligent Lending",
+      "description": "Transform your lending operations with autonomous AI agents. Experience unprecedented intelligence in loan origination, credit analysis, servicing, and collections.",
+      "publisher": {
+        "@id": "https://lendro.ai/#organization"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://lendro.ai/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Lendro.AI Platform",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web Browser",
+      "description": "AI-powered lending platform with autonomous agents for loan origination, risk assessment, and portfolio management",
+      "url": "https://lendro.ai/platform",
+      "publisher": {
+        "@id": "https://lendro.ai/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "USD",
+          "price": "Contact for pricing"
+        }
+      }
+    }
+  ]
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -83,6 +153,22 @@ export default function RootLayout({
         <meta property="og:image:height" content="630" />
         <meta name="twitter:image" content={`https://lendro.ai/og-image.png?${cacheVersion}`} />
         <meta name="twitter:image:alt" content="Lendro.AI - Autonomous AI Agents for Lending" />
+        
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://lendro.ai" />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="google-site-verification" content="" />
       </head>
       <body className={inter.className}>
         <Providers>
