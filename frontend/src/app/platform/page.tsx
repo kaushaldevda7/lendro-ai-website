@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Layout from '@/components/layout/Layout';
 import Link from 'next/link';
 
-type SectionKey = 'origination' | 'risk' | 'servicing' | 'ai' | 'portals' | 'analytics';
+type SectionKey = 'origination' | 'risk' | 'servicing' | 'ai' | 'portals' | 'analytics' | 'documents';
 
 interface Feature {
   title: string;
@@ -176,6 +176,32 @@ export default function PlatformPage() {
           description: 'Historical data storage and analysis capabilities'
         }
       ]
+    },
+    documents: {
+      title: 'Digital Document Signing & Management',
+      icon: '✍️',
+      features: [
+        {
+          title: 'Self-Hosted Document Signing',
+          description: 'Fully white-labeled, self-hosted digital signature solution with your branding'
+        },
+        {
+          title: 'Advanced E-Signature Workflows',
+          description: 'Multi-party signing, conditional logic, and automated routing'
+        },
+        {
+          title: 'Template Management',
+          description: 'Customizable document templates with smart field mapping'
+        },
+        {
+          title: 'Audit Trail & Compliance',
+          description: 'Complete signing history, legal compliance, and tamper-proof documents'
+        },
+        {
+          title: 'API Integration',
+          description: 'Seamless integration with lending workflows and third-party systems'
+        }
+      ]
     }
   };
 
@@ -258,7 +284,7 @@ export default function PlatformPage() {
             {/* Platform Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16 border-t border-white/20">
             <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">8+</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">9+</div>
                 <p className="text-white/80 text-sm">Core Modules</p>
             </div>
             <div className="text-center">
@@ -346,6 +372,157 @@ export default function PlatformPage() {
                     <span className="text-gray-700 font-medium text-sm">Real-time Analytics</span>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Document Signing Highlight Section */}
+      <section className="py-12 md:py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-gray-100/20"></div>
+        <div className="absolute top-1/4 left-0 w-72 h-72 bg-gradient-to-r from-[#1E51DB]/3 to-[#65A8F3]/3 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-gradient-to-r from-[#65A8F3]/3 to-[#9BD7FB]/3 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 max-w-7xl relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-gray-200/50 shadow-sm mb-8">
+              <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full mr-3 animate-pulse"></div>
+              <span className="text-sm font-medium text-gray-700">Featured Solution</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-[#1E51DB] via-[#65A8F3] to-[#9BD7FB] bg-clip-text text-transparent">
+                Self-Hosted Document Signing
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Complete control over your document workflows with our white-labeled, self-hosted signing solution
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#1E51DB]/10 to-[#65A8F3]/10 rounded-full blur-2xl"></div>
+                
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-2xl flex items-center justify-center text-2xl shadow-lg">
+                      ✍️
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-1">Your Brand, Your Infrastructure</h3>
+                      <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full border border-blue-200">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                        <span className="text-sm font-medium text-blue-700">Self-Hosted</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Built on proven Documenso technology, our self-hosted document signing solution gives you complete control over your document workflows while maintaining your brand identity.
+                  </p>
+                  
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="p-4 bg-gradient-to-r from-gray-50/50 to-white/50 rounded-xl">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
+                          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <span className="font-semibold text-gray-900 text-sm">Enterprise Control</span>
+                      </div>
+                      <p className="text-gray-600 text-xs">Complete ownership and customization</p>
+                    </div>
+                    
+                    <div className="p-4 bg-gradient-to-r from-gray-50/50 to-white/50 rounded-xl">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
+                          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                          </svg>
+                        </div>
+                        <span className="font-semibold text-gray-900 text-sm">Bank-Grade Security</span>
+                      </div>
+                      <p className="text-gray-600 text-xs">End-to-end encryption & compliance</p>
+                    </div>
+                    
+                    <div className="p-4 bg-gradient-to-r from-gray-50/50 to-white/50 rounded-xl">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center">
+                          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                          </svg>
+                        </div>
+                        <span className="font-semibold text-gray-900 text-sm">Lightning Fast</span>
+                      </div>
+                      <p className="text-gray-600 text-xs">Reduce signing time by 90%</p>
+                    </div>
+                    
+                    <div className="p-4 bg-gradient-to-r from-gray-50/50 to-white/50 rounded-xl">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+                          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                          </svg>
+                        </div>
+                        <span className="font-semibold text-gray-900 text-sm">API Integration</span>
+                      </div>
+                      <p className="text-gray-600 text-xs">Seamless workflow integration</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50">
+                <h4 className="text-xl font-bold text-gray-900 mb-6">Key Use Cases</h4>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-blue-50/50 to-indigo-50/50 rounded-xl">
+                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0 text-white font-bold">
+                      💰
+                    </div>
+                    <div>
+                      <h5 className="font-semibold text-gray-900 mb-1">Loan Documentation</h5>
+                      <p className="text-gray-600 text-sm">Streamline loan agreement signing with automated workflows</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-green-50/50 to-emerald-50/50 rounded-xl">
+                    <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0 text-white font-bold">
+                      📜
+                    </div>
+                    <div>
+                      <h5 className="font-semibold text-gray-900 mb-1">Compliance Documents</h5>
+                      <p className="text-gray-600 text-sm">Ensure regulatory compliance with automated disclosures</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-purple-50/50 to-violet-50/50 rounded-xl">
+                    <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-violet-600 rounded-xl flex items-center justify-center flex-shrink-0 text-white font-bold">
+                      👥
+                    </div>
+                    <div>
+                      <h5 className="font-semibold text-gray-900 mb-1">Client Onboarding</h5>
+                      <p className="text-gray-600 text-sm">Accelerate customer onboarding with digital forms</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <Link
+                  href="/solutions/document-signing"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] text-white font-semibold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  <span>Explore Document Signing</span>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
               </div>
             </div>
           </div>

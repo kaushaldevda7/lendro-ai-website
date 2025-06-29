@@ -4,6 +4,85 @@ import React, { useState } from 'react';
 import Layout from '@/components/layout/Layout';
 import ContactFormModal from '@/components/ui/ContactFormModal';
 import CalendlyModal from '@/components/ui/CalendlyModal';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+
+const teamMembers = [
+  {
+    name: "Dr. Sarah Chen",
+    role: "CEO & Co-Founder",
+    bio: "Former VP of AI at JPMorgan Chase with 15+ years in financial services AI. PhD in Computer Science from Stanford.",
+    image: "/team/sarah-chen.jpg",
+    linkedin: "https://linkedin.com/in/sarahchen",
+    expertise: ["AI Strategy", "Risk Management", "Financial Services"]
+  },
+  {
+    name: "Michael Rodriguez",
+    role: "CTO & Co-Founder", 
+    bio: "Ex-Principal Engineer at Goldman Sachs, led AI initiatives processing $2B+ in loans. MS in AI from MIT.",
+    image: "/team/michael-rodriguez.jpg",
+    linkedin: "https://linkedin.com/in/mrodriguez",
+    expertise: ["AI Architecture", "Machine Learning", "Scalable Systems"]
+  },
+  {
+    name: "Jennifer Park",
+    role: "Chief Product Officer",
+    bio: "Former Head of Digital Lending at Wells Fargo, 12+ years transforming lending operations. MBA from Wharton.",
+    image: "/team/jennifer-park.jpg",
+    linkedin: "https://linkedin.com/in/jenniferpark",
+    expertise: ["Product Strategy", "Lending Operations", "User Experience"]
+  },
+  {
+    name: "David Kumar",
+    role: "VP of Engineering",
+    bio: "Previously Staff Engineer at Stripe, built payment systems handling $100B+ annually. MS Computer Science from Carnegie Mellon.",
+    image: "/team/david-kumar.jpg",
+    linkedin: "https://linkedin.com/in/davidkumar",
+    expertise: ["Distributed Systems", "API Design", "Financial Infrastructure"]
+  }
+];
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://lendro.ai" },
+  { name: "About", url: "https://lendro.ai/about" }
+];
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Lendro.AI",
+  "alternateName": "Lendro",
+  "url": "https://lendro.ai",
+  "logo": "https://lendro.ai/lendro-logo.svg",
+  "description": "Autonomous AI agents that transform lending operations with unprecedented intelligence in loan origination, credit analysis, servicing, and collections.",
+  "foundingDate": "2024",
+  "industry": "Financial Technology",
+  "numberOfEmployees": "25-50",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US",
+    "addressRegion": "CA"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Service",
+    "url": "https://lendro.ai/contact",
+    "email": "hello@lendro.ai"
+  },
+  "sameAs": [
+    "https://twitter.com/LendroAI",
+    "https://linkedin.com/company/lendro-ai"
+  ],
+  "employee": teamMembers.map(member => ({
+    "@type": "Person",
+    "name": member.name,
+    "jobTitle": member.role,
+    "description": member.bio,
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Lendro.AI"
+    }
+  }))
+};
 
 export default function AboutPage() {
   // Modal states
@@ -12,6 +91,14 @@ export default function AboutPage() {
 
   return (
     <Layout>
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationSchema),
+        }}
+      />
+      
       {/* Modals */}
       <CalendlyModal 
         isOpen={isScheduleDemoModalOpen} 
@@ -25,7 +112,7 @@ export default function AboutPage() {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-lendro-primary via-lendro-secondary to-lendro-tertiary text-white py-12 md:py-20 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-[#1E51DB] via-[#65A8F3] to-[#9BD7FB] text-white py-12 md:py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="absolute inset-0 bg-grid-white/10"></div>
         
@@ -397,6 +484,147 @@ export default function AboutPage() {
               <span>Pioneering the future of autonomous lending</span>
               <div className="w-1 h-1 bg-gradient-to-r from-teal-400 to-emerald-500 rounded-full"></div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership Team */}
+      <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-[#1E51DB] via-[#65A8F3] to-[#9BD7FB] bg-clip-text text-transparent">
+                Leadership Team
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Industry veterans with decades of combined experience in financial services, AI, and technology
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-xl border border-gray-200/50 overflow-hidden hover:shadow-2xl transition-all duration-300 group">
+                <div className="aspect-w-1 aspect-h-1 bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#1E51DB]/10 to-[#65A8F3]/10 flex items-center justify-center">
+                    <div className="w-24 h-24 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-2xl">
+                        {member.name.split(' ').map(n => n[0]).join('')}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
+                  <p className="text-[#1E51DB] font-medium mb-3">{member.role}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{member.bio}</p>
+                  
+                  <div className="space-y-2 mb-4">
+                    <div className="text-xs font-medium text-gray-700 mb-1">Expertise:</div>
+                    <div className="flex flex-wrap gap-1">
+                      {member.expertise.map((skill, skillIndex) => (
+                        <span key={skillIndex} className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-[#1E51DB] hover:text-[#65A8F3] transition-colors text-sm font-medium"
+                  >
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    <span>LinkedIn</span>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Values & Culture */}
+      <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-[#1E51DB] via-[#65A8F3] to-[#9BD7FB] bg-clip-text text-transparent">
+                Our Values
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              The principles that guide everything we do
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-200/50 text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Innovation First</h3>
+              <p className="text-gray-600 leading-relaxed">
+                We push the boundaries of what's possible with AI, constantly exploring new ways to solve complex lending challenges.
+              </p>
+            </div>
+
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-200/50 text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Trust & Security</h3>
+              <p className="text-gray-600 leading-relaxed">
+                We build with security at the core, ensuring our clients' data and operations are protected at the highest level.
+              </p>
+            </div>
+
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-200/50 text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Client Success</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Our success is measured by our clients' success. We're committed to delivering transformational results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-12 md:py-20 bg-gradient-to-br from-[#1E51DB] via-[#65A8F3] to-[#9BD7FB] text-white">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Transform Your Lending Operations?
+          </h2>
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            Join the growing number of lenders leveraging our agentic AI platform to revolutionize their operations.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="px-8 py-4 bg-white text-[#1E51DB] font-semibold rounded-xl hover:bg-white/90 transition-all duration-300 transform hover:scale-105"
+            >
+              Get in Touch
+            </a>
+            <a
+              href="/solutions"
+              className="px-8 py-4 bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold rounded-xl hover:bg-white/30 transition-all duration-300"
+            >
+              Explore Solutions
+            </a>
           </div>
         </div>
       </section>

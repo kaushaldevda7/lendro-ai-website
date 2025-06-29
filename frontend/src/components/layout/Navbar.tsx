@@ -66,8 +66,14 @@ const Navbar: React.FC = () => {
             <Link href="/platform" className="text-sm font-medium uppercase tracking-wider hover:text-white/80 transition-colors">
               Platform
             </Link>
+            <Link href="/blog" className="text-sm font-medium uppercase tracking-wider hover:text-white/80 transition-colors">
+              Blog
+            </Link>
             <Link href="/about" className="text-sm font-medium uppercase tracking-wider hover:text-white/80 transition-colors">
               About
+            </Link>
+            <Link href="/faq" className="text-sm font-medium uppercase tracking-wider hover:text-white/80 transition-colors">
+              FAQ
             </Link>
             
             {isAuthenticated ? (
@@ -115,8 +121,14 @@ const Navbar: React.FC = () => {
             <Link href="/platform" className="text-sm font-medium uppercase tracking-wider hover:text-white/80 transition-colors py-2">
               Platform
             </Link>
+            <Link href="/blog" className="text-sm font-medium uppercase tracking-wider hover:text-white/80 transition-colors py-2">
+              Blog
+            </Link>
             <Link href="/about" className="text-sm font-medium uppercase tracking-wider hover:text-white/80 transition-colors py-2">
               About
+            </Link>
+            <Link href="/faq" className="text-sm font-medium uppercase tracking-wider hover:text-white/80 transition-colors py-2">
+              FAQ
             </Link>
             
             {isAuthenticated ? (

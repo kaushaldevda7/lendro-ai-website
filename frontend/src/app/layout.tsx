@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Providers from "@/providers";
 import { Analytics } from "@vercel/analytics/react";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -171,6 +172,7 @@ export default function RootLayout({
         <meta name="google-site-verification" content="" />
       </head>
       <body className={inter.className}>
+        <GoogleAnalytics />
         <Providers>
           {children}
         </Providers>

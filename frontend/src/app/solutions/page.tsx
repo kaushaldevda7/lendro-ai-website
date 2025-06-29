@@ -306,61 +306,8 @@ export default function SolutionsPage() {
                           </div>
                         ))}
                       </div>
-                  </div>
-                  
-                    <div className="flex gap-2">
-                      <Link
-                        href={`/solutions/${solution.slug}`}
-                        className={`flex-1 py-2 px-3 bg-gradient-to-r ${solution.color} text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] text-center text-xs`}
-                      >
-                    Learn More
-                  </Link>
-                      <button
-                        onClick={() => setIsScheduleDemoModalOpen(true)}
-                        className="px-3 py-2 bg-gray-100 text-gray-700 rounded-xl font-semibold hover:bg-gray-200 transition-all text-xs"
-                      >
-                        Demo
-                      </button>
                     </div>
-                  </div>
-                </div>
-              ))}
-              </div>
-            
-            {/* Second Row - 3 Agents Centered */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {solutions.slice(4, 7).map((solution, index) => (
-                <div key={solution.id} className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300 group relative overflow-hidden">
-                  {/* Gradient Background */}
-                  <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${solution.color} opacity-10 rounded-full blur-2xl`}></div>
-                  
-                  <div className="relative z-10">
-                    <div className="text-center mb-6">
-                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${solution.color} flex items-center justify-center text-white mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform`}>
-                        {solution.icon}
-                      </div>
-                      <h3 className="text-lg font-bold text-gray-900 group-hover:text-lendro-primary transition-colors mb-1">
-                        {solution.title}
-                      </h3>
-                      <p className="text-gray-500 text-xs">Autonomous Intelligence</p>
-                </div>
                     
-                    <p className="text-gray-600 mb-6 leading-relaxed text-sm text-center">
-                      {solution.description}
-                    </p>
-                    
-                    <div className="space-y-3 mb-6">
-                      <h4 className="text-xs font-semibold text-gray-800 uppercase tracking-wider text-center">Key Capabilities</h4>
-                      <div className="space-y-2">
-                        {solution.features.slice(0, 3).map((feature, idx) => (
-                          <div key={idx} className="flex items-center gap-2 p-2 bg-gray-50 rounded-lg">
-                            <div className={`w-1.5 h-1.5 bg-gradient-to-r ${solution.color} rounded-full flex-shrink-0`}></div>
-                            <span className="text-gray-700 text-xs font-medium">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                  </div>
-                  
                     <div className="flex gap-2">
                       <Link
                         href={`/solutions/${solution.slug}`}
@@ -378,6 +325,247 @@ export default function SolutionsPage() {
                   </div>
                 </div>
               ))}
+            </div>
+            
+            {/* Second Row - 3 Agents Centered */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {solutions.slice(4, 7).map((solution, index) => (
+                <div key={solution.id} className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300 group relative overflow-hidden">
+                  {/* Gradient Background */}
+                  <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${solution.color} opacity-10 rounded-full blur-2xl`}></div>
+                  
+                  <div className="relative z-10">
+                    <div className="text-center mb-6">
+                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${solution.color} flex items-center justify-center text-white mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform`}>
+                        {solution.icon}
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900 group-hover:text-lendro-primary transition-colors mb-1">
+                        {solution.title}
+                      </h3>
+                      <p className="text-gray-500 text-xs">Autonomous Intelligence</p>
+                    </div>
+                    
+                    <p className="text-gray-600 mb-6 leading-relaxed text-sm text-center">
+                      {solution.description}
+                    </p>
+                    
+                    <div className="space-y-3 mb-6">
+                      <h4 className="text-xs font-semibold text-gray-800 uppercase tracking-wider text-center">Key Capabilities</h4>
+                      <div className="space-y-2">
+                        {solution.features.slice(0, 3).map((feature, idx) => (
+                          <div key={idx} className="flex items-center gap-2 p-2 bg-gray-50 rounded-lg">
+                            <div className={`w-1.5 h-1.5 bg-gradient-to-r ${solution.color} rounded-full flex-shrink-0`}></div>
+                            <span className="text-gray-700 text-xs font-medium">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="flex gap-2">
+                      <Link
+                        href={`/solutions/${solution.slug}`}
+                        className={`flex-1 py-2 px-3 bg-gradient-to-r ${solution.color} text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] text-center text-xs`}
+                      >
+                        Learn More
+                      </Link>
+                      <button
+                        onClick={() => setIsScheduleDemoModalOpen(true)}
+                        className="px-3 py-2 bg-gray-100 text-gray-700 rounded-xl font-semibold hover:bg-gray-200 transition-all text-xs"
+                      >
+                        Demo
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Solutions Section */}
+      <section className="py-12 md:py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-gray-100/20"></div>
+        <div className="absolute top-1/4 right-0 w-72 h-72 bg-gradient-to-r from-[#1E51DB]/3 to-[#65A8F3]/3 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 max-w-7xl relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-gray-200/50 shadow-sm mb-8">
+              <div className="w-2 h-2 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full mr-3 animate-pulse"></div>
+              <span className="text-sm font-medium text-gray-700">Essential Tools</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-[#1E51DB] via-[#65A8F3] to-[#9BD7FB] bg-clip-text text-transparent">
+                Additional Solutions
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Comprehensive tools that complete your lending ecosystem with enterprise-grade security and seamless integration
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Document Signing Solution */}
+            <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#1E51DB]/10 to-[#65A8F3]/10 rounded-full blur-2xl"></div>
+              
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform shadow-lg">
+                    ✍️
+                  </div>
+                  <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full border border-blue-200">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                    <span className="text-sm font-medium text-blue-700">Self-Hosted</span>
+                  </div>
+                </div>
+                
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#1E51DB] transition-colors">
+                  Document Signing
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Complete control with self-hosted, white-labeled document signing solution. Built on proven Documenso technology.
+                </p>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-gray-50/50 to-white/50 rounded-xl">
+                    <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full flex-shrink-0"></div>
+                    <span className="text-gray-700 text-sm">Self-hosted & white-labeled</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-gray-50/50 to-white/50 rounded-xl">
+                    <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full flex-shrink-0"></div>
+                    <span className="text-gray-700 text-sm">Advanced e-signature workflows</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-gray-50/50 to-white/50 rounded-xl">
+                    <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full flex-shrink-0"></div>
+                    <span className="text-gray-700 text-sm">Legal compliance & audit trails</span>
+                  </div>
+                </div>
+                
+                <div className="flex gap-3">
+                  <Link
+                    href="/solutions/document-signing"
+                    className="flex-1 py-3 px-4 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] text-center text-sm"
+                  >
+                    Learn More
+                  </Link>
+                  <button
+                    onClick={() => setIsScheduleDemoModalOpen(true)}
+                    className="px-4 py-3 bg-gray-100 text-gray-700 rounded-xl font-semibold hover:bg-gray-200 transition-all text-sm"
+                  >
+                    Demo
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Integration Hub */}
+            <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-500/10 to-teal-600/10 rounded-full blur-2xl"></div>
+              
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform shadow-lg">
+                    🔗
+                  </div>
+                  <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-emerald-100 to-teal-100 rounded-full border border-emerald-200">
+                    <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></div>
+                    <span className="text-sm font-medium text-emerald-700">40+ Integrations</span>
+                  </div>
+                </div>
+                
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-emerald-600 transition-colors">
+                  Integration Hub
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Connect with your existing systems through our comprehensive integration marketplace and API ecosystem.
+                </p>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-gray-50/50 to-white/50 rounded-xl">
+                    <div className="w-2 h-2 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex-shrink-0"></div>
+                    <span className="text-gray-700 text-sm">Core banking systems</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-gray-50/50 to-white/50 rounded-xl">
+                    <div className="w-2 h-2 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex-shrink-0"></div>
+                    <span className="text-gray-700 text-sm">Credit bureaus & data providers</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-gray-50/50 to-white/50 rounded-xl">
+                    <div className="w-2 h-2 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex-shrink-0"></div>
+                    <span className="text-gray-700 text-sm">Payment processors</span>
+                  </div>
+                </div>
+                
+                <div className="flex gap-3">
+                  <Link
+                    href="/solutions/integrations"
+                    className="flex-1 py-3 px-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] text-center text-sm"
+                  >
+                    View All
+                  </Link>
+                  <button
+                    onClick={() => setIsScheduleDemoModalOpen(true)}
+                    className="px-4 py-3 bg-gray-100 text-gray-700 rounded-xl font-semibold hover:bg-gray-200 transition-all text-sm"
+                  >
+                    Demo
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* ROI Calculator */}
+            <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/10 to-violet-600/10 rounded-full blur-2xl"></div>
+              
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform shadow-lg">
+                    📊
+                  </div>
+                  <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-purple-100 to-violet-100 rounded-full border border-purple-200">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
+                    <span className="text-sm font-medium text-purple-700">Business Tool</span>
+                  </div>
+                </div>
+                
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+                  ROI Calculator
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Calculate your potential return on investment with our comprehensive ROI modeling tool and business case builder.
+                </p>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-gray-50/50 to-white/50 rounded-xl">
+                    <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-violet-600 rounded-full flex-shrink-0"></div>
+                    <span className="text-gray-700 text-sm">Personalized ROI projections</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-gray-50/50 to-white/50 rounded-xl">
+                    <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-violet-600 rounded-full flex-shrink-0"></div>
+                    <span className="text-gray-700 text-sm">Cost-benefit analysis</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-gray-50/50 to-white/50 rounded-xl">
+                    <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-violet-600 rounded-full flex-shrink-0"></div>
+                    <span className="text-gray-700 text-sm">Implementation timeline</span>
+                  </div>
+                </div>
+                
+                <div className="flex gap-3">
+                  <Link
+                    href="/solutions/roi-calculator"
+                    className="flex-1 py-3 px-4 bg-gradient-to-r from-purple-500 to-violet-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] text-center text-sm"
+                  >
+                    Calculate ROI
+                  </Link>
+                  <button
+                    onClick={() => setIsGetStartedModalOpen(true)}
+                    className="px-4 py-3 bg-gray-100 text-gray-700 rounded-xl font-semibold hover:bg-gray-200 transition-all text-sm"
+                  >
+                    Start
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -674,13 +862,13 @@ export default function SolutionsPage() {
                   <span className="text-gray-700">Cooperative compliance</span>
                 </li>
               </ul>
-                </div>
+            </div>
             
             <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300 group">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                  </svg>
+                </svg>
               </div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900 group-hover:text-lendro-primary transition-colors">Retail & E-commerce</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
@@ -720,8 +908,8 @@ export default function SolutionsPage() {
             <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full border border-white/30 shadow-lg mb-8">
               <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-teal-500 rounded-full mr-3 animate-pulse"></div>
               <span className="text-sm font-medium text-white">Ready to Transform Your Lending?</span>
-                </div>
-                
+            </div>
+            
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white leading-tight">
               <span className="block mb-2">Start Your AI Lending</span>
               <span className="block bg-gradient-to-r from-cyan-300 via-teal-300 to-emerald-300 bg-clip-text text-transparent py-2">
@@ -768,21 +956,21 @@ export default function SolutionsPage() {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
-                      </div>
+                </div>
                 <h4 className="text-lg font-semibold text-white mb-2">Rapid Deployment</h4>
                 <p className="text-white/80 text-sm">Go live in weeks, not months with our proven implementation process</p>
-                    </div>
-                    
+              </div>
+              
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
-                      </div>
+                </div>
                 <h4 className="text-lg font-semibold text-white mb-2">Enterprise Security</h4>
                 <p className="text-white/80 text-sm">Bank-grade security with SOC 2 compliance and end-to-end encryption</p>
-                    </div>
-                    
+              </div>
+              
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-teal-400 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">

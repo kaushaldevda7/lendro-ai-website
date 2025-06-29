@@ -3,6 +3,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Link from 'next/link';
 
 interface LayoutProps {
   children: React.ReactNode;
