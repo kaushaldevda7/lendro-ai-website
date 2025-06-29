@@ -20,10 +20,11 @@ export const metadata: Metadata = {
   robots: "index, follow",
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico", sizes: "32x32" }
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" }
     ],
-    apple: { url: "/favicon.svg", type: "image/svg+xml" }
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico"
   },
   openGraph: {
     title: "Lendro.AI - Agentic AI for Intelligent Lending",
@@ -144,9 +145,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link rel="apple-touch-icon" href="/favicon.svg" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="theme-color" content="#1E51DB" />
         <meta property="og:image" content={`https://lendro.ai/og-image.png?${cacheVersion}`} />
         <meta property="og:image:type" content="image/png" />

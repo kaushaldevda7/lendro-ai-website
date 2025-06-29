@@ -364,8 +364,12 @@ export default function LendingAsAServicePage() {
               <ul className="space-y-2 mb-6 text-gray-600">
                 <li>• Personal loans</li>
                 <li>• Small business lending</li>
+                <li>• Commercial Real Estate (CRE)</li>
+                <li>• Commercial & Industrial (C&I)</li>
                 <li>• Line of credit products</li>
-                <li>• Credit builder loans</li>
+                <li>• Asset-based lending</li>
+                <li>• SBA loans</li>
+                <li>• Equipment financing</li>
               </ul>
               <Link href="/solutions/banking" className="text-black font-medium hover:underline inline-flex items-center">
                 Learn More

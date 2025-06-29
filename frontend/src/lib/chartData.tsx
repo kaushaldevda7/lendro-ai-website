@@ -86,8 +86,8 @@ export function getLoanStatusData(): ChartData {
  */
 export function getLoanTypeData(): ChartData {
   return {
-    labels: ['Personal', 'Business', 'Education', 'Home', 'Vehicle'],
-    values: [35, 30, 15, 12, 8]
+    labels: ['Personal', 'Business', 'Commercial RE', 'C&I', 'Auto', 'Equipment', 'SBA', 'Asset-Based'],
+    values: [35, 30, 18, 15, 12, 10, 8, 6]
   };
 }
 

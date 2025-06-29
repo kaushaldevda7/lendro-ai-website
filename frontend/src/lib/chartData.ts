@@ -66,18 +66,20 @@ export function getChartData(type?: 'line' | 'bar' | 'pie'): ChartData {
 
   // Bar chart data - loan categories
   const barChartData: BarChartData = {
-    labels: ['Personal', 'Business', 'Education', 'Home', 'Vehicle', 'Medical'],
+    labels: ['Personal', 'Business', 'Commercial RE', 'C&I', 'Auto', 'Equipment', 'SBA', 'Asset-Based'],
     datasets: [
       {
         label: 'Number of Loans',
-        data: [65, 59, 80, 81, 56, 40],
+        data: [65, 59, 45, 38, 56, 42, 35, 28],
         backgroundColor: [
           'rgba(255, 99, 132, 0.6)',
           'rgba(54, 162, 235, 0.6)',
           'rgba(255, 206, 86, 0.6)',
           'rgba(75, 192, 192, 0.6)',
           'rgba(153, 102, 255, 0.6)',
-          'rgba(255, 159, 64, 0.6)'
+          'rgba(255, 159, 64, 0.6)',
+          'rgba(199, 199, 199, 0.6)',
+          'rgba(83, 102, 255, 0.6)'
         ]
       }
     ]

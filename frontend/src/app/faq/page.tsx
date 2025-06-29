@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     question: "What types of loans can Lendro.AI handle?",
-    answer: "Lendro.AI supports multiple loan products including personal loans, business loans, auto loans, lines of credit, SBA loans, equipment financing, and merchant cash advances. Our platform is configurable for any lending product with customizable workflows and risk parameters."
+    answer: "Lendro.AI supports a comprehensive range of loan products including personal loans, business loans, auto loans, lines of credit, SBA loans, equipment financing, merchant cash advances, Commercial Real Estate (CRE), Commercial & Industrial (C&I) loans, asset-based lending, marketable securities financing, invoice factoring, bridge loans, construction loans, and specialty finance products. Our platform is fully configurable for any lending product with customizable workflows, risk parameters, and compliance requirements."
   },
   {
     question: "How long does it take to implement Lendro.AI?",

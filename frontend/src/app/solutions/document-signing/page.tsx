@@ -20,37 +20,61 @@ export default function DocumentSigningPage() {
     {
       title: "Self-Hosted & White-Labeled",
       description: "Complete control with your own branding, domain, and infrastructure. No third-party dependencies.",
-      icon: "🏠",
+      icon: (
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      ),
       highlight: "Enterprise Control"
     },
     {
       title: "Advanced E-Signature Workflows",
       description: "Multi-party signing sequences, conditional routing, and automated notifications.",
-      icon: "🔄",
+      icon: (
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+        </svg>
+      ),
       highlight: "Smart Automation"
     },
     {
       title: "Template Management System",
       description: "Create, customize, and manage document templates with intelligent field mapping.",
-      icon: "📋",
+      icon: (
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      ),
       highlight: "Efficiency Boost"
     },
     {
       title: "Legal Compliance & Audit Trails",
       description: "ESIGN Act compliant with tamper-proof documents and comprehensive audit logs.",
-      icon: "⚖️",
+      icon: (
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16l3-3m-3 3l-3-3" />
+        </svg>
+      ),
       highlight: "Regulatory Ready"
     },
     {
       title: "API-First Integration",
       description: "Seamlessly integrate with your existing lending platform and third-party systems.",
-      icon: "🔗",
+      icon: (
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+        </svg>
+      ),
       highlight: "Seamless Integration"
     },
     {
       title: "Enterprise Security",
       description: "Bank-grade encryption, SSO support, and advanced access controls.",
-      icon: "🔒",
+      icon: (
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+      ),
       highlight: "Maximum Security"
     }
   ];
@@ -59,25 +83,41 @@ export default function DocumentSigningPage() {
     {
       title: "Loan Documentation",
       description: "Streamline loan agreement signing with automated workflows and real-time status tracking.",
-      icon: "💰",
+      icon: (
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
       benefits: ["Faster loan closings", "Reduced errors", "Better compliance"]
     },
     {
       title: "Compliance Documents",
       description: "Ensure regulatory compliance with automated disclosures and acknowledgment workflows.",
-      icon: "📜",
+      icon: (
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      ),
       benefits: ["Regulatory compliance", "Audit trails", "Risk reduction"]
     },
     {
       title: "Client Onboarding",
       description: "Accelerate customer onboarding with digital forms and signature collection.",
-      icon: "👥",
+      icon: (
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+      ),
       benefits: ["Faster onboarding", "Better experience", "Higher conversion"]
     },
     {
       title: "Internal Approvals",
       description: "Digitize internal approval processes and document workflows for efficiency.",
-      icon: "✅",
+      icon: (
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
       benefits: ["Process efficiency", "Clear accountability", "Faster decisions"]
     }
   ];
@@ -297,7 +337,7 @@ export default function DocumentSigningPage() {
                 
                 <div className="relative z-10">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform shadow-lg">
+                    <div className="w-16 h-16 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
                       {feature.icon}
                     </div>
                     <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-green-100 to-emerald-100 rounded-full border border-green-200">
@@ -333,7 +373,7 @@ export default function DocumentSigningPage() {
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white rounded-3xl p-8 shadow-xl border border-gray-200/50 hover:shadow-2xl transition-all duration-300 group">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-2xl flex items-center justify-center text-2xl flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
                     {useCase.icon}
                   </div>
                   <div className="flex-1">
