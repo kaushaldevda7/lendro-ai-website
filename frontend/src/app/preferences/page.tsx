@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import Layout from '@/components/layout/Layout';
 import { useSearchParams } from 'next/navigation';
 import axios from 'axios';
 
-export default function PreferencesPage() {
+function PreferencesContent() {
   const searchParams = useSearchParams();
   const emailParam = searchParams.get('email');
   
@@ -334,5 +334,27 @@ export default function PreferencesPage() {
         </div>
       </div>
     </Layout>
+  );
+}
+
+export default function PreferencesPage() {
+  return (
+    <Suspense fallback={
+      <Layout>
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 py-12">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 text-center">
+              <div className="animate-pulse">
+                <div className="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-6"></div>
+                <div className="h-8 bg-gray-200 rounded w-3/4 mx-auto mb-4"></div>
+                <div className="h-4 bg-gray-200 rounded w-1/2 mx-auto"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Layout>
+    }>
+      <PreferencesContent />
+    </Suspense>
   );
 } 
