@@ -101,7 +101,7 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose, he
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-[#1E51DB]/10 via-[#65A8F3]/10 to-[#9BD7FB]/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-[#9BD7FB]/10 via-[#65A8F3]/10 to-[#1E51DB]/10 rounded-full blur-3xl"></div>
       
-      <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl max-w-lg w-full max-h-[95vh] overflow-hidden border border-gray-200/50 relative">
+      <div className="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl max-w-lg w-full max-h-[95vh] overflow-hidden border border-[#1E51DB]/20 relative">
         {/* Modal Header */}
         <div className="bg-gradient-to-r from-[#1E51DB] via-[#65A8F3] to-[#9BD7FB] p-6 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-grid-white/10"></div>
@@ -147,12 +147,16 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose, he
                 </>
               ) : (
                 <>
-                  <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
+                  <div className="w-20 h-20 bg-gradient-to-r from-[#1E51DB] via-[#65A8F3] to-[#9BD7FB] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg relative overflow-hidden">
+                    {/* Animated background pulse */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#1E51DB] via-[#65A8F3] to-[#9BD7FB] rounded-full animate-pulse opacity-50"></div>
+                    <div className="relative z-10">
+                      <svg className="w-10 h-10 text-white animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Thank you!</h3>
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] bg-clip-text text-transparent mb-3">Thank you!</h3>
                   <p className="text-gray-600 mb-8 leading-relaxed">{formStatus.message}</p>
                 </>
               )}
@@ -181,7 +185,7 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose, he
                     name="name" 
                     value={formData.name} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-3 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E51DB]/50 focus:border-[#1E51DB] transition-all duration-200 shadow-sm hover:shadow-md" 
+                    className="w-full px-4 py-3 bg-white/90 backdrop-blur-sm border border-[#65A8F3]/30 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E51DB]/50 focus:border-[#1E51DB] transition-all duration-200 shadow-sm hover:shadow-md hover:border-[#65A8F3]/50" 
                     placeholder="John Doe"
                     required 
                   />
@@ -195,7 +199,7 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose, he
                     name="email" 
                     value={formData.email} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-3 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E51DB]/50 focus:border-[#1E51DB] transition-all duration-200 shadow-sm hover:shadow-md" 
+                    className="w-full px-4 py-3 bg-white/90 backdrop-blur-sm border border-[#65A8F3]/30 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E51DB]/50 focus:border-[#1E51DB] transition-all duration-200 shadow-sm hover:shadow-md hover:border-[#65A8F3]/50" 
                     placeholder="john@company.com"
                     required 
                   />
@@ -211,7 +215,7 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose, he
                     name="company" 
                     value={formData.company} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-3 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E51DB]/50 focus:border-[#1E51DB] transition-all duration-200 shadow-sm hover:shadow-md" 
+                    className="w-full px-4 py-3 bg-white/90 backdrop-blur-sm border border-[#65A8F3]/30 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E51DB]/50 focus:border-[#1E51DB] transition-all duration-200 shadow-sm hover:shadow-md hover:border-[#65A8F3]/50" 
                     placeholder="Your Company"
                   />
                 </div>
@@ -224,7 +228,7 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose, he
                     name="phone" 
                     value={formData.phone} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-3 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E51DB]/50 focus:border-[#1E51DB] transition-all duration-200 shadow-sm hover:shadow-md" 
+                    className="w-full px-4 py-3 bg-white/90 backdrop-blur-sm border border-[#65A8F3]/30 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E51DB]/50 focus:border-[#1E51DB] transition-all duration-200 shadow-sm hover:shadow-md hover:border-[#65A8F3]/50" 
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
@@ -238,7 +242,7 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose, he
                   value={formData.message} 
                   onChange={handleChange} 
                   rows={4} 
-                  className="w-full px-4 py-3 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E51DB]/50 focus:border-[#1E51DB] transition-all duration-200 shadow-sm hover:shadow-md resize-none" 
+                  className="w-full px-4 py-3 bg-white/90 backdrop-blur-sm border border-[#65A8F3]/30 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E51DB]/50 focus:border-[#1E51DB] transition-all duration-200 shadow-sm hover:shadow-md resize-none hover:border-[#65A8F3]/50" 
                   placeholder="Tell us about your lending operations and how we can help transform them with AI..."
                   required
                 ></textarea>
@@ -249,7 +253,7 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose, he
                 <button 
                   type="button" 
                   onClick={onClose} 
-                  className="flex-1 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-xl transition-all duration-200 border border-gray-200 hover:border-gray-300"
+                  className="flex-1 px-6 py-3 bg-gray-50 hover:bg-gray-100 text-gray-700 font-semibold rounded-xl transition-all duration-200 border border-[#65A8F3]/20 hover:border-[#65A8F3]/40"
                   disabled={formStatus.loading}
                 >
                   Cancel
