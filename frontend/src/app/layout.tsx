@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 // Cache-busting parameter to force social platforms to refresh
 const cacheVersion = "v2024-12-17";
+const faviconVersion = "v2024-12-17-fix";
 
 export const metadata: Metadata = {
   title: "Lendro.AI - Agentic AI for Lending | Autonomous AI Agents Transform Lending Operations",
@@ -20,11 +21,13 @@ export const metadata: Metadata = {
   robots: "index, follow",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon.svg", type: "image/svg+xml" }
+      { url: `/favicon.svg?${faviconVersion}`, type: "image/svg+xml" },
+      { url: `/favicon.ico?${faviconVersion}`, sizes: "any" },
+      { url: `/favicon-16x16.png?${faviconVersion}`, sizes: "16x16", type: "image/png" },
+      { url: `/favicon-32x32.png?${faviconVersion}`, sizes: "32x32", type: "image/png" }
     ],
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico"
+    shortcut: `/favicon.ico?${faviconVersion}`,
+    apple: `/favicon-32x32.png?${faviconVersion}`
   },
   openGraph: {
     title: "Lendro.AI - Agentic AI for Intelligent Lending",
@@ -145,10 +148,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/favicon.ico" />
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="icon" href={`/favicon.svg?${faviconVersion}`} type="image/svg+xml" />
+        <link rel="icon" href={`/favicon.ico?${faviconVersion}`} sizes="any" />
+        <link rel="icon" href={`/favicon-16x16.png?${faviconVersion}`} sizes="16x16" type="image/png" />
+        <link rel="icon" href={`/favicon-32x32.png?${faviconVersion}`} sizes="32x32" type="image/png" />
+        <link rel="apple-touch-icon" href={`/favicon-32x32.png?${faviconVersion}`} />
+        <link rel="shortcut icon" href={`/favicon.ico?${faviconVersion}`} />
         <meta name="theme-color" content="#1E51DB" />
         <meta property="og:image" content={`https://lendro.ai/og-image.png?${cacheVersion}`} />
         <meta property="og:image:type" content="image/png" />
