@@ -147,12 +147,13 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose, he
                 </>
               ) : (
                 <>
-                  <div className="w-20 h-20 bg-gradient-to-r from-[#1E51DB] via-[#65A8F3] to-[#9BD7FB] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg relative overflow-hidden">
-                    {/* Animated background pulse */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#1E51DB] via-[#65A8F3] to-[#9BD7FB] rounded-full animate-pulse opacity-50"></div>
-                    <div className="relative z-10">
-                      <svg className="w-10 h-10 text-white animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <div className="relative w-20 h-20 mx-auto mb-6">
+                    {/* Subtle outer ring */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#1E51DB] via-[#65A8F3] to-[#9BD7FB] rounded-full opacity-20 animate-ping"></div>
+                    {/* Main success icon */}
+                    <div className="relative w-20 h-20 bg-gradient-to-r from-[#1E51DB] via-[#65A8F3] to-[#9BD7FB] rounded-full flex items-center justify-center shadow-lg">
+                      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
                   </div>
