@@ -5,9 +5,10 @@ interface ContactFormModalProps {
   isOpen: boolean;
   onClose: () => void;
   heading: string;
+  formType?: string;
 }
 
-const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose, heading }) => {
+const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose, heading, formType }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -45,7 +46,10 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose, he
     
     try {
       // Send email through our Next.js API route
-      const response = await axios.post('/api/send-email', formData);
+      const response = await axios.post('/api/send-email', {
+        ...formData,
+        formType: formType || heading
+      });
       
       console.log('Email API response:', response.data);
       

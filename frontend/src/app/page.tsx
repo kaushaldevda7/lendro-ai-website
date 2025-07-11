@@ -292,12 +292,14 @@ export default function Home() {
         isOpen={isGetStartedModalOpen} 
         onClose={() => setIsGetStartedModalOpen(false)}
         heading="Get Started"
+        formType="Get Started Form"
       />
       
       <ContactFormModal 
         isOpen={isStartTrialModalOpen} 
         onClose={() => setIsStartTrialModalOpen(false)}
         heading="Start Free Trial"
+        formType="Free Trial Form"
       />
       
       {/* AI Assistants Showcase Section - Now at the top */}
@@ -536,7 +538,7 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-relaxed mb-8">
-              Intelligent Lending
+              Intelligent Lending 
               <span className="block bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent py-2">
                 Reimagined
               </span>
