@@ -36,7 +36,7 @@ export async function POST(request: Request) {
 
     // Send confirmation email to user
     const userEmailResult = await resend.emails.send({
-      from: 'Lendro.AI - Intelligent Lending <hello@lendro.ai>',
+      from: 'Lendro.AI <hello@lendro.ai>',
       to: email,
       subject: 'Welcome to the Future of AI Lending - Lendro.AI',
       html: getUserConfirmationEmail({ name, company, email }),
