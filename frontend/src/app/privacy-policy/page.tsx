@@ -8,198 +8,398 @@ export default function PrivacyPolicyPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-white text-black py-16 md:py-24 relative overflow-hidden bg-grid-black">
-        <div className="container mx-auto px-4 max-w-6xl">
+      <section className="bg-gradient-to-br from-[#1E51DB] via-[#65A8F3] to-[#9BD7FB] text-white py-16 md:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+        <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
               Privacy Policy
             </h1>
-            <p className="text-gray-600 text-lg md:text-xl mt-6">
-              Last updated: May 1, 2024
+            <p className="text-white/80 text-lg md:text-xl mt-6">
+              Your privacy is our priority. Learn how we protect and handle your data.
+            </p>
+            <p className="text-white/60 text-sm md:text-base mt-4">
+              Last updated: December 17, 2024
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4 max-w-3xl">
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose prose-lg max-w-none">
-            <p>
-              Technexus ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our loan management platform and services (collectively, the "Services").
-            </p>
-            
-            <p>
-              Please read this Privacy Policy carefully. By accessing or using our Services, you acknowledge that you have read, understood, and agree to be bound by all the terms of this Privacy Policy.
-            </p>
+            <div className="bg-gradient-to-r from-[#1E51DB]/5 to-[#65A8F3]/5 rounded-2xl p-8 mb-12 border border-[#1E51DB]/10">
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Lendro.AI ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our AI-powered lending platform and services (collectively, the "Services").
+              </p>
+              
+              <p className="text-lg text-gray-700 leading-relaxed mt-4">
+                Please read this Privacy Policy carefully. By accessing or using our Services, you acknowledge that you have read, understood, and agree to be bound by all the terms of this Privacy Policy.
+              </p>
+            </div>
 
-            <h2 className="text-2xl font-bold mt-10 mb-4">Information We Collect</h2>
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-[#1E51DB] border-b-2 border-[#65A8F3] pb-2">Information We Collect</h2>
             
-            <h3 className="text-xl font-bold mt-8 mb-2">Personal Information</h3>
+            <h3 className="text-2xl font-bold mt-8 mb-4 text-[#1E51DB]">Personal Information</h3>
             
-            <p>
+            <p className="text-gray-700 leading-relaxed">
               We may collect personal information that you voluntarily provide to us when you:
             </p>
             
-            <ul className="list-disc ml-6 space-y-2">
-              <li>Register for an account</li>
-              <li>Express interest in obtaining information about us or our products and services</li>
-              <li>Apply for a loan or financial product</li>
-              <li>Participate in activities on our Services</li>
-              <li>Contact us</li>
+            <ul className="list-none space-y-3 ml-0 mt-4">
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">Register for an account or request a demo</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">Express interest in our AI lending solutions</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">Apply for a loan or financial product through our platform</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">Participate in activities on our Services</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">Contact us or subscribe to our newsletter</span>
+              </li>
             </ul>
             
-            <p>
+            <p className="text-gray-700 leading-relaxed mt-6">
               The personal information we collect may include:
             </p>
             
-            <ul className="list-disc ml-6 space-y-2">
-              <li>Name, email address, phone number, and mailing address</li>
-              <li>Date of birth, Social Insurance Number (SIN), and government-issued identification</li>
-              <li>Financial information, including income, expenses, assets, and liabilities</li>
-              <li>Employment information</li>
-              <li>Credit history and credit scores</li>
-              <li>Banking information</li>
-              <li>Any other information you choose to provide</li>
+            <ul className="list-none space-y-3 ml-0 mt-4">
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#65A8F3] to-[#9BD7FB] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">Name, email address, phone number, and mailing address</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#65A8F3] to-[#9BD7FB] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">Date of birth, Social Insurance Number (SIN), and government-issued identification</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#65A8F3] to-[#9BD7FB] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">Financial information, including income, expenses, assets, and liabilities</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#65A8F3] to-[#9BD7FB] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">Employment information and business details</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#65A8F3] to-[#9BD7FB] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">Credit history and credit scores</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#65A8F3] to-[#9BD7FB] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">Banking information and transaction data</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#65A8F3] to-[#9BD7FB] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">Any other information you choose to provide</span>
+              </li>
             </ul>
             
-            <h3 className="text-xl font-bold mt-8 mb-2">Information Automatically Collected</h3>
+            <h3 className="text-2xl font-bold mt-8 mb-4 text-[#1E51DB]">Information Automatically Collected</h3>
             
-            <p>
-              When you use our Services, we may automatically collect certain information, including:
+            <p className="text-gray-700 leading-relaxed">
+              When you use our Services, we may automatically collect certain information through our AI systems and analytics tools, including:
             </p>
             
-            <ul className="list-disc ml-6 space-y-2">
-              <li>Device information (such as your mobile device ID, model, and manufacturer)</li>
-              <li>IP address, browser type, operating system</li>
-              <li>Location information</li>
-              <li>Usage data, such as pages visited, time spent on those pages, and click-through data</li>
-              <li>Cookies and similar tracking technologies</li>
+            <ul className="list-none space-y-3 ml-0 mt-4">
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">Device information (mobile device ID, model, manufacturer)</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">IP address, browser type, operating system</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">Location information (when permitted)</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">Usage data, pages visited, time spent, and interaction patterns</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">Cookies and similar tracking technologies</span>
+              </li>
             </ul>
             
-            <h2 className="text-2xl font-bold mt-10 mb-4">How We Use Your Information</h2>
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-[#1E51DB] border-b-2 border-[#65A8F3] pb-2">How We Use Your Information</h2>
             
-            <p>
-              We may use the information we collect for various purposes, including to:
+            <p className="text-gray-700 leading-relaxed">
+              We use the information we collect to power our AI-driven lending platform and provide you with personalized financial solutions:
             </p>
             
-            <ul className="list-disc ml-6 space-y-2">
-              <li>Provide, maintain, and improve our Services</li>
-              <li>Process loan applications and manage your account</li>
-              <li>Assess creditworthiness and make lending decisions</li>
-              <li>Personalize your experience and deliver content</li>
-              <li>Communicate with you about our Services</li>
-              <li>Send administrative information, such as updates or security alerts</li>
-              <li>Respond to your inquiries and requests</li>
-              <li>Monitor and analyze usage patterns and trends</li>
-              <li>Protect against fraudulent or unauthorized activity</li>
-              <li>Comply with legal and regulatory requirements</li>
+            <div className="grid md:grid-cols-2 gap-6 mt-6">
+              <div className="bg-gradient-to-br from-[#1E51DB]/5 to-[#65A8F3]/5 rounded-xl p-6 border border-[#1E51DB]/10">
+                <h4 className="font-bold text-[#1E51DB] mb-3">Platform Operations</h4>
+                <ul className="list-none space-y-2">
+                  <li className="flex items-start space-x-2">
+                    <div className="w-1.5 h-1.5 bg-[#1E51DB] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm text-gray-700">Provide and maintain our AI lending platform</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <div className="w-1.5 h-1.5 bg-[#1E51DB] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm text-gray-700">Process loan applications and manage accounts</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <div className="w-1.5 h-1.5 bg-[#1E51DB] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm text-gray-700">Assess creditworthiness using AI models</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-gradient-to-br from-[#65A8F3]/5 to-[#9BD7FB]/5 rounded-xl p-6 border border-[#65A8F3]/10">
+                <h4 className="font-bold text-[#1E51DB] mb-3">User Experience</h4>
+                <ul className="list-none space-y-2">
+                  <li className="flex items-start space-x-2">
+                    <div className="w-1.5 h-1.5 bg-[#65A8F3] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm text-gray-700">Personalize your experience and content</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <div className="w-1.5 h-1.5 bg-[#65A8F3] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm text-gray-700">Communicate about our services and updates</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <div className="w-1.5 h-1.5 bg-[#65A8F3] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm text-gray-700">Respond to inquiries and provide support</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <ul className="list-none space-y-3 ml-0 mt-6">
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">Monitor and analyze usage patterns to improve our AI algorithms</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">Protect against fraudulent or unauthorized activity</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">Comply with legal and regulatory requirements</span>
+              </li>
             </ul>
             
-            <h2 className="text-2xl font-bold mt-10 mb-4">How We Share Your Information</h2>
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-[#1E51DB] border-b-2 border-[#65A8F3] pb-2">How We Share Your Information</h2>
             
-            <p>
-              We may share your information with:
+            <p className="text-gray-700 leading-relaxed">
+              We may share your information with trusted partners and service providers to deliver our AI-powered lending solutions:
             </p>
             
-            <ul className="list-disc ml-6 space-y-2">
-              <li>Service providers that help us deliver our Services</li>
-              <li>Credit bureaus and credit reporting agencies</li>
-              <li>Financial institutions and payment processors</li>
-              <li>Professional advisors, such as lawyers, auditors, and insurers</li>
-              <li>Regulatory authorities, law enforcement, and other governmental agencies</li>
-              <li>Business partners for marketing and promotional purposes (with your consent)</li>
-              <li>Potential buyers or investors in the event of a business transaction</li>
+            <div className="bg-gradient-to-r from-[#1E51DB]/5 to-[#65A8F3]/5 rounded-xl p-6 mt-6 border border-[#1E51DB]/10">
+              <h4 className="font-bold text-[#1E51DB] mb-4">Trusted Partners & Service Providers</h4>
+              <ul className="list-none space-y-3">
+                <li className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full mt-2.5 flex-shrink-0"></div>
+                  <span className="text-gray-700">AI and technology service providers that help power our platform</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full mt-2.5 flex-shrink-0"></div>
+                  <span className="text-gray-700">Credit bureaus and credit reporting agencies</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full mt-2.5 flex-shrink-0"></div>
+                  <span className="text-gray-700">Financial institutions and payment processors</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full mt-2.5 flex-shrink-0"></div>
+                  <span className="text-gray-700">Professional advisors (lawyers, auditors, insurers)</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] rounded-full mt-2.5 flex-shrink-0"></div>
+                  <span className="text-gray-700">Regulatory authorities and governmental agencies</span>
+                </li>
+              </ul>
+            </div>
+            
+            <p className="text-gray-700 leading-relaxed mt-6">
+              We may also share your information in the following circumstances:
+            </p>
+            
+            <ul className="list-none space-y-3 ml-0 mt-4">
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#65A8F3] to-[#9BD7FB] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">To comply with applicable laws and regulations</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#65A8F3] to-[#9BD7FB] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">To respond to legal process or government requests</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#65A8F3] to-[#9BD7FB] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">To protect our rights, privacy, safety, or property</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-gradient-to-r from-[#65A8F3] to-[#9BD7FB] rounded-full mt-2.5 flex-shrink-0"></div>
+                <span className="text-gray-700">With your explicit consent or at your direction</span>
+              </li>
             </ul>
             
-            <p>
-              We may also share your information:
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-[#1E51DB] border-b-2 border-[#65A8F3] pb-2">Data Security & AI Protection</h2>
+            
+            <p className="text-gray-700 leading-relaxed">
+              We implement industry-leading security measures to protect your personal information, including advanced encryption and AI-powered fraud detection. While we maintain reasonable security measures, no system is completely secure, and we cannot guarantee absolute security.
             </p>
             
-            <ul className="list-disc ml-6 space-y-2">
-              <li>To comply with applicable laws and regulations</li>
-              <li>To respond to a subpoena, court order, or legal process</li>
-              <li>To protect our rights, privacy, safety, or property</li>
-              <li>With your consent or at your direction</li>
-            </ul>
+            <div className="bg-gradient-to-r from-[#1E51DB]/5 to-[#65A8F3]/5 rounded-xl p-6 mt-6 border border-[#1E51DB]/10">
+              <h4 className="font-bold text-[#1E51DB] mb-3">Our Security Measures Include:</h4>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <ul className="list-none space-y-2">
+                    <li className="flex items-start space-x-2">
+                      <div className="w-1.5 h-1.5 bg-[#1E51DB] rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700">End-to-end encryption</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <div className="w-1.5 h-1.5 bg-[#1E51DB] rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700">Multi-factor authentication</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <div className="w-1.5 h-1.5 bg-[#1E51DB] rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700">Regular security audits</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul className="list-none space-y-2">
+                    <li className="flex items-start space-x-2">
+                      <div className="w-1.5 h-1.5 bg-[#65A8F3] rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700">AI-powered fraud detection</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <div className="w-1.5 h-1.5 bg-[#65A8F3] rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700">Secure cloud infrastructure</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <div className="w-1.5 h-1.5 bg-[#65A8F3] rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700">Data anonymization techniques</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             
-            <h2 className="text-2xl font-bold mt-10 mb-4">Cookies and Tracking Technologies</h2>
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-[#1E51DB] border-b-2 border-[#65A8F3] pb-2">Data Retention</h2>
             
-            <p>
-              We use cookies and similar tracking technologies to track activity on our Services and hold certain information. Cookies are files with small amounts of data that may include an anonymous unique identifier. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Services.
+            <p className="text-gray-700 leading-relaxed">
+              We retain your personal information only for as long as necessary to fulfill the purposes outlined in this policy, comply with legal obligations, resolve disputes, and enforce our agreements. Retention periods vary based on the type of information and applicable legal requirements.
             </p>
             
-            <h2 className="text-2xl font-bold mt-10 mb-4">Security of Your Information</h2>
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-[#1E51DB] border-b-2 border-[#65A8F3] pb-2">Your Rights and Choices</h2>
             
-            <p>
-              We use administrative, technical, and physical security measures to protect your personal information. While we have taken reasonable steps to secure the information you provide to us, please be aware that no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against interception or other types of misuse.
+            <p className="text-gray-700 leading-relaxed">
+              Depending on your location, you may have certain rights regarding your personal information:
             </p>
             
-            <h2 className="text-2xl font-bold mt-10 mb-4">Data Retention</h2>
+            <div className="grid md:grid-cols-2 gap-6 mt-6">
+              <div className="bg-gradient-to-br from-[#1E51DB]/5 to-[#65A8F3]/5 rounded-xl p-6 border border-[#1E51DB]/10">
+                <h4 className="font-bold text-[#1E51DB] mb-3">Access & Control</h4>
+                <ul className="list-none space-y-2">
+                  <li className="flex items-start space-x-2">
+                    <div className="w-1.5 h-1.5 bg-[#1E51DB] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm text-gray-700">Access and receive a copy of your data</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <div className="w-1.5 h-1.5 bg-[#1E51DB] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm text-gray-700">Rectify or update your information</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <div className="w-1.5 h-1.5 bg-[#1E51DB] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm text-gray-700">Request deletion of your data</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-gradient-to-br from-[#65A8F3]/5 to-[#9BD7FB]/5 rounded-xl p-6 border border-[#65A8F3]/10">
+                <h4 className="font-bold text-[#1E51DB] mb-3">Processing Rights</h4>
+                <ul className="list-none space-y-2">
+                  <li className="flex items-start space-x-2">
+                    <div className="w-1.5 h-1.5 bg-[#65A8F3] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm text-gray-700">Restrict or object to processing</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <div className="w-1.5 h-1.5 bg-[#65A8F3] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm text-gray-700">Data portability</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <div className="w-1.5 h-1.5 bg-[#65A8F3] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm text-gray-700">Withdraw consent</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
             
-            <p>
-              We will retain your personal information only for as long as necessary to fulfill the purposes for which it was collected, including to satisfy legal, accounting, or reporting requirements. To determine the appropriate retention period, we consider the amount, nature, and sensitivity of the personal information, the potential risk of harm from unauthorized use or disclosure, and applicable legal requirements.
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-[#1E51DB] border-b-2 border-[#65A8F3] pb-2">Cookies and Tracking</h2>
+            
+            <p className="text-gray-700 leading-relaxed">
+              We use cookies and similar technologies to enhance your experience, analyze usage patterns, and improve our AI algorithms. You can control cookie preferences through your browser settings, though some features may not function properly if cookies are disabled.
             </p>
             
-            <h2 className="text-2xl font-bold mt-10 mb-4">Your Rights and Choices</h2>
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-[#1E51DB] border-b-2 border-[#65A8F3] pb-2">Children's Privacy</h2>
             
-            <p>
-              Depending on your location, you may have certain rights regarding your personal information, including:
+            <p className="text-gray-700 leading-relaxed">
+              Our Services are designed for adults and businesses. We do not knowingly collect personal information from individuals under 18. If you believe a child has provided us with personal information, please contact us immediately.
             </p>
             
-            <ul className="list-disc ml-6 space-y-2">
-              <li>The right to access and receive a copy of your personal information</li>
-              <li>The right to rectify or update your personal information</li>
-              <li>The right to request deletion of your personal information</li>
-              <li>The right to restrict or object to our processing of your personal information</li>
-              <li>The right to data portability</li>
-              <li>The right to withdraw consent</li>
-            </ul>
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-[#1E51DB] border-b-2 border-[#65A8F3] pb-2">Changes to This Policy</h2>
             
-            <p>
-              To exercise these rights, please contact us using the information provided in the "Contact Us" section below.
+            <p className="text-gray-700 leading-relaxed">
+              We may update this Privacy Policy to reflect changes in our practices or legal requirements. We will notify you of material changes by posting the updated policy on our website and updating the "Last updated" date.
             </p>
             
-            <h2 className="text-2xl font-bold mt-10 mb-4">Children's Privacy</h2>
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-[#1E51DB] border-b-2 border-[#65A8F3] pb-2">Contact Us</h2>
             
-            <p>
-              Our Services are not intended for individuals under the age of 18. We do not knowingly collect personal information from children under 18. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us.
+            <p className="text-gray-700 leading-relaxed">
+              If you have questions about this Privacy Policy or wish to exercise your rights, please contact us:
             </p>
             
-            <h2 className="text-2xl font-bold mt-10 mb-4">Changes to This Privacy Policy</h2>
-            
-            <p>
-              We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date. You are advised to review this Privacy Policy periodically for any changes.
-            </p>
-            
-            <h2 className="text-2xl font-bold mt-10 mb-4">Contact Us</h2>
-            
-            <p>
-              If you have any questions about this Privacy Policy, please contact us at:
-            </p>
-            
-            <address className="not-italic mt-4">
-              Technexus Inc.<br />
-              40 King St W, 41st Floor
-              <br />
-              Toronto, ON M5H 3Y2
-              <br />
-              Canada
-              <br />
-              Email: privacy@technexus.ca<br />
-              Phone: (647) 554-4857
-            </address>
+            <div className="bg-gradient-to-r from-[#1E51DB]/5 to-[#65A8F3]/5 rounded-xl p-8 mt-6 border border-[#1E51DB]/10">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="font-bold text-[#1E51DB] mb-4">Lendro.AI</h4>
+                  <address className="not-italic text-gray-700 leading-relaxed">
+                    <strong>Email:</strong> privacy@lendro.ai<br />
+                    <strong>Website:</strong> www.lendro.ai<br />
+                    <strong>Response Time:</strong> Within 48 hours
+                  </address>
+                </div>
+                <div>
+                  <h4 className="font-bold text-[#1E51DB] mb-4">Data Protection Officer</h4>
+                  <address className="not-italic text-gray-700 leading-relaxed">
+                    <strong>Email:</strong> dpo@lendro.ai<br />
+                    <strong>For:</strong> Privacy rights requests<br />
+                    <strong>Response Time:</strong> Within 30 days
+                  </address>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-200">
+          <div className="mt-16 pt-8 border-t border-[#1E51DB]/20">
             <div className="flex flex-wrap gap-6">
-              <Link href="/terms-of-service" className="text-black hover:text-gray-700">
+              <Link href="/terms-of-service" className="text-[#1E51DB] hover:text-[#65A8F3] font-medium transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/security" className="text-black hover:text-gray-700">
+              <Link href="/security" className="text-[#1E51DB] hover:text-[#65A8F3] font-medium transition-colors">
                 Security
               </Link>
-              <Link href="/compliance" className="text-black hover:text-gray-700">
+              <Link href="/compliance" className="text-[#1E51DB] hover:text-[#65A8F3] font-medium transition-colors">
                 Compliance
+              </Link>
+              <Link href="/contact" className="text-[#1E51DB] hover:text-[#65A8F3] font-medium transition-colors">
+                Contact Us
               </Link>
             </div>
           </div>
