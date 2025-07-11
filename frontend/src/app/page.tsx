@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation';
 import ContactFormModal from '@/components/ui/ContactFormModal';
 import CalendlyModal from '@/components/ui/CalendlyModal';
 import Head from 'next/head';
+import axios from 'axios';
 
 export default function Home() {
   const { state } = useAuth();
@@ -21,6 +22,21 @@ export default function Home() {
   const [isROIModalOpen, setIsROIModalOpen] = useState(false);
   const [isWhitepaperModalOpen, setIsWhitepaperModalOpen] = useState(false);
   const [whitepaperEmail, setWhitepaperEmail] = useState('');
+  
+  // Newsletter state
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [newsletterStatus, setNewsletterStatus] = useState({
+    loading: false,
+    success: false,
+    error: ''
+  });
+  
+  // Whitepaper state
+  const [whitepaperStatus, setWhitepaperStatus] = useState({
+    loading: false,
+    success: false,
+    error: ''
+  });
   const [roiInputs, setROIInputs] = useState({
     monthlyApplicationVolume: 250,
     avgLoanAmount: 25000,
@@ -260,14 +276,67 @@ export default function Home() {
     return Math.round(num).toString();
   };
 
-  // Handle whitepaper email submission
-  const handleWhitepaperSubmit = (e: React.FormEvent) => {
+  // Handle newsletter subscription
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (whitepaperEmail.trim()) {
-      // Close modal and redirect to whitepaper
-      setIsWhitepaperModalOpen(false);
-      setWhitepaperEmail('');
-      router.push('/whitepaper');
+    if (!newsletterEmail.trim()) return;
+    
+    setNewsletterStatus({ loading: true, success: false, error: '' });
+    
+    try {
+      const response = await axios.post('/api/newsletter', {
+        email: newsletterEmail,
+        source: 'Homepage'
+      });
+      
+      if (response.data.success) {
+        setNewsletterStatus({ loading: false, success: true, error: '' });
+        setNewsletterEmail('');
+        // Reset success message after 3 seconds
+        setTimeout(() => {
+          setNewsletterStatus({ loading: false, success: false, error: '' });
+        }, 3000);
+      }
+    } catch (error) {
+      console.error('Newsletter subscription error:', error);
+      let errorMessage = 'Failed to subscribe. Please try again.';
+      
+      if (axios.isAxiosError(error) && error.response?.data?.error) {
+        errorMessage = error.response.data.error;
+      }
+      
+      setNewsletterStatus({ loading: false, success: false, error: errorMessage });
+    }
+  };
+
+  // Handle whitepaper email submission
+  const handleWhitepaperSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!whitepaperEmail.trim()) return;
+    
+    setWhitepaperStatus({ loading: true, success: false, error: '' });
+    
+    try {
+      const response = await axios.post('/api/whitepaper', {
+        email: whitepaperEmail
+      });
+      
+      if (response.data.success) {
+        setWhitepaperStatus({ loading: false, success: true, error: '' });
+        setWhitepaperEmail('');
+        setIsWhitepaperModalOpen(false);
+        // Redirect to whitepaper after successful submission
+        router.push('/whitepaper');
+      }
+    } catch (error) {
+      console.error('Whitepaper access error:', error);
+      let errorMessage = 'Failed to process request. Please try again.';
+      
+      if (axios.isAxiosError(error) && error.response?.data?.error) {
+        errorMessage = error.response.data.error;
+      }
+      
+      setWhitepaperStatus({ loading: false, success: false, error: errorMessage });
     }
   };
 
@@ -1356,16 +1425,42 @@ export default function Home() {
               <p className="text-gray-600 text-lg mb-8">
                 Get the latest insights, research, and industry trends delivered to your inbox monthly
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-          <input 
+              <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input 
                   type="email" 
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
                   placeholder="Enter your email address" 
                   className="flex-1 px-4 py-3 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-lendro-primary/50 focus:border-lendro-primary shadow-sm"
+                  required
+                  disabled={newsletterStatus.loading}
                 />
-                <button className="px-6 py-3 bg-gradient-to-r from-lendro-primary to-lendro-secondary text-white font-semibold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 whitespace-nowrap">
-                  Subscribe Now
-          </button>
-        </div>
+                <button 
+                  type="submit"
+                  disabled={newsletterStatus.loading}
+                  className="px-6 py-3 bg-gradient-to-r from-lendro-primary to-lendro-secondary text-white font-semibold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                >
+                  {newsletterStatus.loading ? 'Subscribing...' : 'Subscribe Now'}
+                </button>
+              </form>
+              
+              {/* Newsletter Status Messages */}
+              {newsletterStatus.success && (
+                <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+                  <p className="text-green-800 text-sm text-center">
+                    ✅ Successfully subscribed! Thank you for joining our newsletter.
+                  </p>
+                </div>
+              )}
+              
+              {newsletterStatus.error && (
+                <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                  <p className="text-red-800 text-sm text-center">
+                    ❌ {newsletterStatus.error}
+                  </p>
+                </div>
+              )}
+              
               <p className="text-gray-500 text-sm mt-4">
                 Join 5,000+ lending professionals. Unsubscribe anytime.
               </p>
@@ -1682,21 +1777,32 @@ export default function Home() {
                   />
                 </div>
 
+                {/* Whitepaper Status Messages */}
+                {whitepaperStatus.error && (
+                  <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                    <p className="text-red-800 text-sm text-center">
+                      ❌ {whitepaperStatus.error}
+                    </p>
+                  </div>
+                )}
+
                 <div className="flex gap-3">
                   <button
                     type="button"
                     onClick={() => setIsWhitepaperModalOpen(false)}
                     className="flex-1 px-4 py-3 bg-gray-100 text-gray-700 rounded-xl hover:bg-gray-200 transition-colors font-medium"
+                    disabled={whitepaperStatus.loading}
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 font-medium shadow-lg hover:shadow-xl"
+                    disabled={whitepaperStatus.loading}
+                    className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 font-medium shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    View Whitepaper
-          </button>
-        </div>
+                    {whitepaperStatus.loading ? 'Processing...' : 'View Whitepaper'}
+                  </button>
+                </div>
               </form>
 
               <div className="mt-4 p-3 bg-gray-50 rounded-lg">

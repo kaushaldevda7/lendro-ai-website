@@ -1,9 +1,10 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '@/components/layout/Layout';
 import Link from 'next/link';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import axios from 'axios';
 
 const blogArticles = [
   {
@@ -77,6 +78,47 @@ const blogSchema = {
 export default function BlogPage() {
   const featuredArticles = blogArticles.filter(article => article.featured);
   const categories = [...new Set(blogArticles.map(article => article.category))];
+  
+  // Newsletter state
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [newsletterStatus, setNewsletterStatus] = useState({
+    loading: false,
+    success: false,
+    error: ''
+  });
+
+  // Handle newsletter subscription
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newsletterEmail.trim()) return;
+    
+    setNewsletterStatus({ loading: true, success: false, error: '' });
+    
+    try {
+      const response = await axios.post('/api/newsletter', {
+        email: newsletterEmail,
+        source: 'Blog Page'
+      });
+      
+      if (response.data.success) {
+        setNewsletterStatus({ loading: false, success: true, error: '' });
+        setNewsletterEmail('');
+        // Reset success message after 3 seconds
+        setTimeout(() => {
+          setNewsletterStatus({ loading: false, success: false, error: '' });
+        }, 3000);
+      }
+    } catch (error) {
+      console.error('Newsletter subscription error:', error);
+      let errorMessage = 'Failed to subscribe. Please try again.';
+      
+      if (axios.isAxiosError(error) && error.response?.data?.error) {
+        errorMessage = error.response.data.error;
+      }
+      
+      setNewsletterStatus({ loading: false, success: false, error: errorMessage });
+    }
+  };
 
   return (
     <Layout>
@@ -201,16 +243,41 @@ export default function BlogPage() {
             <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
               Get the latest insights on AI lending, industry trends, and research delivered to your inbox
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input 
                 type="email" 
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
                 placeholder="Enter your email address" 
                 className="flex-1 px-4 py-3 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E51DB]/50 focus:border-[#1E51DB] shadow-sm"
+                required
+                disabled={newsletterStatus.loading}
               />
-              <button className="px-6 py-3 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] text-white font-semibold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 whitespace-nowrap">
-                Subscribe
+              <button 
+                type="submit"
+                disabled={newsletterStatus.loading}
+                className="px-6 py-3 bg-gradient-to-r from-[#1E51DB] to-[#65A8F3] text-white font-semibold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+              >
+                {newsletterStatus.loading ? 'Subscribing...' : 'Subscribe'}
               </button>
-            </div>
+            </form>
+            
+            {/* Newsletter Status Messages */}
+            {newsletterStatus.success && (
+              <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+                <p className="text-green-800 text-sm text-center">
+                  ✅ Successfully subscribed! Thank you for joining our newsletter.
+                </p>
+              </div>
+            )}
+            
+            {newsletterStatus.error && (
+              <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                <p className="text-red-800 text-sm text-center">
+                  ❌ {newsletterStatus.error}
+                </p>
+              </div>
+            )}
             <p className="text-gray-500 text-sm mt-4">
               Join 5,000+ lending professionals. Unsubscribe anytime.
             </p>

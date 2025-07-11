@@ -1,11 +1,53 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Layout from '@/components/layout/Layout';
+import axios from 'axios';
 
 export default function PressPage() {
+  // Newsletter state
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [newsletterStatus, setNewsletterStatus] = useState({
+    loading: false,
+    success: false,
+    error: ''
+  });
+
+  // Handle newsletter subscription
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newsletterEmail.trim()) return;
+    
+    setNewsletterStatus({ loading: true, success: false, error: '' });
+    
+    try {
+      const response = await axios.post('/api/newsletter', {
+        email: newsletterEmail,
+        source: 'Press Page'
+      });
+      
+      if (response.data.success) {
+        setNewsletterStatus({ loading: false, success: true, error: '' });
+        setNewsletterEmail('');
+        // Reset success message after 3 seconds
+        setTimeout(() => {
+          setNewsletterStatus({ loading: false, success: false, error: '' });
+        }, 3000);
+      }
+    } catch (error) {
+      console.error('Newsletter subscription error:', error);
+      let errorMessage = 'Failed to subscribe. Please try again.';
+      
+      if (axios.isAxiosError(error) && error.response?.data?.error) {
+        errorMessage = error.response.data.error;
+      }
+      
+      setNewsletterStatus({ loading: false, success: false, error: errorMessage });
+    }
+  };
+
   const blogPosts = [
     {
       id: 1,
@@ -194,23 +236,45 @@ export default function PressPage() {
               </p>
             </div>
             
-            <form className="mt-8 space-y-4 md:space-y-0 md:flex md:gap-4">
+            <form onSubmit={handleNewsletterSubmit} className="mt-8 space-y-4 md:space-y-0 md:flex md:gap-4">
               <div className="flex-grow">
                 <label htmlFor="email" className="sr-only">Email address</label>
                 <input 
                   id="email" 
                   type="email" 
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
                   placeholder="Enter your email address" 
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-black focus:border-black outline-none transition-all"
+                  required
+                  disabled={newsletterStatus.loading}
                 />
               </div>
               <button 
                 type="submit" 
-                className="w-full md:w-auto px-6 py-3 bg-black text-white rounded-lg font-medium hover:bg-gray-800 transition-colors"
+                disabled={newsletterStatus.loading}
+                className="w-full md:w-auto px-6 py-3 bg-black text-white rounded-lg font-medium hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Subscribe
+                {newsletterStatus.loading ? 'Subscribing...' : 'Subscribe'}
               </button>
             </form>
+            
+            {/* Newsletter Status Messages */}
+            {newsletterStatus.success && (
+              <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+                <p className="text-green-800 text-sm text-center">
+                  ✅ Successfully subscribed! Thank you for joining our newsletter.
+                </p>
+              </div>
+            )}
+            
+            {newsletterStatus.error && (
+              <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                <p className="text-red-800 text-sm text-center">
+                  ❌ {newsletterStatus.error}
+                </p>
+              </div>
+            )}
             
             <p className="text-xs text-gray-500 mt-4 text-center">
               By subscribing, you agree to our Privacy Policy and consent to receive relevant content from Technexus.
