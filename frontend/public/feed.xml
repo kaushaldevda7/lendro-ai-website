@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Lendro.AI Blog - AI-Powered Lending Insights</title>
+    <description>Expert insights on AI in lending, credit risk, fintech innovation, and the future of financial services. Technical deep dives, industry analysis, and thought leadership from the Lendro.AI team.</description>
+    <link>https://lendro.ai/blog</link>
+    <atom:link href="https://lendro.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <language>en-US</language>
+    <copyright>Copyright 2024-2026 Lendro.AI. All rights reserved.</copyright>
+    <managingEditor>team@lendro.ai (Lendro.AI Team)</managingEditor>
+    <webMaster>team@lendro.ai (Lendro.AI Team)</webMaster>
+    <pubDate>Mon, 20 Jan 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Mon, 20 Jan 2026 00:00:00 GMT</lastBuildDate>
+    <category>Technology</category>
+    <category>Finance</category>
+    <category>Artificial Intelligence</category>
+    <category>Fintech</category>
+    <category>Lending</category>
+    <generator>Lendro.AI Blog</generator>
+    <docs>https://www.rssboard.org/rss-specification</docs>
+    <ttl>60</ttl>
+    <image>
+      <url>https://lendro.ai/images/logo.png</url>
+      <title>Lendro.AI Blog</title>
+      <link>https://lendro.ai/blog</link>
+      <width>144</width>
+      <height>144</height>
+    </image>
+
+    <item>
+      <title>Interoperability in Financial Services: The Power of Connection</title>
+      <link>https://lendro.ai/blog/interoperability-in-financial-services-jan-26</link>
+      <guid isPermaLink="true">https://lendro.ai/blog/interoperability-in-financial-services-jan-26</guid>
+      <pubDate>Fri, 17 Jan 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Lendro.AI Team</dc:creator>
+      <category>Thought Leadership</category>
+      <description>A strategic perspective on interoperability in financial services and its implications for the future of lending.</description>
+    </item>
+
+    <item>
+      <title>The Talent Gap in AI Lending: Building Teams for the Future</title>
+      <link>https://lendro.ai/blog/the-talent-gap-in-ai-lending-jan-26</link>
+      <guid isPermaLink="true">https://lendro.ai/blog/the-talent-gap-in-ai-lending-jan-26</guid>
+      <pubDate>Thu, 16 Jan 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Lendro.AI Team</dc:creator>
+      <category>Thought Leadership</category>
+      <description>A strategic perspective on the talent gap in AI lending and its implications for the future of lending.</description>
+    </item>
+
+    <item>
+      <title>From Transactions to Relationships: The Evolution of Banking</title>
+      <link>https://lendro.ai/blog/from-transactions-to-relationships-jan-26</link>
+      <guid isPermaLink="true">https://lendro.ai/blog/from-transactions-to-relationships-jan-26</guid>
+      <pubDate>Wed, 15 Jan 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Lendro.AI Team</dc:creator>
+      <category>Thought Leadership</category>
+      <description>A strategic perspective on the evolution of banking from transactions to relationships.</description>
+    </item>
+
+    <item>
+      <title>The Next Generation of Risk: Preparing for Unknown Unknowns</title>
+      <link>https://lendro.ai/blog/the-next-generation-of-risk-jan-26</link>
+      <guid isPermaLink="true">https://lendro.ai/blog/the-next-generation-of-risk-jan-26</guid>
+      <pubDate>Tue, 14 Jan 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Lendro.AI Team</dc:creator>
+      <category>Thought Leadership</category>
+      <description>A strategic perspective on preparing for the next generation of risk in lending.</description>
+    </item>
+
+    <item>
+      <title>Lending to the Underbanked: A Moral and Business Imperative</title>
+      <link>https://lendro.ai/blog/lending-to-the-underbanked-jan-26</link>
+      <guid isPermaLink="true">https://lendro.ai/blog/lending-to-the-underbanked-jan-26</guid>
+      <pubDate>Mon, 13 Jan 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Lendro.AI Team</dc:creator>
+      <category>Thought Leadership</category>
+      <description>A strategic perspective on lending to the underbanked as both a moral and business imperative.</description>
+    </item>
+
+    <item>
+      <title>Building Antifragile Lending Systems: Getting Stronger from Stress</title>
+      <link>https://lendro.ai/blog/building-antifragile-lending-systems-jan-26</link>
+      <guid isPermaLink="true">https://lendro.ai/blog/building-antifragile-lending-systems-jan-26</guid>
+      <pubDate>Sat, 11 Jan 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Lendro.AI Team</dc:creator>
+      <category>Thought Leadership</category>
+      <description>A strategic perspective on building antifragile lending systems that get stronger from stress.</description>
+    </item>
+
+    <item>
+      <title>The Role of Human Oversight: Where Judgment Still Matters</title>
+      <link>https://lendro.ai/blog/the-role-of-human-oversight-jan-26</link>
+      <guid isPermaLink="true">https://lendro.ai/blog/the-role-of-human-oversight-jan-26</guid>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Lendro.AI Team</dc:creator>
+      <category>Thought Leadership</category>
+      <description>A strategic perspective on where human oversight and judgment still matters in AI lending.</description>
+    </item>
+
+    <item>
+      <title>AI Ethics in Financial Services: Building Responsible Systems</title>
+      <link>https://lendro.ai/blog/ai-ethics-in-financial-services-jan-26</link>
+      <guid isPermaLink="true">https://lendro.ai/blog/ai-ethics-in-financial-services-jan-26</guid>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Lendro.AI Team</dc:creator>
+      <category>Thought Leadership</category>
+      <description>A strategic perspective on AI ethics in financial services and building responsible systems.</description>
+    </item>
+
+    <item>
+      <title>Education Financing Reform: Rethinking Student Debt</title>
+      <link>https://lendro.ai/blog/education-financing-reform-dec-25</link>
+      <guid isPermaLink="true">https://lendro.ai/blog/education-financing-reform-dec-25</guid>
+      <pubDate>Wed, 31 Dec 2025 00:00:00 GMT</pubDate>
+      <dc:creator>Lendro.AI Team</dc:creator>
+      <category>Industry Insights</category>
+      <description>How education financing is being reformed through technology and innovative lending approaches.</description>
+    </item>
+
+    <item>
+      <title>Healthcare Lending Innovations: Financing Medical Needs</title>
+      <link>https://lendro.ai/blog/healthcare-lending-innovations-dec-25</link>
+      <guid isPermaLink="true">https://lendro.ai/blog/healthcare-lending-innovations-dec-25</guid>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 GMT</pubDate>
+      <dc:creator>Lendro.AI Team</dc:creator>
+      <category>Industry Insights</category>
+      <description>How healthcare lending is being transformed through technology and AI-powered solutions.</description>
+    </item>
+
+    <item>
+      <title>Building the Next Generation of AI Risk Models</title>
+      <link>https://lendro.ai/blog/ai-risk-models</link>
+      <guid isPermaLink="true">https://lendro.ai/blog/ai-risk-models</guid>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 GMT</pubDate>
+      <dc:creator>Lendro.AI Team</dc:creator>
+      <category>Technical Deep Dive</category>
+      <description>An in-depth exploration of modern machine learning approaches to credit risk assessment, comparing traditional statistical methods with cutting-edge AI techniques.</description>
+    </item>
+
+    <item>
+      <title>Why Traditional Lending is Ripe for AI Disruption</title>
+      <link>https://lendro.ai/blog/lending-ai-disruption</link>
+      <guid isPermaLink="true">https://lendro.ai/blog/lending-ai-disruption</guid>
+      <pubDate>Wed, 28 May 2025 00:00:00 GMT</pubDate>
+      <dc:creator>Lendro.AI Team</dc:creator>
+      <category>Industry Insights</category>
+      <description>Analyzing the inefficiencies in current lending processes and how autonomous AI agents can transform operations from application to servicing.</description>
+    </item>
+
+    <item>
+      <title>The $2.8 Trillion Opportunity: AI in Financial Services</title>
+      <link>https://lendro.ai/blog/ai-financial-opportunity</link>
+      <guid isPermaLink="true">https://lendro.ai/blog/ai-financial-opportunity</guid>
+      <pubDate>Tue, 22 Apr 2025 00:00:00 GMT</pubDate>
+      <dc:creator>Lendro.AI Team</dc:creator>
+      <category>Market Analysis</category>
+      <description>Breaking down the massive market opportunity for AI-powered lending solutions and what it means for financial institutions of all sizes.</description>
+    </item>
+
+  </channel>
+</rss>
