@@ -1,12 +1,19 @@
+# Lendro.AI - Robots.txt
+# AI-Powered Lending Solutions | https://lendro.ai
+
+# ===========================================
+# DEFAULT RULES - All Crawlers Welcome
+# ===========================================
 User-agent: *
 Allow: /
-
-# Important pages for crawling
+Allow: /blog/
 Allow: /solutions/
 Allow: /platform/
-Allow: /blog/
 Allow: /security/
 Allow: /contact/
+Allow: /about/
+Allow: /privacy/
+Allow: /terms/
 
 # Block admin and private areas
 Disallow: /platform/dashboard
@@ -14,8 +21,145 @@ Disallow: /platform/admin
 Disallow: /login
 Disallow: /api/
 
-# Sitemap location
+# ===========================================
+# SEARCH ENGINE CRAWLERS
+# ===========================================
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /blog/
+
+User-agent: Googlebot-News
+Allow: /blog/
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Yahoo
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# ===========================================
+# AI ASSISTANT CRAWLERS - EXPLICITLY ALLOWED
+# These crawlers help AI assistants like ChatGPT,
+# Claude, Gemini, and others understand our content
+# ===========================================
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+Allow: /blog/
+Allow: /solutions/
+Allow: /platform/
+Allow: /about/
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic / Claude
+User-agent: anthropic-ai
+Allow: /
+Allow: /blog/
+Allow: /solutions/
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Google / Gemini / Bard
+User-agent: Google-Extended
+Allow: /
+Allow: /blog/
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+Allow: /blog/
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# Apple / Siri
+User-agent: Applebot
+Allow: /
+Allow: /blog/
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Amazon / Alexa
+User-agent: Amazonbot
+Allow: /
+
+# Microsoft / Copilot
+User-agent: bingbot
+Allow: /
+
+# Common Crawl (used by many AI systems)
+User-agent: CCBot
+Allow: /
+
+# AI training datasets
+User-agent: ia_archiver
+Allow: /
+
+User-agent: archive.org_bot
+Allow: /
+
+# ===========================================
+# SOCIAL MEDIA CRAWLERS
+# ===========================================
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Pinterest
+Allow: /
+
+# ===========================================
+# SITEMAP & LLMs.txt LOCATIONS
+# ===========================================
 Sitemap: https://lendro.ai/sitemap.xml
 
-# Crawl delay (optional - helps with server load)
-Crawl-delay: 1 
+# LLMs.txt - Information specifically for AI assistants
+# See: https://lendro.ai/llms.txt
